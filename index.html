@@ -84,6 +84,10 @@ button{font:inherit;color:inherit}
 .chip:hover{border-color:var(--accent);color:var(--accent)}
 .chip.on{background:var(--gold);border-color:var(--gold-deep);color:var(--on-gold);font-weight:600}
 .chip.dim{opacity:.28}
+.chip.em-pauta{position:relative;border-color:var(--gold-deep);box-shadow:inset 0 0 0 1px var(--gold-deep)}
+.chip.em-pauta::after{content:"";position:absolute;top:-4px;right:-4px;width:9px;height:9px;border-radius:50%;background:var(--gold);border:2px solid var(--surface)}
+.toc-leg{display:flex;align-items:center;gap:7px;font-size:.76rem;color:var(--muted);margin:-4px 0 14px}
+.toc-leg .dot{width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 1px var(--gold-deep)}
 .toc-note{margin-top:18px;padding:10px 12px;border:1px dashed var(--line);border-radius:8px;color:var(--muted);font-size:.78rem;line-height:1.45}
 
 /* Conteúdo */
@@ -335,6 +339,7 @@ footer.note{margin-top:48px;font-size:.8rem;color:var(--muted);line-height:1.55;
 <div class="wrap" id="viewEstatuto">
   <nav class="toc" id="toc" aria-label="Sumário">
     <h2>Sumário</h2>
+    <p class="toc-leg"><span class="dot" aria-hidden="true"></span>Em pauta na XII Convenção</p>
     <div id="tocList"></div>
     <p class="toc-note">Texto até o art. 74, III. As páginas 25 a 27 do documento registrado ainda não foram localizadas.</p>
   </nav>
@@ -1459,7 +1464,10 @@ footer.note{margin-top:48px;font-size:.8rem;color:var(--muted);line-height:1.55;
     var d=document.createElement('div');d.className='chips';
     $$(':scope > .art', container).forEach(function(a){
       var c=document.createElement('a');c.className='chip';c.href='#'+a.id;c.textContent=a.dataset.label.replace('º','');
-      c.dataset.for=a.id;c.title=a.dataset.label;d.appendChild(c);
+      c.dataset.for=a.id;c.title=a.dataset.label;
+      var pa=a.querySelector('.pauta');
+      if(pa){var mn=(pa.textContent.match(/Moção nº \d+/)||[''])[0];c.classList.add('em-pauta');c.title=a.dataset.label.replace('º','')+' · em pauta: '+mn;c.setAttribute('aria-label',c.title)}
+      d.appendChild(c);
     });
     return d;
   }
