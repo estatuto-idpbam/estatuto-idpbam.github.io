@@ -1,0 +1,1299 @@
+<title>Estatuto IDPB-AM</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Estatuto da Igreja de Deus Pentecostal do Brasil do Amazonas, aprovado na XI Convenção (2023), organizado por artigos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Public+Sans:wght@400;500;600&family=Young+Serif&display=swap">
+<style>
+/* Layout: leitura em coluna única (~66ch) com sumário fixo à esquerda; no celular o sumário vira gaveta. */
+:root{
+  /* Paleta do logo IDPB: ouro do livro, verde do mapa, preto da sigla */
+  --bg:#f6f6f3; --surface:#ffffff; --ink:#15171a; --muted:#5d6068; --line:#e4e2da;
+  --accent:#7a5a08; --accent-soft:#fbf2d4; --gold:#f0c23e; --gold-deep:#e0ad2a; --on-gold:#15171a;
+  --green:#4f6e35; --green-soft:#edf3e6; --mark:#f6dc78; --mark-ink:#15171a; --warn:#4f6e35;
+  --f-display:"Young Serif", Georgia, "Times New Roman", serif;
+  --f-body:"Literata", Georgia, "Times New Roman", serif;
+  --f-ui:"Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --fs:1; --hh:60px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121316; --surface:#1a1c20; --ink:#ecebe6; --muted:#a4a39b; --line:#2e2f34;
+  --accent:#f2c94c; --accent-soft:#2c2614; --gold:#f0c23e; --gold-deep:#e0ad2a; --on-gold:#15171a;
+  --green:#a9c58b; --green-soft:#1f2a19; --mark:#6b5414; --mark-ink:#fff6d6; --warn:#a9c58b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121316; --surface:#1a1c20; --ink:#ecebe6; --muted:#a4a39b; --line:#2e2f34;
+  --accent:#f2c94c; --accent-soft:#2c2614; --gold:#f0c23e; --gold-deep:#e0ad2a; --on-gold:#15171a;
+  --green:#a9c58b; --green-soft:#1f2a19; --mark:#6b5414; --mark-ink:#fff6d6; --warn:#a9c58b; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-ui);margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--surface)}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+
+/* Cabeçalho */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--surface);border-bottom:3px solid var(--gold);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.top-in{max-width:1200px;margin:0 auto;min-height:var(--hh);display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-block:10px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.logo-sm{height:40px;width:auto;flex:none;display:block}
+.brand b{font-family:var(--f-display);font-weight:400;font-size:1.05rem;white-space:nowrap}
+.brand small{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.02em}
+.search{flex:1 1 280px;position:relative;min-width:0}
+.search input{width:100%;height:40px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;
+  padding:0 70px 0 36px;font:inherit;font-size:.95rem}
+.search input::placeholder{color:var(--muted)}
+.search svg{position:absolute;left:11px;top:11px;width:18px;height:18px;stroke:var(--muted)}
+.search .kbd{position:absolute;right:10px;top:9px;font-size:.72rem;color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:2px 6px}
+.search .clear{position:absolute;right:6px;top:6px;height:28px;border:0;background:none;color:var(--muted);cursor:pointer;padding:0 8px;font-size:.8rem}
+.acts{display:flex;gap:6px;align-items:center}
+.ibtn{height:38px;min-width:38px;padding:0 10px;border:1px solid var(--line);background:var(--surface);border-radius:8px;cursor:pointer;
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;font-size:.85rem}
+.ibtn:hover{border-color:var(--accent);color:var(--accent)}
+.ibtn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8}
+.menu-btn{display:none}
+
+/* Estrutura */
+.wrap{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:280px minmax(0,1fr);gap:56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* Sumário */
+.toc{position:sticky;top:calc(var(--hh) + env(safe-area-inset-top,0px));align-self:start;max-height:calc(100vh - var(--hh) - env(safe-area-inset-top,0px));
+  overflow:auto;padding-block:28px 40px;font-size:.86rem}
+.toc h2{font:600 .7rem/1 var(--f-ui);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+.toc-cap{border-top:1px solid var(--line);padding-block:12px}
+.toc-cap>a{display:block;text-decoration:none;font-weight:600;line-height:1.35}
+.toc-cap>a span{display:block;font-weight:400;color:var(--muted);font-size:.8rem;margin-top:2px}
+.toc-sec{margin-top:10px}
+.toc-sec>a{display:block;text-decoration:none;color:var(--muted);font-size:.8rem;line-height:1.35}
+.toc-sec>a:hover,.toc-cap>a:hover{color:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.chip{min-width:34px;height:28px;padding:0 8px;white-space:nowrap;border-radius:6px;display:inline-grid;place-items:center;text-decoration:none;
+  font-size:.78rem;font-variant-numeric:tabular-nums;border:1px solid var(--line);background:var(--surface)}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip.on{background:var(--gold);border-color:var(--gold-deep);color:var(--on-gold);font-weight:600}
+.chip.dim{opacity:.28}
+.toc-note{margin-top:18px;padding:10px 12px;border:1px dashed var(--line);border-radius:8px;color:var(--muted);font-size:.78rem;line-height:1.45}
+
+/* Conteúdo */
+main{min-width:0;padding-block:36px 96px;font-size:calc(1.0625rem * var(--fs))}
+.read{max-width:68ch}
+.cover{padding-bottom:28px;margin-bottom:12px;border-bottom:1px solid var(--line)}
+.cover-head{display:grid;grid-template-columns:auto minmax(0,1fr);gap:24px;align-items:center;margin-bottom:22px}
+.cover-txt{min-width:0}
+.cover-txt .sub{margin-bottom:0}
+.logo-lg{width:112px;height:auto;max-width:100%;filter:drop-shadow(0 6px 14px rgba(120,90,10,.18))}
+@media (max-width:520px){.cover-head{grid-template-columns:1fr;gap:14px}.logo-lg{width:84px}}
+.eyebrow{font:600 .72rem/1.3 var(--f-ui);letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin:0 0 12px}
+.cover h1{font-family:var(--f-display);font-weight:400;font-size:clamp(1.7rem,4.2vw,2.5rem);line-height:1.12;margin:0 0 10px;text-wrap:balance}
+.cover .sub{font-family:var(--f-body);font-size:1.02em;color:var(--muted);margin:0 0 18px;line-height:1.5}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px 24px;margin:0;font-size:.82rem}
+.facts div{min-width:0}
+.facts dt{color:var(--muted);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.facts dd{margin:0;font-variant-numeric:tabular-nums}
+.aviso{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;align-items:start;margin:0 0 22px;padding:14px 16px;
+  background:var(--accent-soft);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;font-size:.88rem;line-height:1.5}
+.aviso .dot{width:10px;height:10px;border-radius:50%;background:var(--green);margin-top:.45em;box-shadow:0 0 0 0 var(--green);animation:pulso 2s infinite}
+@keyframes pulso{0%{box-shadow:0 0 0 0 rgba(95,138,69,.5)}70%{box-shadow:0 0 0 8px rgba(95,138,69,0)}100%{box-shadow:0 0 0 0 rgba(95,138,69,0)}}
+@media (prefers-reduced-motion: reduce){.aviso .dot{animation:none}}
+.aviso strong{display:block;font-weight:600}
+.aviso small{display:block;color:var(--muted);font-size:.8rem;margin-top:2px}
+.aviso p{margin:0;grid-column:2}
+.proto{margin-top:18px;font-size:.82rem;color:var(--warn);display:flex;gap:8px;align-items:baseline}
+
+.cap>header{margin:52px 0 6px}
+.cap-label{font:600 .72rem/1 var(--f-ui);letter-spacing:.14em;text-transform:uppercase;color:var(--green);display:inline-flex;align-items:center;gap:8px}
+.cap-label::before{content:"";width:18px;height:3px;border-radius:2px;background:var(--gold)}
+.cap h2{font-family:var(--f-display);font-weight:400;font-size:1.55em;line-height:1.2;margin:8px 0 0;text-wrap:balance}
+.secao>h3{font:600 .8rem/1.35 var(--f-ui);letter-spacing:.04em;color:var(--muted);margin:34px 0 4px;display:flex;gap:10px;align-items:baseline}
+.secao>h3 span:first-child{text-transform:uppercase;letter-spacing:.12em;font-size:.7rem;color:var(--ink);white-space:nowrap}
+
+.art{font-family:var(--f-body);line-height:1.68;padding:18px 0 14px;border-bottom:1px solid var(--line);
+  scroll-margin-top:calc(var(--hh) + env(safe-area-inset-top,0px) + 20px);position:relative}
+.art:target,.art.flash{box-shadow:inset 3px 0 0 var(--gold);background:linear-gradient(90deg,var(--accent-soft),transparent 80%);margin-inline:-14px;padding-inline:14px;border-radius:6px}
+.art p{margin:0 0 .55em}
+.artnum{font-family:var(--f-display);color:var(--accent);text-decoration:none;font-size:1.08em;margin-right:.25em;white-space:nowrap}
+.inc,.par,.ali{display:grid;grid-template-columns:2.7em minmax(0,1fr);column-gap:.5em}
+.inc{padding-left:.6em}
+.par{margin-top:.75em!important}
+.ali{padding-left:3.2em;grid-template-columns:1.8em minmax(0,1fr)}
+.sub{padding-left:3.2em}
+.sub2{padding-left:6.4em}
+.lacuna{margin:28px 0 0;padding:16px 18px;border:1px dashed var(--gold-deep);border-radius:8px;background:var(--accent-soft);font-family:var(--f-ui);font-size:.88rem;line-height:1.55}
+.lacuna strong{display:block;margin-bottom:2px}
+.n{color:var(--muted);font-variant-numeric:tabular-nums;font-family:var(--f-ui);font-size:.86em;padding-top:.18em;white-space:nowrap}
+.par>.n{color:var(--ink);font-weight:600}
+.tx{min-width:0}
+.destaque{font-weight:600}
+
+/* Remissões e siglas */
+.ref{color:var(--accent);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;cursor:pointer}
+.ref.ext{text-decoration-style:dotted}
+.sigla{text-decoration:underline dotted var(--muted);text-underline-offset:3px;cursor:help}
+.bib{font-style:italic}
+.alt-row{padding-left:calc(.6em + 2.7em + .5em);margin:-.2em 0 .6em}
+.ref.alt{display:inline-flex;align-items:center;gap:6px;font:500 .72rem/1 var(--f-ui);letter-spacing:.02em;text-decoration:none;
+  color:var(--green);background:var(--green-soft);border:1px solid transparent;border-radius:999px;padding:5px 10px}
+.ref.alt:hover{border-color:var(--green)}
+.ref.alt::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.pop dl{margin:8px 0 0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;font-family:var(--f-ui);font-size:.82rem}
+.pop dt{color:var(--muted)}
+.pop dd{margin:0}
+@media (max-width:900px){.alt-row{padding-left:calc(2.7em + .5em)}}
+mark{background:var(--mark);color:var(--mark-ink);border-radius:2px;padding:0 1px}
+
+.tools{display:flex;gap:4px;justify-content:flex-end;font-family:var(--f-ui);font-size:.74rem;margin-top:2px}
+.tools button{border:0;background:none;color:var(--muted);cursor:pointer;padding:4px 8px;border-radius:6px;display:inline-flex;gap:5px;align-items:center}
+.tools button:hover{color:var(--accent);background:var(--accent-soft)}
+.tools svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8}
+@media (hover:hover){.tools{opacity:0;transition:opacity .15s}.art:hover .tools,.art:focus-within .tools{opacity:1}}
+
+.empty{font-family:var(--f-body);color:var(--muted);padding:40px 0}
+.status{font-size:.8rem;color:var(--muted);margin:18px 0 0;min-height:1.2em}
+
+footer.note{margin-top:48px;font-size:.8rem;color:var(--muted);line-height:1.55;max-width:68ch}
+
+/* Popover */
+.pop{position:fixed;z-index:60;width:min(400px,calc(100vw - 24px));max-height:min(60vh,440px);overflow:auto;background:var(--surface);
+  border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 32px rgba(10,20,40,.18);padding:14px 16px;font-size:.92rem}
+.pop h4{font:600 .72rem/1.3 var(--f-ui);letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+.pop .body{font-family:var(--f-body);line-height:1.6}
+.pop .body p{margin:0 0 .5em}
+.pop .body .tools{display:none}
+.pop .body .inc,.pop .body .par,.pop .body .ali{grid-template-columns:2.4em minmax(0,1fr)}
+.pop .body .sub,.pop .body .ali{padding-left:1.4em}
+.pop .body .sub2{padding-left:2.8em}
+.pop .foot{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:10px;font-size:.78rem;color:var(--muted)}
+.pop .go{border:1px solid var(--accent);color:var(--accent);background:none;border-radius:6px;padding:5px 10px;cursor:pointer;font-size:.8rem}
+
+/* Aviso flutuante */
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:70;
+  background:var(--ink);color:var(--bg);border-radius:10px;padding:10px 14px;font-size:.85rem;display:flex;gap:12px;align-items:center;
+  max-width:calc(100vw - 32px);box-shadow:0 10px 24px rgba(0,0,0,.2)}
+.toast button{border:0;background:var(--gold);color:var(--on-gold);font-weight:600;border-radius:6px;padding:6px 10px;cursor:pointer;font-size:.8rem;white-space:nowrap}
+.toast .x{background:none;color:inherit;opacity:.7;padding:4px 6px}
+
+.scrim{position:fixed;inset:0;background:rgba(8,12,20,.45);z-index:45}
+
+@media (max-width:900px){
+  :root{--hh:112px}
+  .menu-btn{display:inline-flex}
+  .search{order:3;flex-basis:100%}
+  .brand{flex:1}
+  .search .kbd{display:none}
+  .wrap{grid-template-columns:minmax(0,1fr);gap:0}
+  .toc{position:fixed;top:0;bottom:0;left:0;width:min(86vw,330px);max-height:none;z-index:50;background:var(--surface);
+    border-right:1px solid var(--line);transform:translateX(-105%);transition:transform .22s ease;
+    padding:calc(20px + env(safe-area-inset-top,0px)) 18px calc(30px + env(safe-area-inset-bottom,0px)) max(18px,env(safe-area-inset-left,0px))}
+  .toc.open{transform:none}
+  main{padding-top:24px}
+  .inc{padding-left:0}
+  .ali,.sub{padding-left:1.6em}
+  .sub2{padding-left:3.2em}
+}
+</style>
+
+<div class="top">
+  <div class="top-in">
+    <button class="ibtn menu-btn" id="menuBtn" aria-label="Abrir sumário" aria-controls="toc" aria-expanded="false">
+      <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+    </button>
+    <a class="brand" href="#inicio">
+      <img class="logo-sm" src="data:image/webp;base64,UklGRqg4AABXRUJQVlA4WAoAAAAQAAAAxgAA7wAAQUxQSDkKAAABCcZtJClS9R5fX/4B4/J+I/o/AUS97hD8j2nfd5AiWFIK5UU7XIDGBj3mtaVwLHQS54RIcqJpihAeojMUt20bSd5/7B5ugP4jYgIA97k+WB+Yoqv56bWBF6n+IUB67cwXmBbAktqL06Mp+zJt1dJzL0/c5xxyJEmKpKyZZRJg9ZeQefvte9DfiAmYAEvWtq1xHt3PJ6nQxWhmZoeTH5I0MzNPe0+9KVxCRj1GW987qCq7pLbfnkbEBNC1rW1545z3kyHM2KVi6JiTO0jJJTMzU5XcQNp0zBUzMw6PQWaLJUv6//97CsmBT543WETEBGT8YCGEYuTx6q/fP6w0SENFAqRMeez0Y5Hl+Vo747cHQwKxSxZICvfG/GTUbTWG/X4nWK3aXOmNlVWHJgILhXpF1u/31+q1csyyVt7Op5qNej22GG4BJEC7CCGRM7+3Nei0V3o7w93xSlqj7EWWzSxVpmrtdnm50l7tMjyYhDYyIZEzq/ZwsrPW2Do+aDd4pFmcEQK0HIEQYASM9Tu9YuHL6W53ame9WhXAGJLQxiPJIrP98XR94+B8s99gvkUTEiBKLhASFozhRav946YdC+XZSqcPEAxpI6jkOYhANKCxOdlsXt0edKrMWo4kEM+gQBJWYminMfXp5sb0ynSLwVKwUcssYgYw3p/u330wbDNrESHxDAshhcBga/Wn77ZVp8udJhCCjZAMoLW2P7r46LwLEKOExHMvISwwuFB5t2VZrS6wMCIhp7p+frV/fQhgUUi8pBKixOD8lnd+mJ9B0UbAYhx9+1tdZnMh8TJLoGBAb8cd548xCvajPwBEkHjpIxA4+pqbjkLJ6Yh3iRACXpSiOOlES0tGN5Bn+DKEyOSUkoKf2sQMj85vJVgy4p1PUYZHjaeWx/ZJRYH7VkLEpYV99uoayRqfDy34JHD9D/rJwA6GT2W1dGwiKbeaPo95KjJ6foHbicISsXS6gvyydQDJVi8GfhGTg7BE9M96C7eK8QHJBBvWTF4hZoeRamRXEcceEMsh0yquPWqYSgHZMfKL6aJGWbMpjhWTLipJI/PNeEJZVxuuiWkflWS7i/wCTLFSGMcV883rzFQCoQkR1942jVJWt3Bup49KUVlHnhGTESUd4FrFWhuVIk99g9GjnJWqc+C4EksgWt4Rh1VTcXDeQ66BvZQSitUU724MS2AKJ4pyjeiOUWEQOhi+tc6kFNka8o0iNcqoGv5tliJpOWg7iSVQxz3ipmcqzurugdMKhYtWE7mn0iwONqp4Vww20P8DVh8XJmMni3IOkQaFGxsyvGtkxRFaeHiMFZb1HCROGrGwyqqLPmghlXaQe6Beo3BV8HDWKy60kXtEa4pUluJgq08oWDQzBylniAxUEwcBovBxxUehKKMnH/WLEp+M5eYfcZTmhYDwsFjrY43ESQeTgnASVJrFyBpbmItWdikCQgUPK6pbWANzEEYDrAwnW1HJyEeGilId8xDUiwoZLhYboekB2O58CFEJPhL9ahSAm6BeCZs5SWx2EPIRpE20+eClSgft4qZeFNJA5iKjFraH8LCMehRgquNkoxpQMekjL7UFkOHmYISfZULip3ppRFb3kjhe+iggyEuQlpBJhrkpaEhwsqhPmeAl2NwjJF4SgymS4ucwIgp+0gCISg/z0vgaAAXcXJqJAsz8xExI4ecwRah5yRR2TOolYA4YFh01Aobh6ALASm4SC1EA5iZYii4UA2J+ghHR325ihrh6ohdKfxXsr8JfRv1V+KdRfxX+H1ZIfwn+eZQc1RByRxVTOMpKjmpIUThqQGLuqDNi0U3ihMQechI0ysvijpi5CUovjKIBytwk7kIWXTdRUOz7yR5I3kQ+MuVH0QAVuFkPIWPup3jVCXoT1qshL2UHAkX83ACBOWoAkLUIXgpFGA3MS60ngX1hJheJ77/ACuBfho9F5x4VcRAKc1HgpHWWL2t/GSebDr+Wlkf3juAjCruwpSnqKxUzJxnvtaOWBO2fh4iTA5+/NpYsJlfISxb1Ci0J1sYEL5Gzz7KN71nEzeLVdtRSZP3PZH7CVt9qObB1TuKo3F4bSxV3qeHooJtm1BIU6z8huoq7tyyF7Q8JniIPy4HtrslVxn5iT7OY/cgMVye8OorhaUy+JHytOPmMZZ7tWfAVZl/Xk0zV9zGcLe3uhKeg9ndxd7CLVw96QmD7xIK3iHzO0y9bhsPPEvQoi3zT8Hfg7F0Lj8Ku30r+Mk1oLugxKauj3GFEem/ckzwicIvPQ3yTEBbpP/1fIo8Z+5eJ94sCHx6ay4iW8/iNavQZYbxtWqA8/QbC5cZeX+URvP9Vr6Gx7ydRiw4audt0w+LILX7XcHuBbPN7yGuyyY8WBN7biG4j8o3ENGO6zRwHJ1NmFbufE/C7jb40B46ukd8U0y8nJgi838wdh3hVB7D0CPMcdA8E4WHrYxIcH2Lv1zKJV2bBc8DrGhiveEhcJ873UeyfEPCdNb8CfGbId0TepJEb8tR5gQ979Hfwt+kJMHzLMadhkgDDMB8Zg4ZhCJSnf/rjufsSCPg6Hxt4/J+/dXzod9r1Vt6vzS193cs4/fztRNfE8PG99ThJo7F21J+2a0m90w/x9vbDrdvOULWbMfjJuxW8u+kd1q9Wa0m11gn//PsM65sZWNjDO+Jn26sjkBnG4jEJNCAAi51p5Booq1swVACaiTm/W1V8a3QpSNBwjkJ7mSSNwjm2CkpB4etakGNg1khS2tQw32xKxLTaxbc/YDEF6K05ZychkYmOa0LWIVVVPSNWQIlkO5FnZkMyxSKu/XqMNGWUi+CZrwhFEhg/N01uMaYwpSF2VHCLrJUjUl2sO4aFQLrKcatYASWDY4wfg8VUjAXPvEspGfTYBbHkE+OZs0nXdOHtMp9EPX08MaFD7x4rzCNBR54VLB3g9CPwiMRlh8lI12CySSlGeSIWlOjsCTEhBFNf54RAjEgvngQBY/H9CskHfnryiU8XsAARkF4oCVkAmHnnoZdqjGCk8eFTV1x+47NXmw2AaEJ6SYSQBYC1nZ99MF1+ZkvBSAoD6AzXN/a+vtVvAkRDSM+dECIYQHvxy/eWl3csdgEMjQIIySKQ9Fe2TtZvLgZtZi2ahNCzI4TEGEMrU9/9vLB9ZqUDmJmEGGUhRQMY9Kab3b3Lo3GT+blJAvQ/J5CQlRheb3z7+crK0qbVHCCYhNgYJTBjtt46WBv0j6/GnRUWxghCmlFpNCAhzALDi87q1LYt9fLccr3GYDAJsdEKySLzO6PNtV5n/fQsa2bisRaxOQL0BJPQgGFmA+vGVn/l29lma8fsan++YDCYEGLjFkgQjdlk2K5P2qvNJNsY743aSSZK3M+zbVPN5VanVVkt1xtNhlpACLGrFEjkPFLj3mq1kQ661QaWprVuUkkGSZoIiEURs0P3X/i5na9lWSz6zaKdlVvNZqWfs24whBC7ZAFCwizy1JSgTggCKKIY26PoVnv8/mAggRh5AFZQOCBILgAA8JQAnQEqxwDwAD49GIpDoiGhFDoO/CADxLQEOVjKhIrA17v/ef2V/vn7OfMNYv7x/dP1L/b//N/uPln249Y+YRzv/vP8D+7H+d+Z3+V9Tv5z/5/+F+AL9av+F/jPx0+LX9gPdD/dP9l6gv6D/av+r/qf3/+WT/Tf9P/fe5b+0/4P9qv9V8gf9S/snrdf7j2Pf7V/t///7g/8m/rfq//8b/3/8X4Pf6v/q//d/q/gV/on98/8H58fIB6AHoAeqf1s/vv4ve9LwB/A/kR+53sX+OfOP2z8kf65/y/9R8g38N4weuv9f6K/xn7SfcP7v+0X+B/bj5y/2/5M+d/xS/uvlV+wX8X/l39q/IX+6/tf7kO1U1v/O/7P1BfWL5h/i/71+339f/cj2Yf9T+/erP19/y/uAfyD+U/2z8pv7z/9veA/1Xj9/Wv9b/wftA+wP+K/z7/If3T9rP7n///ti/lv+d/mP3g/v3uP/MP73/zv8l/l//T/pvsG/j/89/yv9y/y3/K/wH///6n3jewr9pvY5/Xj/b/nw6EF9B75uqxTY6K+M3/2ZopKO4ow0CGQ1XvCkGVmNYhpf0XPOrPZjBTl8x0gBtW7/Fa9Bk5OcIn9gszXLxGSpK1MzJfS7CNfBUA+ybMPaCNNIo0z+yA//1U+D7qe8G3dDpWWOcMthTQdeb6zolfYlxbEvusZtMA9crDNm2o4uD3kk1G/AgPE6b3xedru3n6bfu26KoCxz41IGNaQsS+/P21rnKmstS+/pWNHOpUKcwZNHbRZa+0Jda/FnYj9Ii0WETdh6XCpHCOVJ3bWvdOtWeSHonKOddOJEeXE6QliGa69qU+qPpCm2nE1U6L3KSXr59EHXdAk4YFpQS7nPg0WA8VTvXiN81717STG21noxuhUPzXlnGtgTvZJ2GHsdTCbi19oI4bWM+/uDI43HJ79BG6sWxuwM97q2YPMxKae7xTzduJ2kHjRzgKwotvc2jBACuvK4qzlADc6vDJUh08xaJViDX6YZiO/aR6LN6BAey5bK+wQDnyxiuRLn0t38/6ChA2fP39urXTFfWPL0dl4Acgl0tjtf+ZAyncOwusxtQVq/pxjZXmDcVYwEWpqHwCEcdLEMr00nusjIrg0gfuf4b0nIqnRsDZc5WcfgFBBnzR0wVVqjD7CFmDYg6UuvoFl87snayPCreuP+VSPf9PNNqvI/qqKxB2/C7Frd11OB76NNbjNIhUmQ0EQlF5E3K++HbBU2p6ctvDCfZjzwwnXg31uHVRTcZ4zqpFsy9YDrTN0jjSV/OAI2WV1v3sCrhQ1+28aeBeEXkTAbbJFIKntaRHqw/A54EwQLXra/xA5wjYIGIJbvIQnHk/m7eLoDC6muvsPwbAE9A3M12Wa3lPF+qtaSZnUYwuvHkp5joKAtS52XGizvdQtHKX0sDzBH/lDboW8FYQoi6Hx9ZtdooJfE03FXwDzf/612uR5UJkVTuwW1c+CNwkLn0aabV5OmPPNNcRwAbtGM0ytioKRJKWwdNSvkuKPG/rzzW0tN8vHD4jZfqyPQ5bCv8kG04N10XajniTXgbzp8JGOcHJOEtlGmcfDSdIWv0qneYAAAP73keedHyuRoLLxVIJfBrZosDe2NjqctEf/XxlXkxF6pu6fm8h+S9NA7/G5S+OapV/REMKAdZlEH7evL7j7/goIY9ShoGSBmjCciu8uy3Ab6gWbvGgnhYfA+KybWPkBwBPAqZMHZgSZswgzvxz46nPifP2h7EIhnj3zYFlxRHKzYY+8735XXlNuespFMb/HvwwLakipyYzM6hzgx7fgJdQ83OEEgiUUIhlE61gZrEz0vXYctsFpYC8xRerO5WO3cNWJaqACsSRPt3HVhQw8Xu4UY4XoCm3cjCL1LB+WWgq49cSzekNmObWIWrzUyFLxoWI4jEPmG4nOkfSTg0H+w84ZblnULIcgIpk/7llRpZ+mUADQQUTttmpDJ4IzKhiG43v0LQ7373Rn/dqN/Jk1kxh8q8QsJ72bTmmI08x4b7TrwWQUh6fcC90ZQn6OiYzn9eO2ple986MJUVKv9wUM6HGSu3DiDdUPe4yiMPS3bFeWL5HWhW3suTQZLVd08lfXGGH8dSm77vKSvghvt42arw1BmCDtM4gsbuD9atwux9SXnfdFfCgdAf1+DREha02tNAlWtdSfID01vu0kvqvjfMLdNjxo6XFmJp6G/9WyvYVRy2sqP7Wad2cBJSgLpkbhsXVNC3wWZKLeUNCDprge+y++JsaDMD591lGL5v8+TZnVw/chku5IX5y4SnC/HTASXAgmlokJoQqD6hUXEhXD/8IkjmUs3vSnFA0khrcRkJMSGfq/7qhalfRIxsW4dhgT//Ge/LfA3Ixva7oxnSeDvkj+Qr5ikyBHOlPtogHlkDe7qwsyAgDetHR/1WchiSfKSH5BYXO0mYnXesf7NIooYZEvBTqWfQez3MnBdAAIl2UMGIS+n3Fy1s511b/xfDVLNFkQ11Xm6P8c6w8s3jiq5k3Sb+7pBGOziXw8Z3sFHKHIWJxtRudZ1SeO3wrDlCT6jz+CLW/Mn5M0XvCREngekZnvzhWz9bGWfOSa75jxKEOOyNzaiivfxOc97/L5Mj16yipMTDwEDA/nmqPTH6wUB7G+SBHaSSacACtPqEkAYkwUs59kBDyrHBsYp9vEWsSFNZa9jQ4rOieXNHW0p18cSXZ7Ot+H0MlRovbTtTQM8vyVdunvT0mgSOsBl+psZNNZaO57A0DJ8myA6rVBYPrfHPvMtxRIHaN5i4f3Rgtn75X4s7V8US2euaGd45eVaf60tms0ccr/8rFLfiUtHbbH+ZIKLPoevQyYd/LNr7sw6PlkhuJQpDXJW6QqFUhrTjedi6eRYbBEnL2mBLHb4+00dWkFCsT7YxiTQu4khtcilwwQUCSOtoq/KBUsnqIxubgvmcL4xvTZNRfG/09nmYCskYIQM/eeXxWJk4M/oGCwFWkb8mpdLNfVZ+WRdQ1ILHhoNQCax1KE67zNsNoRNMPu4R+0iMz9aO9Lf/+2znD6Tp90/gHmrWWZTw/VuqKAuZ6VsZj5mDsiSceqYxKWbGBj+3mhu9OTpz88BCNWZdtaG6ivOyCyplHD3GjONgYATbg/pKcYKpbFbzzl6nV7DXtoPLd9y0a8K8G/qRsB0DbeoLJlzMmyqFzmB5M/Y5EaREGBkvxtneZqBsiwfVN/8GJ1Nh6APJ104Z/UzEbyEmBASsld6fmrR0wdw5q/4s+1IXTM+hs39/KrsSza/dFo9U2iyCPz5elSP9D9o386p9IpJbmpAcCRmWhnngkHqkiO680OTFBjtp5arFqmWUagDcjim8S1fpfGMS9MbpY9gOPn2AW7iHb8IUAj32tPO4EcwYnEbppxsabMJlw0E4KLkjTv7VQBJGvJatFyTOwOD00PPquHfwlgxav5Jf6mScNnUl6p8tknqTkHz0vUBwyv8lniOmTxRtWvH7q49TB0pQezyeqx3sZROA7aBwKfpNX+XV/0V8V6vbok/MSZa+/Rpy/0xg79Lc6ynL3/RnH6wSJ20qbaBtpW27PmAfmOlnzcTcLuVYuloznrLago4CMRl9Zi8ZNozdRnYW9uuBGgEvpbue2QY5jZVsYgUcEabjYg3G/qBZokCGPM0zoJXlqsBrtgJxN4e4jZZMxewAXV/w3SLpAvL4T0FIEczeqNz4e5GQ0HAl71/C9GZ6AGhwJPjEZ4V6ZZIJHbvYWaBmH8/T/viOsmwX95saHepAzExyuor3E19L+XRMX50yYkgOYwNFo9xH4Yg1S0yFnKBIY1h/JhTBz2kEd7vyJFDx/1EBHQy/PLrJcv6PHw6zBg37cLJ03j5OVWacCOqNwBpM2chdHLpadO9CZaTNk6flvrPFnmmF80AbEvrCVuIKAMaUadAhpvtE3CKV8nlKcGTuuZqzgCNVhF7CzHCER3dc4//Bt+VfbLysxJA0qS2G/i/GUmKNVdPXQKHeFccuRLKnIKt2w7yXjuLzaTLyEYHIIPMhWkRusEqkCnhpvdryL7dgbyhiV8IaXN0GkNvXBY2hKwi8A/nt0BNZM2FV5ZfVokQmlVzEtvJB44SvoUoU/miEaR08fV4v2KjZiAJlAFN2u61wAxAG2XrMr0HSw4XiDV7P2q2njtsfdYQ86LipG9XIHYeaXB8Hjfw63H9St5sBOkoVR5ycyn3QAFY9XC0GPHZ85cQ7EJSWpHyzu1M3Qf9Kc9aS9Gwds/fwdPAf6rZ2QuFdK08lhULBZwlvX61Kvgr1ahV+ikOIHBbcib28jOTfP/wcOZcN6BIttNAATY9Sz1qL4plglP2s+Pt2dvoXS8B3Y1ThRkbR4b6KsadAApCvwI3DXwVWhK9+lqEDxVCAeF1E6vmQviaPHSqSRgHQcqEK4AOQd4e2AJV3SoJaild6QQ8fkHoyJ1F9o3RiJDHAbhnj0ZbFmld+ZHcRwGr8pYwln6LwbK9VBXFxXOvq4qhOmdBTWRtt70OvDLv/KbrneQiRpcD2B1rx1eFuvdB41kVkX3VWn436gS9/ev0dnHvqCZSUtb5wAIY0f98DMYRDhBOZoqHDZKGHe59AoIF2Rk5hgNt8DCf9YhWK2BQD/wFtnRp51vLe+7KJ4ci2UdYNgzEqMCOxF0NIFc2RyX0cjwEvM940QpwUnE1b0IRyolzg657bjWB7Y3tWtA59PCaveh+tkdI2hFhgwWnn2EyqgQBVhhfwWG98dq1WaWbKGbDywzrqGpevP0CqV+6WirsQT7W7FaEja2VNbnSbkZ215DGeYltwC9JkXNepo8Zx6ySfoP8wrkdNNOv4dEt/JjHoG17XTsfcuYKuCTflHU5HdwTxm6zdCrRkx1kvn6CmMtsYfJMoZNib8OSlcrdyzkveVa5DPj1HAl/ggn+Whi0L16Xe7PEuaQBSrO27a/KPj/p6f6IDor3LxPZ2+Cei/wIt6tFCzzaTtmdJCU/jCG9ZjZEToEkAxqf/SJX6r61F+l2+FfYrCqCfGdK0mDWnIZwfD/WBsAW+fpmC4admTerfHWytUkUnAEnOyqNGehq4r2Fdl3wGs6XnhYsjkm+vp3YnVaWWSLCXwlSIeU4yNrO8ifmAJW/LireHA18n4ZMd6hDlUjQm5agqVR9S0L4J2eZ1xbmhsOXj7jDnkQxx458RGp62yfky+NhzQ4P1LLTrtkjU8zXlQtXGlNNBhwNNDKxYCYt3CnHx+j9PtocdpU4FTvAYfYtg8S8kzm0/odLzQwNKSow+TPD7Tjhj1HFe7Yt89t8UlLcOxtqEBEYfS7ciflm/ROPhNqoiDH7kZEVL2bl1+I7ngT8tjCByo2WWljfudI6yUcbAt/sxcGzqP8DVcMfQga/v44xfayD1jg0xQom96DznIEcOI3nXMrp3/1agYfuPI69FB0fXd2RCKjzSaHRN91wKvSgvSsfRoBQmyw2uJRZfXVL5BLNzke9RfFdSuyIYocyXIOI9i5BvqNjlCqolCJp7FHFgX4FdPvC2pG/G6lCjmRp7CLPCaezsNWUpqopXjfkBX2xEUKxbWDEjM+474+YZ2jxMk8ZrvN8HZp39XUNHtp5FhODk9JXbI5xX7m9rIkxHHKGmAPmZ1va0+tJKnQ4mKhhMeTkONqn3LfBWtVi5TUSI+F2WbBV5u7YkApFBOK7btkM/fjDSbRTPXsgaRSpXRGMd1/nGSOtKugJ3Ben99I4pWmFSQC9TVxi5kCkGGvzEkeM1tx8+6+oHiNLtwNOIys+xVtdaw78zuv9Rib+e/c6infE2s1amp6Sfzy54eA9QZ7kHz71mgVHVLBen2eQ5ilxTsxoF0VT9sJZKY07G8/7t+sdcer/ZkI4pEdU6fNzCVsZG0LGAbNFZgQNSpGZempOLPcQ0fwZAnbwAAO4GoSvXj1sCSufNt/QP8uYWoacMKXRWQUzE5QQpMjprsUSIANZoEJkWvkfIqGTXFJdNQZkdl9L3F7clE5QbE6n+r3KtYX8vpFkIAwkc9bs5ST/OriQUrXawrbO2HHM/dtJ4+J5IRHCoG+KPDc2NJW2TuneeL+ELVEuO9IjzgvRo9DrzugekT1T5Ri5p6m5VMkeNwWWrs5/Qdna2TJ0mgzR+SDagRcvX+efgaJtPRtq2UHO7LxUJqjqObTygwGcbeDTConqN5yug0uhY16C/kInm9PI0fvdKQS0VYqZ4i+brK871juOecfcflnsKFpW0i3tL/xdeXHIwzrZKlg/GIR7H12fELUjt+rCFu4VVOwDjRqyFZ/vJbvPOrqS/kXG84A+LC62GU6RRDQUm3Uio/Jfz2EwmWL+YiflIS1yMaWnfm+v0/eLMWqLvB7d1FnCYitE+N283isamyef6aF44dChewJC1t6F+yrR1fv/2fiskTUtfFjLyivenzSZubX6ejekWxpI5PSdpsDN0Jg/pheVV2cOlES4Cy0GI0EZ2D8UYmzfWGOPedaEEkximyRfbGqdID9NZskZPVaV4nkDXhw7nCJZRBjTl+IbCw3u7wdMdaN1tdTVFVScJPcS036XLL2ki1cSCZOHWTB8hwD7yKo+b9pxu5BLZtyoXjt6qwznbKEQrbFbyikHBBjIp531MsvEERIzCXM/PvtnobhbYTnHThwGXqlTTFsF8iu7gwcvpon0Ov/EFMoGfR/xaSdJ8VLOIrblL6ZOCQnNG3HOW3U5pvL+uOtubXc03ryGC2SPWSnvqXE4f6uTKdzHtkppdU3jqCMtsJC1PMQF/d6my8gBAErJ5ibZcr5xB/Vn6ZBV8WDAuPrTM1ILHAWB3Qi8XtvMSiy/wGAkOn/jJuovEmsAflBHaKEQCI3Dm/Xnsy35XMZ0Plc6oA/HIWwg1ZV+asrjKX1ViPV22Ipmdv6hq5ytVw8Np5xfF9XYcu/YJaEltN1ANp/SlfmxUQ8j2UR5sZ8x5q/xEwXiXhJzXxMrR8TiMtSMHfSBpWo9Q41RvoapN6NaOv4fKKZE7ka9CvuJJIwIPl+9w8mnp0KbJ/UrBe155YVyNOZ/Fx2zh7GC6xrqNzh1dSgKmiim4G7OtfH7mGEsLNGtRA9ZvmfcHSU1IF6L/XPnGF+qySa8i24TqasIT+rQgbnsZyhoN6h+MN+U/gAJdA8eYB0sWh9qZqYKWDfiNg5z/bHRNosIiOcbbKK0NQhGAT4ohu+iYm9Te6V3s+ESiXU8ftBVZHp3TwZ9vWPlXV1mJJXL66t6H5YURKmyvC/Yw8k6z85q+B+zVwbDyXIURAd8Ss3MFt2n8B+8OrkkXLly/f3Zi4v/bm3aDR7L6b1QTsX9JdGMgOiulpjKZMFX0TFNHrrzpFJqCkMC7OGjfkKHa/nqMCUySrBd+4fHM2vLtklSwXivtUD+6TmJSngTkTRfGvxqHGfq+I8J/Duc5wgbiv+TD9RVRS8YMm4P5gjlaFlWKCWipLalxwaDlwQzW7eXk+Souuq4WcmFLqvR6gHSGD9ZkPgVikOP9H+U//XrAXMYzeKiaJHLwouORceeiMQBdqVUmx6d6m9K5/Y4Av8v41oLLhn1peue9jagWmQbt3k9/THsne72pDs4WnhflE3XdAp9aT9/MwRTvkIuf6R+lZ+qv3NJ2S1DF7ICH73wfB4RyUce64N0iy0uBzJct0RaZy3waTz7JQku3ukar0mjv7Br1GMOWw6b2JNi/m5x1cQCT1AdtrEnQY88c80/6vkvzWjPzspMTcq+GyJCMgoUuVK8C5z8sbWwXTrMmnhRBXBwrICtEPHSeEDobZRayt/9p351l/MzV+dIKCL9kCgRUIFMjjXmeURMCzVGT70K4gIaABdbV3NvClGB8EXzMcAeOmh7Xk5kpVgTZ4drGPAJtReJQMXWQlU31aNCUMOdW/cHpne1UbIsCYRI8rTqT0jEZUc9+In4i+a/TevguKHYtJJ39f7DN6TvAToTNLwtuw2LsA8ftKgdPJ4oFlyWkQuN45VHvavl7jt5Yks9O5Po1N1MusA/tGEDOrR0/ghThH0sv6bab0QZx93YDcU+WNW1FprzuJ9G6zTpTHpMntxTvGprXw+6d0UPCbqgwVRYBmp/UgibavyiIbRQPHEIP8K/G4AVyaH690J27F0n1+XpY75uWGI+w0SmRgC1RgCzuLJJYJpV5W1YvQ6n1WACg8jZcV5RMZLWkQeCczVY+YL6Ik6CLaC5lCxPIVBLYNd1Z/5wN1qX/sUIIuYIkBSva51x9B5iD9r1+lL3UalQ26KrgU4J/B0UFLJK2qEK/LXKdwxYrWiwFtTew03hXtTJ2wVL+CeYQ0SWrEojEvYWWi7rQLiC2U+OggHLXburcw/vFxElf09wqkH7tOrvwXpWZr7JN7aoN9BUjPd8QVGG61LgGkWjrXvpXQFzQbe6EMxOYmezns0BDrFQRhQArttG8hvOvQw+7ahNwMagPtIxndv5jvzkNUs6hZOgiS09/v14Ui9Mu7MyOG6NMo9UGajfajjHLa2+oWzVEN+Rs8yra/JUJi+k6qUZ50TIk8hSHNYXvMPpQDD0pt+XAnCccGN53PWu5UjWg7gr5izd2njydSZF526Ci7NUkivlx3Qabz6rV0pgkheAY236k2JzAmpYSmhHG1cRX2cB4qowvhK/rXFERrQEsI46KWj2fjt+KqUH9CWsaB8dOzhAA0urhq2KOhUDTvgMHYL2I4pxa2Hp4colY9vb7Fc44zJWgexR3q7TGyYiuvQgc0+PvZ9TN31EqGbqZqmPd1u4GwfoxLDtfBymPHo+e867E3tGr/RBun20i8drq0FT88KF6iZ7i1WcHCZVikU/9+eWj34P1d8lD4IogaUUsuHge+cWqEES8zaTdrP291eoiM//uyxncqTShZL9uwaF0DwAR4MTaob11yEIptRzNOGaJDzfesP/lDrfBCH+/6PEhx9poSmXzrgECf8Fce//ikvLT/GyzQCSO5h6OVrhlY2C09hS64NIYQQQYgMdSKSryL+5CyUx3HlB9PwLkXpKoRAdQMCFU+umRFnB2tzXmfvNNaPUMdoxqtSKbDurd3+62QnLDe86FuddftMR2d3G3vCnXS94WrvlRvc2+8Fw0kOmWCKlS5MHK/dSQNZT0ZInmQmxbONQJi3+j9AeejG340jUbqCyMSBKbbzued6AT21WcIANBUTZPAXtaEl6idjUoon/UFQe3IBBMyb34+dOObDBVnhqGU5nISIyp16bcuwQUTfdk2Qxz1IgxAVeRLfHTS7qkoO48jXzo+1NCgqTpKtTJkg9WpAnxU8Xem61jd7b5umBpp4RYbn0cbjmmtgaOEjsdbmck+vSVHB1kzd7eB+ByJXgfrCSQzgURnlGJh2aXOAWG7Z5jNBEYqicXZyiuNQE/sj7RNh0eFdgTViOrIxLF0EAAAGIwWwTB2utzzoAan9irn+E7Yo9ePhDs4xZ4eWFWB+MPvuFsELC/KWw/pOQ05TLxwScV3Gcu5nkn5oXvab+/UC9YaEC+8sxVRTv5p1xbmKEbiu6QGXRK4Oj/GU5KuDKWGq9swiI//0d19oLSJwhsHN/jtYN6jrggVOglyJ/12qyHbh2n0YI1btT94XNx4/wvtdhHutIgg+CSwrZox4XotZgfvAa3+iL+hlXwxCzJ9lNXgiWR30qOTLAqBdlu0T8Fn44g0yLY0fWD4QnpolI7EXSMI0NX++OiX8KweLyNQ8x4tofM6kOA5UdI+OB873JbbjHiaHgcrxTySdyA4DRhNNSgM7jihfEy18wndqS3iYs7yqxZLcd8HQ9VKn/TOMtmV/If8n4yXU0bIXYsbdIgWKaJ2mrrdxXofV5wO2aljkfTpmKsM62EW9JXlW8SRkw9Km9NaV76sDc5uAToceng3D8wS93lBueuZNQNDdfJrpqdF1prBtjvmvv7l7SGn96EJ7KkgTmCbS/ipV665kxrMNQNLZZIIjMar30zWwAzPa7yiXMtqQpKd8oQFckGePvrdP6vl7shsjtjHunrydqBZ1OxP9oqVDbHbo1zWS/Nty/zh82v9D+fVxHXbH/kmlYFRNyIPfJeGP9U7dtyPhjLj5Qb9KUCpLroSn4bWDwyDNnLjEyvr/6ilMlNK79iZPAzFljYK2Ej4E2F5QOEnVHZWE2//5SlRhaDp6UxsV9aJzsJ4XMDmsSaLBpjfDHnLpeM6jlW9+BRGhC9nmvpjq7c/lkovfwJrugYPwcAEbkPj7dHLyRCtPGq12ihz2wj09prTiQKp25Sq/1GdyALzFgoWsugHclDH6CXrK/7OEiGCeCYMgglYNgT+jMnLW5QaF1BwXxkmKjK/h/sck1jRjaKmhx9kS9rjYWeI/IdmRN+eMLDCHbzn45Y0CHN+t0WQpvvjsJYnZ2GDTcJThAQFAOgDcG3QfA0hhLpkLoJXMQ2cTtwmCDpSzHGdO6PzWrv+cOFx5cO4y6f2mcDZ9K3FbWUWsRgXFP4TgUEtCLvv/QKhyWlLAb2gu9P7PB/szhDIAlfLafC9qi4tLm4jBxXMoEwWqtJ5a9td+dnzoZqK02jXu6olBXYk7B9mg0V9MRRWCOWSydr04JwRoHZCk+T2e5lmJS2uzbXOUBmvIzkBbVh5HBVJHXrxyVYunMnKqG5sv+57R9JDMDHvRIGJC7GUN+ZNjhzXCPDeYQKwaWpRlsnzi/0XRrXGQy+GuUXVD8WBHeU7DAekuZMj8HSAKdpn/o+YZJdXtZyM8S/ZA58jQVldpgfgH2dcqwj4+x/MNIldJbbDyC+h0K/KTmJPCs9es6O+bXFyz75VEdW6fU9JGZaOxgfWdX4w+FLwlcrT/Ca7uFhs63rW1d0KwkJ/0Tgn+KOh/Uh+Jsbsqk1JqL4l/+eJYsplx71vnnggXL6/N2PfTIaRPO5LgaBk8H1GQDgMIGLhPY/vItnl0qbMciC9j3xgcCseWgBc/5OWpCv8fUU/cpDg2I4NUVGjCL6+fuQHLZ+X6SFsOrVEngw5k7/sZFW4l6en8qlU5jB+GX49CpmoK8qmiQ1qmBvh13U1FLY35v3Vm5SZx9iBTNwrLn0wtsPgD3kXx8igTzQykPHc6m5ogu89uyyEugVVwIAedZjUQlcs6vZBxZeY6PoBdV5+NOm98S7+0imMzHpzsu3AHT7onDmNGC2tDvWbo5/IzO9342yBkCql1oTxZvEsMMrvMkxjkiqzkRG+caB6KjiTgfCbGi9STqgXvYMtI+PFmvb/0Nn1bOYPEBycWl4SFxnUIotFbgmCyae6+fM8rT2J1vWumC2blYAIAbMPGNiCdTAh9LsQePbUBBSimiWsaQ8+PeTyv5iObtfc2/kfpLoyv/zblO7per5QQShNZL/KW51FxyVRpzSOTRTYkQLqQCscGBh9PX0L92Mjw77aEU7igSYfmgCipzZEx2q/hylWkJu4KifXnl7xF+MwkURAQiLHQW8ftcAMjCdLRifIMc2Qzb5+XpgI3eOMG3sDizJF0jEoCOhjJUNhaPoNvewBqgeR0bUkIoG4x4JYprZ4yC60K5HgUFz6ik2vnXeoRu7sdxBMpDq5i31+ZnjFSoESTaKup+K1Jz5yHIMkxD/vx16QatiU7tuh7dIeKrvBNwrAO+SAiVXv7Rg39oBH+M9lJetfz8WStxx6Bm7FFe/v+CZZ029NX2pmDeqCLooiXkOD0S1R1WhtCoahYpuwFReN2KYmSpM61p1sf7f+09MLpMVY6gSCtVkVqBygWs9taDuxxCXTPldENenvxTrHTqICzw2W9pLxBuSoo2f2Rbq8BKNaF+zt9MVREXxljo+oBaVGFMrHoXTVAh3bdSzWDzy7nLoFG9u4TG7u05V5+GtxOn4e+T/lBgznlhpwWuelNtqtZ0trleTQiyc+cmguqsUCC10MqvumGb5nNo5vU50o71Q9jx+BNwjdiFYe9B+FMTxwHrUBOC+6EGETbQmgsqBXMHHC4vjgRsxVUczw5WWghcc2EDimnQLymSNjPmv/5+7Ub0mcXnm+7Sfb4nrMEDz13VQdi36WqGZtqiaumNGVblrViu4+V7PAJQk7owCZy+2VF2LHUKYd9fl9k6PAO4HCLk0v/jMGP4Z0+L374Q9ZEBvlqn8BBEWD8B2P5CBueWlEXZtzQcqJOdDoh+GO2ySMuXFteTfsSP20NPDoBsp/J76jukI5Ym08ENqeAzxxKXG5lYzIdSMfzUGT1936DgmOmquBQ8o7nYEsWdw11pxeYpiFoVAdZ7v4j8SD3jRR/vkFQYdu3zL4LDhXX9H2FWEEa5wdw6juwIpiJjbkD6yequqeYdJ0S3RgmMBOebvhPJbRFLfpiIkTw+SCofe8RsNFbf/OG5RrFBFbIWmBMXqFcBT/f4ZtpxujuHsFZ+N5d0ibjXU75mKJ8p3wBIX0PBg1I3KYBbkR1hdRHcOqGjhpKVRhzBcMrJ6qLoUoVRqXvnOT+BOxOgde5UZo+ANdw0WIR3JwOxJh9FzjzAobk7KB5wgfY8NVEocWd/IQHsNvv7wqs9x6k/it9zbRsW/kT+95yeLoBWEq9wVQXVPczkC9dvNl0tVKrvXXxft3G/fRr2gn1EC0Pj+B7rgjyfUwTtYy7ZwJ0BXUIpOyHe9ioB/16yVBhvDHG1oeKOZTaV1rTB2BGv/PQDcKpePRnwHVuo0SDAFLbciE9E9fFef1rZUgZtWqWwTmxy5U4dG08MkTDmvkNV/hL61E5KH5EtitF6BcLvkiM5YIFlZXGycQK9B9M9GgvrUtyZUaZjHT9c6L7U0Effov40tOsBZEVNnY2mE8Z0SYADnRC7LoRrqMrikv6oLg3Zse9eY7dYVU8PpdURE7a0nSI5KmiTAgdx8BFp2s45cc7ZD//btn///Qz9M7dB+SycVx2GMmDrSvQcDm5XndnQj5crcb787mjrJ2oA9DXT0Qn1fldehLUWnUe37K3Nbv95XbV0C4Sg69cqW8HMo7PSVLHja1BOUtl9WZLNy63QsoiT2u/Kc/WCvtP0SPoQCq53cZ6bDeriraEr8jO6uHR0HFUZTw8h+NtLqQqodXowageXkK/7WQrKzYdaJs6MsgTbeOdygKlHDQiNLHainnhTis8mwpyj37Zds5T5TvDATUNjJfa8cz5Vy9ud4B5EOtC+8KY5KpdNkP8eqGhGyQa689jVIhHE+uaV4DmsZGWbQ7wJ2DWEx8ad4oc76cZ5vGMOt5qrQ+AIumLbndrt7itHQ+jHSqZHq6tBbeISCM36Gf43jcHav9m3i07TSnzN6BWMVF1I63k0xcc/2dAbb+h8FxUUSB7Z+tBQNWZ4lykGovjpJgE6rp48rRktVEqr9rIo8dTvzJyvYqfORq4ee/bMDOlkTcEDOs/K++F7c1b6b2zGo/lw6UFjglRpHIcEU/OCbuyvSc0MycnVRRuuT2hSMjEkQXqhtkEaWjj2R2TIzCIyKMGHXKIKgTPAiznk78CrqaIqVSiqJ9zzEHvRgyiMGUsGufrGrYcWhf5CL2xUPZXa0t2d8uoCO1G0ntchTq6LRQC28Y908QqqytiYhGp+7vEXJ/MR1AvTnwmgsR1zd8VMSy8eWteXw3+TdUsistwc1hL7TFHZ0alhLVE2Y2CtL9L3OcKKfp5Gmy/mrhp2nqOfqJRzBMMYoMS3md1OsPCYdk6YNjy7qmiYCRLKNhZQbJIYAvq7v7uMRv6FS+YvsWYNnEngyPtIV7K6H7dyYWufM0uhSdjRPPj2qakQWIHFjtx7ckjuN+S01vW9ertSdYYDJPtobvyknjTTG8gKBoNFqZEI+UVFR8ngEyVxXKN3v9PV4QpeJJkXdaHQJ4C2x3uw1mc4uvF1r0BMkMrlTXNR320VGtA2YMJ8Q1NaW6hHs7zc6Zgqf3qszdVLKYbxcKUBZTGmYpvC5Six814vHaKxeS1Jdqm52lgbhl5jGi+tP0CUqiXYeUmgcH3Hyo4//j+LvKoPP+ODCJ5QKo4GU3VIquNbIAzhoEamk4RYWGOB/iuKY4gqqxETNG7HKr0+WAYbRw3F8bw0uWNlroq8NdtqzmP7qW41Np8b9LtgT3pyj14Q9sHtAfPtjyPSD7Lr1xTK34o1lYgCpKAMpFw+Zf6xZwVH939cIytxI0JEkQeo2J4fE41Ka0QeOm5eldcP6bUv9AGFEZsVky0F0S08d/aLBkQVdzOd4v80mWJhvW1PF1NqBxmrTtT5nnmr5seJXzbOQV8ELjJtGlfP8BjOC5mF/0eiIAOxDpEQuEXKo5ePLSukJrDj8639cn4CP1VQzOlSNLMUmL4pS44F4tr8zW5T6iO7P3K9siQqXDCkzjb+LP6klQJl2BM39ki4BsZjq44SI/0RzPOHcrbVtHYR19Ri1bA2KS8ACvtVbhymy4c6CPNoexWwY94nnpAatJtbCD3b20/F3CO6cHTaBuW2vIEYe3TB89hZlP53L+COIB2ATtwG314jQC5CC9/V83IF1F7fNLp/pVtR3lzM0xhHeIFkJQJryj7ZztM+hni7BH48srHAk/822LdSaM9d4W8V3Od7c24iw70Azy4YY/13VLpj/Qw40hrnRv7o4drUl/KRXZJsBgWiwNH3EEFV8K6G6tvXs2pOLtiBVW4felEiPUI5ZW4H8fs9yPxuwmrfW5HZlBJH9+NFf6RrYj4HxvStBNAioNi3W+7DI4zFaVSBYmBnxlUYDOGwseo8O6UHYFq/UI4vsgdsdtdN41vwt7tbCI+QQya8lzFh0iKmI7QQxPtFiRAUxVdM73FFr4EZ+XizWRXUZXivbUxj4hP9o8r4APfbZVz9a+npzNqsgw0t1HecxJNA3I+Kq1kS4kl1yN2GLyw9sRI3Z3SUuk5Tx3uhjrM0lObvhH8xoXRGwNZ8anOWn/kFftYsZdvV3rtgOCy9ptJlRhd4Bl1HhxuqUpmqgYla/1xAxdCBl4vcytZopmdnBUjHg4+UTVsWzUuOQLkb9FmAV1VHu1/pPkBsKkIqcZmpIgt0E6jouVXnbiHk7Dkcm6SDwy0ioYEcOgGetxbBdEVI2e20gZGG9VRym9TefGEAABLe6uZhEmJwHszX0Sdkkj8y1Y3z0gXbduD4blWF4+cJ9dq02Fnpwcmdr6nBT9lG3zCtlDI4BDLxAXE42bKmpauVLwXaprqqIrqQfDOSCvRXkilNsXXvbkg2Ee8GYo0k2vq85yK1Ca1er/K80rlA4ptWjBTSeRvm4qNVZ9Fsgt+Xo/CQm42CF3xWzMRhn8tmeIJG6D7cDNmebe7VNuyZuwPHsVj9nxJE0j/wW+WYV6uX74lYbjG/+V0PO33JXfq0fPsszyw9i+3Wojfi4H06RBKJ4FmauSMU2A5ZIvBLli9zGSvtaF5BR6iaaT8stqfM6IAUmdhx/TF3lCYPNNIz3gKBH4Dk3uWQDKqg/eUKKUowmOZrDUxJPbrbm4Y0DhZVGei295cRsvhj5fY1J/Zwv6KsfDp6xvxsWzz2SA3fPlGJ4sLOUp3ZlTAMYZBhNkPI5PR1kBV/MBWnYlZIvejRJ+bC6oyOfqwu20l9UAcIPgvha8kP6KnO7Hsw3/UC6VLse7/P02WNFBmJgfyboPid/Gd7QOUhYrsttYyncplrPF5SFUfsBYQHXIS78oZ/8VcGv9X7fikNIhIIam54kig27zAcujUI/8Ig56dei2UVD1sworO2ZTsHwyMZrmDD+L/tcx/SciXMA2MvdOOJXQDXVmptlTx0dSZx3QP1ZD7hTo3wTlDAOeNeSUL82qLYtpe9tjG346apThdSyNtmFkYLgLoFhoqbPx3NcDuNBpeKEd1+Q/I7Sstfv3Cqq3fxdFEMbtbmSwThI29Vl/SPh6Zj4DUG3xWWpMSsLHIhWdH2AAAAA==" alt="" width="33" height="40">
+      <span><b>Estatuto IDPB-AM</b><small>XI Convenção · 2023</small></span>
+    </a>
+    <div class="search" role="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Buscar no estatuto ou digite “art 12”" autocomplete="off" aria-label="Buscar no estatuto">
+      <span class="kbd" id="kbd">/</span>
+      <button class="clear" id="clear" hidden>Limpar</button>
+    </div>
+    <div class="acts">
+      <button class="ibtn" id="fsDown" aria-label="Diminuir letra">A−</button>
+      <button class="ibtn" id="fsUp" aria-label="Aumentar letra">A+</button>
+      <button class="ibtn" id="themeBtn" aria-label="Alternar tema claro ou escuro">
+        <svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <nav class="toc" id="toc" aria-label="Sumário">
+    <h2>Sumário</h2>
+    <div id="tocList"></div>
+    <p class="toc-note">Texto até o art. 74, III. As páginas 25 a 27 do documento registrado ainda não foram localizadas.</p>
+  </nav>
+
+  <main id="inicio">
+    <div class="read">
+      <section class="cover">
+        <div class="aviso" id="aviso" role="note">
+          <span class="dot" aria-hidden="true"></span>
+          <strong id="avisoTit">XII Convenção Estadual em andamento</strong>
+          <p><span id="avisoTxt">A IDPB-AM realiza de 21 a 24 de outubro de 2026 a XII Convenção Estadual</span>, com o tema “Mergulhados no Mover Apostólico”. Nela são eleitos os Ministros Oficiais do próximo triênio (<a class="ref" data-ref="art-28-p2" data-t="Art. 28, § 2º" href="#art-28-p2">art. 28, § 2º</a>).</p>
+          <p><small>O texto abaixo é o estatuto vigente, aprovado na XI Convenção (2023). Alterações aprovadas na XII Convenção serão incorporadas após a publicação da ata.</small></p>
+        </div>
+        <div class="cover-head">
+        <img class="logo-lg" src="data:image/webp;base64,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" alt="Logo da Igreja de Deus Pentecostal do Brasil" width="120" height="145">
+        <div class="cover-txt">
+        <p class="eyebrow">Igreja de Deus Pentecostal do Brasil do Amazonas</p>
+        <h1>Estatuto da IDPB-AM</h1>
+        <p class="sub">Aprovado pela Assembleia Geral Ordinária na XI Convenção da IDPB-AM, em 2023, nos termos do <a class="ref" data-ref="art-30-III" data-t="Art. 30, III" href="#art-30-III">art. 30, III</a>.</p>
+        </div>
+        </div>
+        <dl class="facts">
+          <div><dt>CNPJ</dt><dd>34.585.588/0001-04</dd></div>
+          <div><dt>Sede</dt><dd>Rua Cel. Miranda Reis, 52, Petrópolis, Manaus-AM</dd></div>
+          <div><dt>Registro</dt><dd>RCPJ Manaus · nº 5.498, Livro 38/A</dd></div>
+          <div><dt>Cópia autenticada</dt><dd>5º Ofício de Notas · 08/01/2024</dd></div>
+        </dl>
+        <p class="proto">● Capítulos I a VII, arts. 1º a 74. Os selos verdes marcam o que foi alterado na XI Convenção.</p>
+        <p class="status" id="status" aria-live="polite"></p>
+      </section>
+
+      <div id="texto">
+
+<!-- ===================== CAPÍTULO I ===================== -->
+<section class="cap" id="cap-1" data-label="Capítulo I" data-title="Da Denominação, Natureza, Fins sociais, Sede, Foro e Duração">
+<header><span class="cap-label">Capítulo I</span><h2>Da Denominação, Natureza, Fins sociais, Sede, Foro e Duração</h2></header>
+
+<article class="art" id="art-1" data-label="Art. 1º">
+<p class="caput"><a class="artnum" href="#art-1">Art. 1º</a> A IGREJA DE DEUS PENTECOSTAL DO BRASIL DO AMAZONAS, neste Estatuto denominada também <abbr class="sigla" data-g="IDPB-AM">IDPB-AM</abbr>, é uma organização religiosa, tendo como finalidade principal, a propagação do Evangelho de Nosso Senhor Jesus Cristo. Não possui fins lucrativos, fundamentada juridicamente no <a class="ref ext" data-ref="cf-5" data-t="Constituição Federal, art. 5º" href="#cf-5">artigo 5º, Incisos VI, VII e VIII da Constituição Federal/88</a> e <a class="ref ext" data-ref="cc-44" data-t="Código Civil, art. 44" href="#cc-44">artigo 44, inciso IV e parágrafo 1º do Código Civil Brasileiro de 2002</a>.</p>
+</article>
+
+<article class="art" id="art-2" data-label="Art. 2º">
+<p class="caput"><a class="artnum" href="#art-2">Art. 2º</a> A IDPB-AM tem seu foro e sede social nesta cidade, na Rua Coronel Miranda Reis, nº 52 Bairro de Petrópolis, CEP 69079-310, podendo estabelecer filiais em qualquer lugar do Brasil e exterior. Encontra-se registrada no Cartório de Registro Especial de Títulos e Documentos e Pessoa Jurídica sob o nº 5.498 – Livro nº 38/A, em 26 de julho de 1990. Seu prazo de duração é por tempo indeterminado.</p>
+</article>
+
+<article class="art" id="art-3" data-label="Art. 3º">
+<p class="caput"><a class="artnum" href="#art-3">Art. 3º</a> Para consecução dos seus fins, a IDPB-AM irá:</p>
+<p class="inc"><span class="n">I –</span><span class="tx">planejar, coordenar, administrar e promover a IDPB-AM através da Presidência Estadual, Junta Administrativa Estadual – <abbr class="sigla" data-g="JAE">JAE</abbr> e Juntas Administrativas Distritais – <abbr class="sigla" data-g="JAD">JADs</abbr>, Ministros Credenciados e outros obreiros cristãos para o desenvolvimento do Reino de Deus em todos os seus aspectos, por todos os meios lícitos e, para tanto, estimulará a fraternidade e a solidariedade entre as Igrejas Locais nas seguintes áreas: evangelização, missões, ação social, educação, educação religiosa, educação ministerial, comunicação e afins;</span></p>
+<p class="inc"><span class="n">II –</span><span class="tx">promover a construção e a manutenção de templos religiosos, abertura de seminários teológicos, instituições educacionais e sociais, e criação de parques de impressão, editoração literária e distribuição de livros, Bíblias, panfletos, periódicos e outros impressos evangélicos;</span></p>
+<p class="inc"><span class="n">III –</span><span class="tx">implantar e organizar distritos, subdistritos, igrejas locais, congregações e ações missionárias; e</span></p>
+<p class="inc"><span class="n">IV –</span><span class="tx">preparar e consagrar ministros e missionários para o ministério, aos quais, poderá a seu critério fornecer credenciais.</span></p>
+</article>
+
+<article class="art" id="art-4" data-label="Art. 4º">
+<p class="caput"><a class="artnum" href="#art-4">Art. 4º</a> A IDPB-AM é autônoma juridicamente e soberana em suas decisões, e não está sujeita a qualquer outra denominação. Reconhece e se sujeita a autoridade de nosso Senhor Jesus Cristo, expressada nas Sagradas Escrituras, reconhece também a autoridade eclesiástica da Organização Nacional da Igreja de Deus Pentecostal do Brasil, no sentido espiritual, bem como as autoridades constituídas na forma das Leis do Estado, conforme manda a Bíblia.</p>
+</article>
+</section>
+
+<!-- ===================== CAPÍTULO II ===================== -->
+<section class="cap" id="cap-2" data-label="Capítulo II" data-title="Da sua Composição">
+<header><span class="cap-label">Capítulo II</span><h2>Da sua Composição</h2></header>
+
+<section class="secao" id="cap-2-sec-1" data-label="Seção I" data-title="Da Estrutura Organizacional">
+<h3><span>Seção I</span><span>Da Estrutura Organizacional</span></h3>
+<article class="art" id="art-5" data-label="Art. 5º">
+<p class="caput"><a class="artnum" href="#art-5">Art. 5º</a> Compõem a estrutura organizacional da IDPB-AM:</p>
+<p class="inc"><span class="n">I –</span><span class="tx">Assembleia Geral Estadual;</span></p>
+<p class="inc"><span class="n">II –</span><span class="tx">Junta Administrativa Estadual;</span></p>
+<p class="inc"><span class="n">III –</span><span class="tx">Junta Administrativa Distrital; e</span></p>
+<p class="inc"><span class="n">IV –</span><span class="tx">As Igrejas Locais e Congregações.</span></p>
+</article>
+</section>
+
+<section class="secao" id="cap-2-sec-2" data-label="Seção II" data-title="Dos Membros">
+<h3><span>Seção II</span><span>Dos Membros</span></h3>
+<article class="art" id="art-6" data-label="Art. 6º">
+<p class="caput"><a class="artnum" href="#art-6">Art. 6º</a> A IDPB-AM é constituída de pessoas que aceitam voluntariamente as suas doutrinas e disciplina, sem distinção de cor, idade, sexo e nacionalidade.</p>
+</article>
+<article class="art" id="art-7" data-label="Art. 7º">
+<p class="caput"><a class="artnum" href="#art-7">Art. 7º</a> A IDPB-AM terá seus membros estruturados da seguinte forma:</p>
+<p class="inc"><span class="n">I –</span><span class="tx">os membros Institucionais serão os Ministros Credenciados e seus Cônjuges que se submetem e respondem ao Estatuto e Regimento Interno da IDPB-AM.</span></p>
+<p class="inc"><span class="n">II –</span><span class="tx">os Membros de Igrejas Locais e Congregações se submeterão as regras constantes do Regimento Interno da IDPB-AM e se farão representadas nas Assembleias Gerais Estaduais, através dos Delegados.</span></p>
+</article>
+</section>
+
+<section class="secao" id="cap-2-sec-3" data-label="Seção III" data-title="Dos Requisitos para Admissão de Membro">
+<h3><span>Seção III</span><span>Dos Requisitos para Admissão de Membro</span></h3>
+<article class="art" id="art-8" data-label="Art. 8º">
+<p class="caput"><a class="artnum" href="#art-8">Art. 8º</a> A IDPB-AM reserva-se ao direito de aceitar como membro, pessoas que, mediante conhecimento prévio das atividades e objetivos da igreja, comprometem-se a aceitar os requisitos deste Estatuto e submeter-se a disciplina adotada pela igreja através da Declaração de Aceitação das Normas Estatutárias em vigor, inclusive, confissão expressa de que crê:</p>
+<p class="inc"><span class="n">I –</span><span class="tx">na Bíblia Sagrada, como única regra infalível de fé normativa para a vida e o caráter cristão;</span></p>
+<p class="inc"><span class="n">II –</span><span class="tx">em um só Deus, eternamente subsistente em três pessoas: Pai, Filho e Espírito Santo; e</span></p>
+<p class="inc"><span class="n">III –</span><span class="tx">na liturgia da igreja, em suas diversas formas e práticas, suas doutrinas, costumes e captação de recursos.</span></p>
+</article>
+</section>
+
+<section class="secao" id="cap-2-sec-4" data-label="Seção IV" data-title="Das Categorias de Membros Institucionais">
+<h3><span>Seção IV</span><span>Das Categorias de Membros Institucionais</span></h3>
+<article class="art" id="art-9" data-label="Art. 9º">
+<p class="caput"><a class="artnum" href="#art-9">Art. 9º</a> A qualidade dos Membros Institucionais é intransmissível e intransferível, não sendo permitido o voto por procuração. Sendo classificados da seguinte forma:</p>
+<p class="inc"><span class="n">I –</span><span class="tx">Ministros Oficiais: São os Ministros Credenciados que ocupam cargos nos órgãos administrativos da IDPB-AM eleitos em Assembleia Geral Estadual.</span></p>
+<p class="inc"><span class="n">II –</span><span class="tx">Ministros Credenciados: São os Pastores(as) consagrados(as) e reconhecidos(as) através do credenciamento fornecido pela Junta Administrativa Nacional da IDPB, conforme prevê o <a class="ref ext" data-ref="idpb-nac" data-t="Estatuto da IDPB Nacional, art. 4º, I" href="#idpb-nac">Art. 4º, I, do Estatuto da IDPB Nacional</a>.</span></p>
+<p class="inc"><span class="n">III –</span><span class="tx">Cônjuges de Ministros Credenciados.</span></p>
+</article>
+</section>
+
+<section class="secao" id="cap-2-sec-5" data-label="Seção V" data-title="Direitos dos Membros">
+<h3><span>Seção V</span><span>Direitos dos Membros</span></h3>
+<article class="art" id="art-10" data-label="Art. 10">
+<p class="caput"><a class="artnum" href="#art-10">Art. 10.</a> São direitos dos membros:</p>
+<p class="inc"><span class="n">I –</span><span class="tx">participar de todas as atividades da IDPB-AM;</span></p>
+<p class="inc"><span class="n">II –</span><span class="tx">votar e ser votado para cargos e funções, observando-se as exigências estabelecidas para os cargos majoritários dos órgãos administrativo, com exceção do <a class="ref" data-ref="art-27-VII" data-t="Art. 27, VII" href="#art-27-VII">inciso VII do art. 27</a>; e</span></p>
+<p class="inc"><span class="n">III –</span><span class="tx">convocar a Assembleia Geral Estadual mediante requerimento subscrito por, no mínimo, 1/5 (um quinto) de seus Membros Institucionais, contendo no documento de forma explícita os motivos da convocação.</span></p>
+</article>
+</section>
+
+<section class="secao" id="cap-2-sec-6" data-label="Seção VI" data-title="Deveres dos Membros">
+<h3><span>Seção VI</span><span>Deveres dos Membros</span></h3>
+<article class="art" id="art-11" data-label="Art. 11">
+<p class="caput"><a class="artnum" href="#art-11">Art. 11.</a> São deveres dos membros:</p>
+<p class="inc"><span class="n">I –</span><span class="tx">cumprir o Estatuto, Regimentos e as decisões ministeriais, pastorais e das Assembleias;</span></p>
+<p class="inc" id="art-11-II"><span class="n">II –</span><span class="tx">contribuírem, através de dízimos, ofertas em espécie ou bens materiais para cumprimento de suas finalidades estatutárias;</span></p>
+<p class="inc"><span class="n">III –</span><span class="tx">comparecerem às Assembleias Gerais Ordinárias e Extraordinárias, quando convocados;</span></p>
+<p class="inc"><span class="n">IV –</span><span class="tx">zelarem pelo patrimônio moral, espiritual e material da Igreja;</span></p>
+<p class="inc"><span class="n">V –</span><span class="tx">prestigiarem a instituição e propagarem o Evangelho de Nosso Senhor Jesus Cristo, no espírito cristão;</span></p>
+<p class="inc"><span class="n">VI –</span><span class="tx">abster-se da prática de ato sexual, antes do casamento ou extraconjugal;</span></p>
+<p class="inc"><span class="n">VII –</span><span class="tx">cooperarem para o aumento e a conservação do patrimônio da Igreja; e</span></p>
+<p class="inc"><span class="n">VIII –</span><span class="tx">sendo eleito ou nomeado a qualquer cargo, desempenhar suas funções com presteza, sem pretender ou exigir qualquer remuneração ou participação de seus bens patrimoniais.</span></p>
+<p class="par"><span class="n">§ 1º</span><span class="tx">Em nenhuma hipótese, seja por dissolução da IDPB-AM, seja por demissão ou exclusão dos membros, haverá devolução das contribuições citadas no <a class="ref" data-ref="art-11-II" data-t="Art. 11, II" href="#art-11-II">inciso II do presente artigo</a>, uma vez que foram investidas nas finalidades da instituição previamente estabelecidas e comprometidas.</span></p>
+<p class="par"><span class="n">§ 2º</span><span class="tx">Os ministros credenciados e seus cônjuges não respondem, nem mesmo subsidiariamente pelas obrigações assumidas pela IDPB-AM, salvo, nos termos da lei, quando ocupantes de cargo ou função com poder de direção, em relação às obrigações contraídas pelo uso indevido ou excessivo de tal poder, com desvio de finalidade devidamente comprovada.</span></p>
+</article>
+</section>
+
+<section class="secao" id="cap-2-sec-7" data-label="Seção VII" data-title="Das Exclusões dos Membros">
+<h3><span>Seção VII</span><span>Das Exclusões dos Membros</span></h3>
+<article class="art" id="art-12" data-label="Art. 12">
+<p class="caput"><a class="artnum" href="#art-12">Art. 12.</a> Serão excluídos do rol de membros da IDPB-AM, bem como destituídos de seus cargos e funções administrativas, observado o disposto no <a class="ref" data-ref="art-18" data-t="Art. 18" href="#art-18">art. 18 e seguintes deste Estatuto</a>, os membros que:</p>
+<p class="inc"><span class="n">I –</span><span class="tx">solicitarem seu desligamento ou transferência para outra denominação;</span></p>
+<p class="inc"><span class="n">II –</span><span class="tx">abandonarem a igreja sem qualquer comunicação;</span></p>
+<p class="inc"><span class="n">III –</span><span class="tx">deixarem de dar bom testemunho público, desviando-se da Igreja, não pautando sua vida conforme os preceitos Bíblicos, negando os requisitos preliminares de que trata o <a class="ref" data-ref="art-8" data-t="Art. 8º" href="#art-8">art. 8º deste Estatuto</a>;</span></p>
+<p class="inc"><span class="n">IV –</span><span class="tx">praticarem imoralidade sexual, conforme consta nas Epístolas de <span class="bib">I Coríntios, capítulo 6, versículos 9 e 10</span>, e aos <span class="bib">Romanos, capítulo 1, versículos 27, 28, 29, 30 e 31</span> da Bíblia Sagrada;</span></p>
+<p class="inc"><span class="n">V –</span><span class="tx">praticarem adultério, fornicação, prostituição ou pedofilia. (<span class="bib">Ex. 20:14</span>);</span></p>
+<p class="inc"><span class="n">VI –</span><span class="tx">praticarem furto ou roubo (<span class="bib">Ex. 20:15</span>);</span></p>
+<p class="inc"><span class="n">VII –</span><span class="tx">praticarem homicídio e/ou sua tentativa (<span class="bib">Ex. 20:13, 21:18-19</span>);</span></p>
+<p class="inc"><span class="n">VIII –</span><span class="tx">praticarem relação sexual com animais (<span class="bib">Lv. 18:23-24</span>);</span></p>
+<p class="inc"><span class="n">IX –</span><span class="tx">forem condenados por crime previsto pelo ordenamento jurídico brasileiro, com sentença transitada em julgado, exceto por comprovada perseguição religiosa;</span></p>
+<p class="inc"><span class="n">X –</span><span class="tx">praticarem rebelião (<span class="bib">I Sm. 15:23</span>); e</span></p>
+<p class="inc"><span class="n">XI –</span><span class="tx">praticarem feitiçaria e suas ramificações (<span class="bib">Ap. 22:15; Gl. 5:10</span>).</span></p>
+<p class="par"><span class="n">§ 1º</span><span class="tx">O membro excluído nos termos deste artigo, não tem direito a reivindicar qualquer devolução das ofertas, coletas, dízimos, indenização, reparação por eventuais benefícios ou contribuições que tenha conferido à Igreja; igualmente, quando destituído de qualquer cargo ou função nomeada ou eleita para tal desempenho na igreja.</span></p>
+<p class="par"><span class="n">§ 2º</span><span class="tx">Os motivos considerados graves, não previstos neste artigo, serão resolvidos pela Junta Administrativa Estadual.</span></p>
+<p class="par"><span class="n">§ 3º</span><span class="tx">Após decisão pela exclusão, querendo, o membro excluído poderá como último recurso, apresentar defesa ao Conselho Eclesiástico Estadual que emitirá parecer a ser apreciado pela <abbr class="sigla" data-g="JAE">JAE</abbr>.</span></p>
+</article>
+</section>
+
+<section class="secao" id="cap-2-sec-8" data-label="Seção VIII" data-title="Comissões">
+<h3><span>Seção VIII</span><span>Comissões</span></h3>
+<article class="art" id="art-13" data-label="Art. 13">
+<p class="caput"><a class="artnum" href="#art-13">Art. 13.</a> As comissões serão os órgãos aludidos integralmente no Regimento Interno da IDPB-AM, e, quando necessário com apoio técnico, composta por um grupo de pessoas, com função típica de APOIAR, ORGANIZAR e ESTRUTURAR as práticas estatutárias vigentes.</p>
+<p class="inc"><span class="n">I –</span><span class="tx">todas as comissões estarão subordinadas a Junta Administrativa Estadual para as ações de gestão governamental, na pessoa de seu Presidente Estadual, recebendo da própria <abbr class="sigla" data-g="JAE">JAE</abbr> a direção de todas suas atividades que serão desempenhadas, desde que sejam devidamente expostas, conhecidas e aprovadas pela Assembleia Geral Ordinária ou Extraordinária.</span></p>
+<p class="inc"><span class="n">II –</span><span class="tx">as comissões em suas funções típicas executarão as deliberações da Junta Administrativa Estadual, que por sua vez deliberará somente aquilo que está na sua ação de gestão devidamente regulamentado, salvo o que é oriundo da própria ação estatutária.</span></p>
+<p class="inc"><span class="n">III –</span><span class="tx">nenhuma comissão será órgão regulamentador e deliberador, sob pena de violão estatutária, conforme prever o <a class="ref" data-ref="art-18" data-t="Art. 18" href="#art-18">artigo 18</a>.</span></p>
+<p class="inc"><span class="n">IV –</span><span class="tx">são estas as comissões expostas e existentes com práticas de ações estatutárias e sob a gestão da Junta Administrativa Estadual, conforme prevê o Estatuto Estadual e Regimento Interno da IDPB-AM:</span></p>
+<p class="ali"><span class="n">a)</span><span class="tx">Comissão de Orientação Política;</span></p>
+<p class="ali"><span class="n">b)</span><span class="tx">Comissão Técnica de Construção Civil;</span></p>
+<p class="ali"><span class="n">c)</span><span class="tx">Comissão de Novos Obreiros e Ascensão Ministerial;</span></p>
+<p class="ali"><span class="n">d)</span><span class="tx">Comissão Especial de Estatuto;</span></p>
+<p class="ali"><span class="n">e)</span><span class="tx">Comissão de Regras Parlamentares; e</span></p>
+<p class="ali"><span class="n">d)</span><span class="tx">Comissão Jurídica.</span></p>
+<p class="inc"><span class="n">V –</span><span class="tx">sob pena de responsabilidades, conforme prevê o <a class="ref" data-ref="art-18" data-t="Art. 18" href="#art-18">art. 18</a>, será obrigatório estar exposto de forma clara no Regimento Interno da IDPB-AM, toda a estrutura organizacional, direitos, deveres, funções e esquema de trabalho de todas as comissões descritas neste artigo no inciso IV, sem que haja cobrança de taxas, salvo a do próprio Regimento Interno da IDPB-AM desde que seja em benefício da própria Instituição.</span></p>
+<p class="par"><span class="n">Parágrafo único.</span><span class="tx">O Representante Legal ou qualquer membro oficialmente envolvido em qualquer comissão que simplesmente deliberar, fazendo ações fora do regulamento ou deixando de fazer algo que está regulamentado nas diretrizes da IDPB-AM, e sendo comprobatório e formalizado tal ato, será imediatamente destituído do cargo, agravando a penalidade caso traga prejuízos moral ou financeiro a IDPB-AM.</span></p>
+</article>
+</section>
+</section>
+
+<!-- ===================== CAPÍTULO III ===================== -->
+<section class="cap" id="cap-3" data-label="Capítulo III" data-title="Do Credenciamento ao Ministério Geral da IDPB-AM">
+<header><span class="cap-label">Capítulo III</span><h2>Do Credenciamento ao Ministério Geral da IDPB-AM</h2></header>
+
+<section class="secao" id="cap-3-sec-1" data-label="Seção I" data-title="Disposições Gerais">
+<h3><span>Seção I</span><span>Disposições Gerais</span></h3>
+<article class="art" id="art-14" data-label="Art. 14">
+<p class="caput"><a class="artnum" href="#art-14">Art. 14.</a> Poderão ser admitidos e credenciados pela Junta Administrativa Estadual ao Ministério Geral da IDPB-AM, os membros da Igreja Local ou Congregação, de qualquer nacionalidade, sexo, cor, inclusive seus cônjuges, que pedirem por escrito, no qual expressem que aceitam as Escrituras Sagradas, como única regra de fé e prática, que reconheçam como parâmetro de fidelidade “Regras de Fé e Doutrinas, Estatuto, Regimentos Internos e Declaração de Normas Éticas da IDPB-AM”, e afirmem seu propósito de contribuir moralmente, espiritualmente e financeiramente para a consecução dos fins desta instituição.</p>
+<p class="par"><span class="n">§ 1º</span><span class="tx">Em princípio, nenhum candidato ao ministério, que, após a conversão, tenha se separado de fato ou judicialmente, divorciado ou encontrar-se em relações extraconjugais, ou homossexuais, conforme <span class="bib">I Coríntios 6.9</span>, conforme a Bíblia <abbr class="sigla" data-g="NVI">NVI</abbr>, deverá ser aceito pela IDPB-AM, ficando as questões desta natureza sob a orientação e decisão da Junta Administrativa Estadual.</span></p>
+<p class="par destaque"><span class="n">§ 2º</span><span class="tx">Será vetado o fornecimento de credencial ao candidato à carreira ministerial que apoie, dissemine, doutrine, compartilhe em redes sociais, ou por qualquer outro meio de comunicação, faça campanha política ou seja filiado a partidos de ideologias marxista e leninista, estendido também aos ministros auxiliares.</span></p>
+<div class="alt-row"><a class="ref alt" data-ref="alt-moc2" href="#alt-moc2">Incluído na XI Convenção (2023)</a></div>
+</article>
+</section>
+
+<section class="secao" id="cap-3-sec-2" data-label="Seção II" data-title="Credenciamento ao Ministério">
+<h3><span>Seção II</span><span>Credenciamento ao Ministério</span></h3>
+<article class="art" id="art-15" data-label="Art. 15">
+<p class="caput"><a class="artnum" href="#art-15">Art. 15.</a> O credenciamento ao Ministério Geral da IDPB-AM obedece rigorosamente uma hierarquia de grau ministerial da seguinte ordem:</p>
+<p class="inc" id="art-15-I"><span class="n">I –</span><span class="tx">Ministro Cooperador;</span></p>
+<p class="inc" id="art-15-II"><span class="n">II –</span><span class="tx">Ministro Licenciado; e</span></p>
+<p class="inc" id="art-15-III"><span class="n">III –</span><span class="tx">Ministro Ordenado.</span></p>
+<p class="par"><span class="n">§ 1º</span><span class="tx">As credenciais que trata o presente artigo, terão validade por 12 (doze) meses, de janeiro a dezembro de cada ano e a mesma somente será renovada mediante a apresentação obrigatória dos comprovantes de recolhimento do <abbr class="sigla" data-g="INSS">INSS</abbr> e a declaração do Imposto de Renda, atualizados.</span></p>
+<p class="par"><span class="n">§ 2º</span><span class="tx">Os candidatos de outras organizações que desejarem ingressar no ministério da IDPB-AM submeter-se-ão a um exame doutrinário e a um período de adaptação de, no mínimo, 12 (doze) meses, sob a supervisão de uma autoridade designada pela Junta Administrativa Estadual. Após esse período e antes de seu credenciamento o(a) candidato(a), submeter-se-á a apreciação final da autoridade competente.</span></p>
+<p class="par"><span class="n">§ 3º</span><span class="tx">Será verificada para o credenciamento ao Ministério Pastoral a experiência do batismo no Espírito Santo, com a evidência de falar em línguas estranhas, segundo <span class="bib">Atos 2:4; 10:46 e 19:6</span>; não ocorrerá o credenciamento caso não se verifique a existência destes requisitos em sua experiência pessoal.</span></p>
+<p class="par"><span class="n">§ 4º</span><span class="tx">Nenhum bem ou direito patrimonial e financeiro será exigido da IDPB-AM, por aquele(a) que deixar de ser Ministro Credenciado, não importando o motivo.</span></p>
+<p class="par"><span class="n">§ 5º</span><span class="tx">A Comissão de Novos Obreiros e Ascensão Ministerial, organizada pela Junta Administrativa Estadual - <abbr class="sigla" data-g="JAE">JAE</abbr>, será formada prioritariamente por ministros ordenados.</span></p>
+</article>
+</section>
+
+<section class="secao" id="cap-3-sec-3" data-label="Seção III" data-title="Carreira ao Ministério Geral da IDPB-AM">
+<h3><span>Seção III</span><span>Carreira ao Ministério Geral da IDPB-AM</span></h3>
+<article class="art" id="art-16" data-label="Art. 16">
+<p class="caput"><a class="artnum" href="#art-16">Art. 16.</a> A carreira ao Ministério Geral da IDPB-AM poderá ser iniciada com o estágio para o grau de ministro Cooperador, conforme o <a class="ref" data-ref="art-15" data-t="Art. 15" href="#art-15">art. 15 deste Estatuto</a>.</p>
+</article>
+
+<article class="art" id="art-17" data-label="Art. 17">
+<p class="caput"><a class="artnum" href="#art-17">Art. 17.</a> Será permitido o Estágio para o Grau de Ministro Cooperador ao candidato que demonstrar vocação ministerial e cumprir os seguintes requisitos:</p>
+<p class="inc"><span class="n">I –</span><span class="tx">ser fiel em suas ofertas e dízimos;</span></p>
+<p class="inc"><span class="n">II –</span><span class="tx">apresentar uma declaração da indicação do seu pastor;</span></p>
+<p class="inc"><span class="n">III –</span><span class="tx">assinar uma declaração concordando voluntariamente com os critérios estabelecidos nos <a class="ref" data-ref="art-6" data-t="Arts. 6º a 11" href="#art-6">artigos 6º a 11</a>;</span></p>
+<p class="inc"><span class="n">IV –</span><span class="tx">estar cursando em Escola Teológica, reconhecida pela IDPB-NACIONAL no mínimo o curso básico em Teologia; e</span></p>
+<p class="inc"><span class="n">V –</span><span class="tx">se submeter a um período probatório de no mínimo 01 (um) ano de experiência, acompanhado por um pastor orientador designado pela IDPB-AM ou pelo Ministério de Missões da IDPB-NACIONAL, que emitirá um parecer favorável ou não pela continuidade do mesmo no ministério.</span></p>
+
+<p class="par" id="art-17-p1"><span class="n">§ 1º</span><span class="tx">A credencial de MINISTRO COOPERADOR, <a class="ref" data-ref="art-15-I" data-t="Art. 15, I" href="#art-15-I">art. 15, I</a>, deste Estatuto, será fornecida ao candidato que cumprir os seguintes requisitos:</span></p>
+<p class="inc sub"><span class="n">I –</span><span class="tx">Ter concluído o curso teológico em uma escola reconhecida pela IDPB-AM;</span></p>
+<p class="inc sub"><span class="n">II –</span><span class="tx">Ser aprovado pela <abbr class="sigla" data-g="JAE">JAE</abbr>, após cumprir o período de no mínimo 01 (um) ano como ESTAGIÁRIO, sob a supervisão de um pastor orientador designado pela Junta Administrativa Estadual, demonstrando estar apto nos requisitos de <span class="bib">I Timóteo 3:1-11</span> e habilidade ministerial;</span></p>
+<p class="inc sub"><span class="n">III –</span><span class="tx">Manter-se em dia com suas obrigações financeiras e patrimoniais com a Igreja Estadual e terceiros;</span></p>
+<p class="inc sub"><span class="n">IV –</span><span class="tx">Continuar demonstrando total respeito hierárquico pelos seus líderes eclesiásticos, com o espírito de cooperação, lealdade e honestidade, em todo o seu trato para com a Igreja e terceiros;</span></p>
+<p class="inc sub"><span class="n">V –</span><span class="tx">Saber governar bem sua família, conforme <span class="bib">1 Timóteo 3:2-7 e Tito 1:6-9</span>; e</span></p>
+<p class="inc sub"><span class="n">VI –</span><span class="tx">Demonstrar desenvolvimento intelectual, espiritual e ministerial.</span></p>
+
+<p class="par" id="art-17-p2"><span class="n">§ 2º</span><span class="tx">A credencial de MINISTRO LICENCIADO, <a class="ref" data-ref="art-15-II" data-t="Art. 15, II" href="#art-15-II">art. 15, II</a>, deste Estatuto, considera-se uma ascensão ministerial, e será fornecida ao candidato que cumprir os seguintes requisitos:</span></p>
+<p class="inc sub"><span class="n">I –</span><span class="tx">Solicitar por escrito, anexando a cópia autenticada do diploma ou certificado de conclusão do curso teológico em uma escola reconhecida pela IDPB e a indicação positiva emitida pelo seu Supervisor Distrital;</span></p>
+<p class="inc sub"><span class="n">II –</span><span class="tx">Ter servido, no mínimo, por 02 (dois) anos na função de MINISTRO COOPERADOR, aprovado nos pré-requisitos estabelecidos em <span class="bib">I Timóteo 3:1-11</span> e demonstrando aptidão para fundar, no mínimo, uma Congregação e dirigir uma Igreja Local;</span></p>
+<p class="inc sub"><span class="n">III –</span><span class="tx">Apresentar certidão do departamento financeiro responsável pelo controle de suas contribuições doadas nos últimos 24 (vinte quatro) meses;</span></p>
+<p class="inc sub"><span class="n">IV –</span><span class="tx">Apresentar certificado de conclusão do Ensino Médio; e</span></p>
+<p class="inc sub"><span class="n">V –</span><span class="tx">Cumprir as exigências do <a class="ref" data-ref="art-17-p1" data-t="Art. 17, § 1º" href="#art-17-p1">§1º, incisos III, IV, V e VI, deste artigo</a>.</span></p>
+
+<p class="par" id="art-17-p3"><span class="n">§ 3º</span><span class="tx">A credencial de MINISTRO ORDENADO, <a class="ref" data-ref="art-15-III" data-t="Art. 15, III" href="#art-15-III">art. 15, III</a>, Estatuto, considera-se uma ascensão ministerial, e será fornecida ao candidato que cumprir os seguintes requisitos:</span></p>
+<p class="inc sub"><span class="n">I –</span><span class="tx">Solicitar por escrito, anexando a cópia autenticada do diploma ou certificado de conclusão do curso teológico em uma escola reconhecida pela IDPB-AM e a indicação positiva emitida pela Igreja Estadual ou Supervisão Distrital;</span></p>
+<p class="inc sub"><span class="n">II –</span><span class="tx">ter servido, no mínimo, por 03 (três) anos na função de MINISTRO LICENCIADO, aprovado nos pré-requisitos estabelecido em <span class="bib">I Timóteo 3:1-11</span> e demonstradas totais habilidades para, no mínimo, fundar e dirigir igreja local ou em qualquer lugar do país;</span></p>
+<p class="inc sub"><span class="n">III –</span><span class="tx">demonstrar também conhecimentos nos assuntos administrativos da IDPB-AM;</span></p>
+<p class="inc sub"><span class="n">IV –</span><span class="tx">demonstrar conhecimentos Estatutários e Regimentais da IDPB-AM;</span></p>
+<p class="inc sub"><span class="n">V –</span><span class="tx">apresentar certidão do departamento financeiro responsável pelo controle de suas contribuições doadas para IDPB-AM nos últimos 36 (trinta e seis) meses; e</span></p>
+<p class="inc sub"><span class="n">VI –</span><span class="tx">cumprir as exigências dos <a class="ref" data-ref="art-17-p2" data-t="Art. 17, § 2º" href="#art-17-p2">incisos IV e V, do § anterior</a>.</span></p>
+
+<p class="par"><span class="n">§ 4º</span><span class="tx">A Junta Administrativa Estadual, ao analisar a solicitação do candidato, poderá solicitar outros documentos ou informações que se fizerem necessários para emitir seu parecer final.</span></p>
+<p class="par" id="art-17-p5"><span class="n">§ 5º</span><span class="tx">Os interessados protocolarão seus pedidos, no período de janeiro a março de cada ano, junto à IDPB-AM, que avaliará previamente e encaminhará à Junta Administrativa Nacional, no prazo de 30 dias de antecedência das suas reuniões, para a devida apreciação de seus pedidos, esta, por sua vez, emitirá seu parecer final em 90 (noventa) dias após a reunião em que analisar os referidos pedidos.</span></p>
+<p class="par"><span class="n">§ 6º</span><span class="tx">Esgotado o prazo máximo estabelecido no <a class="ref" data-ref="art-17-p5" data-t="Art. 17, § 5º" href="#art-17-p5">§5º última parte</a>, caberá ao interessado recorrer à Junta Administrativa Estadual e, em última instância, ao Conselho Eclesiástico Estadual.</span></p>
+</article>
+</section>
+</section>
+
+
+<section class="cap" id="cap-4" data-label="Capítulo IV" data-title="Das Penalidades e Impedimentos Disciplinares">
+<header><span class="cap-label">Capítulo IV</span><h2>Das Penalidades e Impedimentos Disciplinares</h2></header>
+
+<section class="secao" id="cap-4-sec-1" data-label="Seção I" data-title="Disposições Gerais">
+<h3><span>Seção I</span><span>Disposições Gerais</span></h3>
+<article class="art" id="art-18" data-label="Art. 18">
+<p class="caput"><a class="artnum" href="#art-18">Art. 18.</a> Serão aplicadas penalidades e impedimentos disciplinares a qualquer Membro que ocasionar prejuízo econômico, financeiro ou moral à IDPB-AM, reservando-lhe ainda o direito de regresso pelas vias administrativa ou judicial, observadas as normas do <a class="ref" data-ref="art-19" data-t="Art. 19" href="#art-19">artigo 19 deste Estatuto</a>.</p>
+</article>
+</section>
+
+<section class="secao" id="cap-4-sec-2" data-label="Seção II" data-title="Instauração do Procedimento Disciplinar e os Recursos">
+<h3><span>Seção II</span><span>Instauração do Procedimento Disciplinar e os Recursos</span></h3>
+<article class="art" id="art-19" data-label="Art. 19">
+<p class="caput"><a class="artnum" href="#art-19">Art. 19.</a> Instaurar-se-á o procedimento disciplinar mediante registro de denúncia, escrita ou verbal, ao Presidente da Junta Administrativa Estadual, contendo a falta praticada, a indicação das provas e a assinatura do denunciante, com 02 (duas) testemunhas idôneas.</p>
+<p class="par" id="art-19-p1"><span class="n">§ 1º</span><span class="tx">A omissão de um desses requisitos para oferecimento da denúncia ensejará o seu arquivamento.</span></p>
+<p class="par" id="art-19-p2"><span class="n">§ 2º</span><span class="tx">Para constituição da prova de que se trata este artigo, tanto o denunciado como o denunciante têm o direito de empregar todos os meios legais, bem como os moralmente legítimos, ainda que não especificados neste Estatuto, para provar a verdade dos fatos ‘em que se funda o pedido ou a defesa, em conformidade ao examinado no <a class="ref ext" data-ref="cpc-369" data-t="CPC, art. 369" href="#cpc-369">art. 369 do CPC 2015</a>.</span></p>
+</article>
+<article class="art" id="art-20" data-label="Art. 20">
+<p class="caput"><a class="artnum" href="#art-20">Art. 20.</a> Caso a denúncia seja aceita e instaurado o procedimento disciplinar, o acusado será notificado do ato, para que querendo, possa exercer o seu direito de ampla defesa, de forma escrita e/ou oral, no prazo de 15 dias corridos.</p>
+</article>
+<article class="art" id="art-21" data-label="Art. 21">
+<p class="caput"><a class="artnum" href="#art-21">Art. 21.</a> Recebida a denúncia pela Junta Administrativa Estadual, esta terá 15 dias corridos para a realização de audiência das partes, podendo a Junta Administrativa Estadual votar, desde logo, pelo afastamento das funções ora exercidas pelo denunciado até o término do processo administrativo.</p>
+<p class="par" id="art-21-p1"><span class="n">§ 1º</span><span class="tx">Encerrada a audiência e a colheita de todas as provas, abrir-se-á o prazo de 10 (dez) dias corridos, a fim de que, o membro denunciado e o denunciante apresentem as suas alegações finais.</span></p>
+<p class="par" id="art-21-p2"><span class="n">§ 2º</span><span class="tx">Findo o prazo do inciso anterior a Junta Administrativa Estadual apreciará a denúncia, a defesa apresentada e suas alegações finais e, então, emitirá sua decisão que conterá os seguintes requisitos essenciais:</span></p>
+<p class="inc sub" id="art-21-p2-I"><span class="n">I –</span><span class="tx">relatório com o nome das partes, o resumo da denúncia e da defesa, bem como o registro das principais ocorrências havidas no andamento do processo;</span></p>
+<p class="inc sub" id="art-21-p2-II"><span class="n">II –</span><span class="tx">fundamentação com base no Estatuto em que a Junta Administrativa Estadual analisou as questões; e</span></p>
+<p class="inc sub" id="art-21-p2-III"><span class="n">III –</span><span class="tx">decisão contendo o dispositivo do Estatuto.</span></p>
+<p class="par" id="art-21-p3"><span class="n">§ 3º</span><span class="tx">Da decisão caberá Recurso, em até 10 dias corridos, ao Conselho Eclesiástico Estadual, fundamentando a insatisfação, para obter a revisão do processo administrativo.</span></p>
+<p class="par" id="art-21-p4"><span class="n">§ 4º</span><span class="tx">Após o parecer pelo Conselho Eclesiástico Estadual não caberá novo Recurso.</span></p>
+</article>
+</section>
+
+<section class="secao" id="cap-4-sec-3" data-label="Seção III" data-title="Das Penalidades e Sanções">
+<h3><span>Seção III</span><span>Das Penalidades e Sanções</span></h3>
+<article class="art" id="art-22" data-label="Art. 22">
+<p class="caput"><a class="artnum" href="#art-22">Art. 22.</a> Tipos de penalidades a serem aplicadas:</p>
+<p class="inc" id="art-22-I"><span class="n">I –</span><span class="tx">advertência reservada por escrito;</span></p>
+<p class="inc" id="art-22-II"><span class="n">II –</span><span class="tx">advertência pública por escrito;</span></p>
+<p class="inc" id="art-22-III"><span class="n">III –</span><span class="tx">suspensão temporária de função ministerial, além de reparação dos danos;</span></p>
+<p class="inc" id="art-22-IV"><span class="n">IV –</span><span class="tx">suspensão temporária da credencial com perda imediata do cargo, função administrativa ou ministerial, além de reparações dos danos; e</span></p>
+<p class="inc" id="art-22-V"><span class="n">V –</span><span class="tx">cassação permanente da credencial, com perda imediata do cargo, função administrativa ou ministerial, além de reparações dos danos.</span></p>
+<p class="par" id="art-22-p1"><span class="n">§ 1º</span><span class="tx">A aplicação das penalidades não se sujeita à sequência estabelecida neste artigo, mas é autônoma, segundo cada caso, devendo ser consideradas para aplicação das mesmas a natureza e a gravidade da infração e os danos que dela provierem para a Organização.</span></p>
+<p class="par" id="art-22-p2"><span class="n">§ 2º</span><span class="tx">A IDPB-AM não é responsável pelos proventos financeiros dos ministros suspensos ou cassados, entretanto a <abbr class="sigla" data-g="JAE">JAE</abbr> poderá avaliar caso a caso.</span></p>
+</article>
+<article class="art" id="art-23" data-label="Art. 23">
+<p class="caput"><a class="artnum" href="#art-23">Art. 23.</a> Os atos de natureza sexual descritos claramente como pecado na Bíblia, e quaisquer atos que desabonem a conduta do ministro e firam a honra da Igreja serão disciplinados da seguinte forma:</p>
+<p class="inc" id="art-23-I"><span class="n">I –</span><span class="tx">no primeiro processo disciplinar em que o ministro for suspenso de suas funções ministeriais, a suspensão de credencial será pelo período de 1(um) ano;</span></p>
+<p class="inc" id="art-23-II"><span class="n">II –</span><span class="tx">reincidindo, a suspensão de credencial será por 3 (três) anos; e</span></p>
+<p class="inc" id="art-23-III"><span class="n">III –</span><span class="tx">numa segunda reincidência, a suspensão de credencial será por 5 (cinco) anos.</span></p>
+<p class="par" id="art-23-pu"><span class="n">Parágrafo único.</span><span class="tx">A Junta Administrativa Estadual caberá notificar à presidência nacional e aos demais presidentes estaduais e estes aos pastores de sua jurisdição o resultado destas sanções.</span></p>
+</article>
+<article class="art" id="art-24" data-label="Art. 24">
+<p class="caput"><a class="artnum" href="#art-24">Art. 24.</a> Qualquer membro investido da função de Gestor Administrativo à frente de qualquer Igreja Local, Congregação ou Diretoria da IDPB-AM, inadimplente, em 02 (dois) meses consecutivos com a entrega do relatório e repasse financeiro sob sua responsabilidade, será advertido em caráter reservado por escrito.</p>
+<p class="par" id="art-24-p1"><span class="n">§ 1º</span><span class="tx">Permanecendo a inadimplência, a Junta Administrativa Estadual aplicará as sanções do <a class="ref" data-ref="art-22-IV" data-t="Art. 22, IV" href="#art-22-IV">art. 22, inciso IV</a>, do presente Estatuto.</span></p>
+<p class="par" id="art-24-p2"><span class="n">§ 2º</span><span class="tx">O Pastor de Igreja Local ou Congregação que permitir atraso em suas obrigações e que acarrete na negativação no sistema SPC/Serasa, leis trabalhistas em relação ao <abbr class="sigla" data-g="FGTS">FGTS</abbr>, PIS, COFINS sobre folha de pessoal, <abbr class="sigla" data-g="INSS">INSS</abbr>, títulos protestados em cartórios e qualquer restrição, caberá a <abbr class="sigla" data-g="JAE">JAE</abbr> assumir a administração financeira da igreja local, bem como, suas congregações e similares, se esta não conseguir provar sua inculpabilidade, pelo período a ser estabelecido pela <abbr class="sigla" data-g="JAE">JAE</abbr>.</span></p>
+<p class="par" id="art-24-p3"><span class="n">§ 3º</span><span class="tx">Qualquer Ministro que se sentir prejudicado pela decisão da Junta Administrativa Estadual, poderá recorrer ao Conselho Eclesiástico Estadual.</span></p>
+</article>
+<article class="art" id="art-25" data-label="Art. 25">
+<p class="caput"><a class="artnum" href="#art-25">Art. 25.</a> A <abbr class="sigla" data-g="JAE">JAE</abbr> em observação ao <a class="ref" data-ref="art-35-XIII" data-t="Art. 35, XIII" href="#art-35-XIII">art. 35, XIII e XIV</a>, será autônoma em seu critério decisório para julgar os processos que lhe forem conferidos, utilizando para esta ação o seu colegiado, os Ministros Oficiais.</p>
+</article>
+</section>
+
+<section class="secao" id="cap-4-sec-4" data-label="Seção IV" data-title="Dos Impedimentos">
+<h3><span>Seção IV</span><span>Dos Impedimentos</span></h3>
+<article class="art" id="art-26" data-label="Art. 26">
+<p class="caput"><a class="artnum" href="#art-26">Art. 26.</a> Está impedido de concorrer à eleição ou de ser nomeado para qualquer cargo ou função administrativa da IDPB-AM, os Ministros Credenciados que incorrerem nas seguintes situações:</p>
+<p class="inc" id="art-26-I"><span class="n">I –</span><span class="tx">o Ministro que sofreu suspensão temporária da credencial, com perda de cargo, função administrativa ou ministerial, não poderá ascender ministerialmente ou concorrer a cargos nas convenções estaduais e nacionais da entidade religiosa IDPB Nacional, após a sua reintegração ministerial, pelo período de 02 (duas) convenções;</span></p>
+<p class="inc" id="art-26-II"><span class="n">II –</span><span class="tx">o Ministro Credenciado que por ocasião de sua gestão administrativa em Igrejas Locais, Congregações ou Diretoria deixar de prestar contas de sua gestão ou não tiver a sua prestação de contas aprovada, ainda que após renúncia ao cargo, pelo período de 5 (cinco) anos; e</span></p>
+<p class="inc destaque" id="art-26-III"><span class="n">III –</span><span class="tx">só poderão concorrer aos cargos eletivos e nomeados na IDPB-AM, seja à nivel Estadual ou Distrital, os ministros credenciados que participaram regularmente de Convenção Estadual Ordinária ou Extraordinária, Reuniões Estadual e Distrital de Pastores e Reuniões de Mentoreamentos Distritais, durante o período convencional vigente, conforme previsão no calendário oficial de atividades ou mediante convocação da presidencia estadual ou supervisão distrital.</span></p>
+<p class="inc destaque" id="art-26-IV"><span class="n">IV –</span><span class="tx">possíveis faltas deverão ser previamente justificadas, conforme normatiza o Estatuto e Regimento Interno da IDPB-AM.</span></p>
+<p class="inc destaque" id="art-26-V"><span class="n">V –</span><span class="tx">a presença dos ministros nas convenções, reuniões e mentoreamentos serão conferidas através de assinaturas em folha de presença ou marcação eletrônica nos respectivos Distritos e IDPB-AM.</span></p>
+<div class="alt-row"><a class="ref alt" data-ref="alt-moc3" href="#alt-moc3">Incluídos na XI Convenção (2023)</a></div>
+</article>
+</section>
+</section>
+
+<section class="cap" id="cap-5" data-label="Capítulo V" data-title="Dos Órgãos Administrativos">
+<header><span class="cap-label">Capítulo V</span><h2>Dos Órgãos Administrativos</h2></header>
+
+<section class="secao" id="cap-5-sec-1" data-label="Seção I" data-title="Disposições Gerais">
+<h3><span>Seção I</span><span>Disposições Gerais</span></h3>
+<article class="art" id="art-27" data-label="Art. 27">
+<p class="caput"><a class="artnum" href="#art-27">Art. 27.</a> A IDPB-AM organiza-se administrativamente realizando seus fins através dos seguintes órgãos:</p>
+<p class="inc" id="art-27-I"><span class="n">I –</span><span class="tx">Assembleia Geral Estadual;</span></p>
+<p class="inc" id="art-27-II"><span class="n">II –</span><span class="tx">Junta Administrativa Estadual;</span></p>
+<p class="inc" id="art-27-III"><span class="n">III –</span><span class="tx">Presidência Estadual;</span></p>
+<p class="inc" id="art-27-IV"><span class="n">IV –</span><span class="tx">Juntas Administrativas Distritais;</span></p>
+<p class="inc" id="art-27-V"><span class="n">V –</span><span class="tx">Conselho Eclesiástico Estadual;</span></p>
+<p class="inc" id="art-27-VI"><span class="n">VI –</span><span class="tx">Conselho de Exame e Tomada de Contas Estadual; e</span></p>
+<p class="inc" id="art-27-VII"><span class="n">VII –</span><span class="tx">Ministério de Educação Teológica do Amazonas.</span></p>
+<p class="par" id="art-27-p1"><span class="n">§ 1º</span><span class="tx">Com exceção do inciso VII, todos os órgãos administrativos possuem poderes deliberativos, conforme a peculiaridade da sua competência, e trabalharão em harmonia com a IDPB Nacional.</span></p>
+<p class="par" id="art-27-p2"><span class="n">§ 2º</span><span class="tx">Os Órgãos Administrativos, além da competência prevista neste estatuto, poderão ser regulamentados através de Regimento Interno e Declaração de Normas Éticas da IDPB-AM aprovados pela Junta Administrativa Estadual, ad referendum da Assembleia Geral dos Membros.</span></p>
+</article>
+</section>
+
+<section class="secao" id="cap-5-sec-2" data-label="Seção II" data-title="Da Constituição e Funcionamento Assembleia Geral Estadual">
+<h3><span>Seção II</span><span>Da Constituição e Funcionamento Assembleia Geral Estadual</span></h3>
+<article class="art" id="art-28" data-label="Art. 28">
+<p class="caput"><a class="artnum" href="#art-28">Art. 28.</a> A Assembleia Geral Estadual é o órgão máximo de deliberação da IDPB-AM, composta pelos Ministros Oficiais, Ministros Credenciados, Cônjuges Credenciados e Delegados representantes dos Membros de Igrejas Locais.</p>
+<p class="par" id="art-28-p1"><span class="n">§ 1º</span><span class="tx">Os delegados serão apresentados pela Igreja Local, através de seu Pastor Presidente, na proporção de 01 (um) representante para cada 200 (duzentos) membros ou fração, com a idade mínima de 18 (dezoito) anos.</span></p>
+<p class="par" id="art-28-p2"><span class="n">§ 2º</span><span class="tx">A Assembleia Geral Ordinária será realizada de três em três anos, sempre no mês de outubro, para eleição dos Ministros Oficiais, e extraordinariamente sempre que necessário, e, se darão em quantas sessões forem necessárias.</span></p>
+<p class="par" id="art-28-p3"><span class="n">§ 3º</span><span class="tx">Cabe ao Presidente da Junta Administrativa Estadual, notificar os membros do local e data da Assembleia Geral Ordinária, através de edital apresentado na Reunião Estadual de Pastores e/ou enviado para o endereço eletrônico cadastrado com antecedência mínima de 60 (sessenta) dias.</span></p>
+<p class="par" id="art-28-p4"><span class="n">§ 4º</span><span class="tx">Cabe ao Presidente da Junta Administrativa Estadual, convocar com antecedência mínima de 30 (trinta) dias, a Assembleia Geral Extraordinária, mediante decisão tomada pela maioria simples dos componentes da referida Junta, em reunião convocada para esse fim.</span></p>
+</article>
+<article class="art" id="art-29" data-label="Art. 29">
+<p class="caput"><a class="artnum" href="#art-29">Art. 29.</a> A Assembleia Geral Ordinária ou Extraordinária, será instalada com quórum de 2/3 (dois terços) dos convocados: Ministros Oficiais, Ministros Credenciados, Cônjuges Credenciados e Delegados, no horário previsto no Edital de Convocação.</p>
+<p class="par" id="art-29-p1"><span class="n">§ 1º</span><span class="tx">A segunda convocação será realizada 30 (trinta) minutos após a primeira, sendo necessário um quórum mínimo de 2/3 (dois terços) dos Convocados para instalação da Assembleia.</span></p>
+<p class="par" id="art-29-p2"><span class="n">§ 2º</span><span class="tx">A terceira convocação se realizará 30 (trinta) minutos após a segunda convocação, sendo instalada a Assembleia Geral com o quórum que se fizer presente.</span></p>
+<p class="par" id="art-29-p3"><span class="n">§ 3º</span><span class="tx">Instalada a assembleia, só poderá ser deliberado acerca de qualquer assunto com 2/3 (dois terços) dos inscritos presentes em plenário.</span></p>
+</article>
+</section>
+
+<section class="secao" id="cap-5-sec-3" data-label="Seção III" data-title="Da Competência da Assembleia Geral Ordinária">
+<h3><span>Seção III</span><span>Da Competência da Assembleia Geral Ordinária</span></h3>
+<article class="art" id="art-30" data-label="Art. 30">
+<p class="caput"><a class="artnum" href="#art-30">Art. 30.</a> A Assembleia Geral Ordinária da IDPB-AM tem as seguintes competências:</p>
+<p class="inc" id="art-30-I"><span class="n">I –</span><span class="tx">eleger seus administradores que compõem a Junta Administrativa Estadual, as Juntas Administrativas Distritais, o Conselho Eclesiástico Estadual e o Conselho de Exame e Tomada de Contas Estadual;</span></p>
+<p class="inc" id="art-30-II"><span class="n">II –</span><span class="tx">aprovar a prestação de contas dos Administradores ao término de mandato; e</span></p>
+<p class="inc" id="art-30-III"><span class="n">III –</span><span class="tx">reformar Estatuto e Regimento Interno.</span></p>
+<p class="par" id="art-30-p1"><span class="n">§ 1º</span><span class="tx">A posse dos Oficiais eleitos se dará no primeiro dia útil de janeiro subsequente, em solenidade Especial.</span></p>
+<p class="par" id="art-30-p2"><span class="n">§ 2º</span><span class="tx">O fim dos mandatos se dará no dia 31 de dezembro do ano convencional.</span></p>
+</article>
+</section>
+
+<section class="secao" id="cap-5-sec-4" data-label="Seção IV" data-title="Da Competência da Assembleia Geral Extraordinária">
+<h3><span>Seção IV</span><span>Da Competência da Assembleia Geral Extraordinária</span></h3>
+<article class="art" id="art-31" data-label="Art. 31">
+<p class="caput"><a class="artnum" href="#art-31">Art. 31.</a> A Assembleia Geral Extraordinária da IDPB-AM poderá ser convocada atendendo requerimento de 1/5 dos membros da IDPB-AM, para:</p>
+<p class="inc" id="art-31-I"><span class="n">I –</span><span class="tx">destituição dos administradores;</span></p>
+<p class="inc" id="art-31-II"><span class="n">II –</span><span class="tx">eleição de novos administradores para completar o mandato de administradores destituídos ou em caso de renúncia;</span></p>
+<p class="inc" id="art-31-III"><span class="n">III –</span><span class="tx">aprovação de reforma Estatutária;</span></p>
+<p class="inc" id="art-31-IV"><span class="n">IV –</span><span class="tx">outros assuntos constantes que sejam relevantes e urgentes no ato de requerimento da convocação; e</span></p>
+<p class="inc" id="art-31-V"><span class="n">V –</span><span class="tx">dissolver a Igreja.</span></p>
+<p class="par" id="art-31-p1"><span class="n">§ 1º</span><span class="tx">Para as deliberações a que se refere o inciso III, deste artigo, será exigido o voto concordante de dois terços dos presentes à assembleia.</span></p>
+<p class="par" id="art-31-p2"><span class="n">§ 2º</span><span class="tx">Os eleitos serão empossados imediatamente em solenidade Especial.</span></p>
+</article>
+</section>
+
+<section class="secao" id="cap-5-sec-5" data-label="Seção V" data-title="Da Composição Da Junta Administrativa Estadual">
+<h3><span>Seção V</span><span>Da Composição Da Junta Administrativa Estadual</span></h3>
+<article class="art" id="art-32" data-label="Art. 32">
+<p class="caput"><a class="artnum" href="#art-32">Art. 32.</a> A Junta Administrativa Estadual é o Órgão Máximo de Administração da IDPB-AM, sendo sua ação exercida dentro dos princípios rigorosamente cristãos, respeitando sempre a sua competência estatutária firmada no <a class="ref" data-ref="art-35" data-t="Art. 35" href="#art-35">art. 35</a>, seguindo fielmente sua orientação sem conflitar com a competência da Assembleia Geral Estadual.</p>
+</article>
+<article class="art" id="art-33" data-label="Art. 33">
+<p class="caput"><a class="artnum" href="#art-33">Art. 33.</a> A Junta Administrativa Estadual é composta por:</p>
+<p class="inc" id="art-33-I"><span class="n">I –</span><span class="tx">Presidência:</span></p>
+<p class="ali"><span class="n">a)</span><span class="tx">Presidente - Atribuição: Direção e Coordenação Geral;</span></p>
+<p class="ali"><span class="n">b)</span><span class="tx">1º Vice-Presidente - Função: Secretário - Atribuição: Gestor Administrativo; e</span></p>
+<p class="ali"><span class="n">c)</span><span class="tx">2º Vice-Presidente - Função: Tesoureiro - Atribuição: Gestor Financeiro.</span></p>
+<p class="inc" id="art-33-II"><span class="n">II –</span><span class="tx">Supervisores de Distritos – Um para cada Distrito criado e homologado oficialmente em Convenção Estadual – Função: Membros da <abbr class="sigla" data-g="JAE">JAE</abbr> como Conselheiros; Supervisão Distrital como administrador do Distrito, ação operacional em missões e mentoria do Corpo Ministerial sob sua jurisdição, atuando em conjunto com sua Junta Distrital.</span></p>
+</article>
+<article class="art" id="art-34" data-label="Art. 34">
+<p class="caput"><a class="artnum" href="#art-34">Art. 34.</a> A Junta Administrativa Estadual reunir-se-á, ordinariamente, conforme agenda aprovada no início de cada semestre e, extraordinariamente, quando convocado por seu Presidente ou pela maioria de seus integrantes.</p>
+<p class="par" id="art-34-pu"><span class="n">Parágrafo único.</span><span class="tx">A reunião da <abbr class="sigla" data-g="JAE">JAE</abbr> estará aberta para deliberações apenas quando alcançar o quórum de 75% (setenta e cinco por cento) de seus integrantes.</span></p>
+</article>
+</section>
+
+<section class="secao" id="cap-5-sec-6" data-label="Seção VI" data-title="Da Competência da Junta Administrativa Estadual">
+<h3><span>Seção VI</span><span>Da Competência da Junta Administrativa Estadual</span></h3>
+<article class="art" id="art-35" data-label="Art. 35">
+<p class="caput"><a class="artnum" href="#art-35">Art. 35.</a> Compete a Junta Administrativa Estadual:</p>
+<p class="inc" id="art-35-I"><span class="n">I –</span><span class="tx">representar a IDPB-AM ativa e passivamente, judicial e extrajudicialmente, pelo Presidente Estadual em suas relações com os poderes públicos e com terceiros, podendo constituir procuradores, conforme <a class="ref" data-ref="art-36-IX" data-t="Art. 36, IX" href="#art-36-IX">art. 36, incisos IX e X</a> deste Estatuto;</span></p>
+<p class="inc" id="art-35-II"><span class="n">II –</span><span class="tx">propor as alterações estatutárias e regimentais através de projeto de sua reforma e publicar o edital de convocação da Assembleia Geral Estadual;</span></p>
+<p class="inc" id="art-35-III"><span class="n">III –</span><span class="tx">aprovar, bem como revogar total ou parcialmente as resoluções e demais documentos oficiais complementares para o exercício de sua gestão administrativa;</span></p>
+<p class="inc" id="art-35-IV"><span class="n">IV –</span><span class="tx">dirigir os trabalhos das Assembleias Gerais, elaborar o programa dos cultos e todas as cerimônias e outros preparativos para realização da Assembleia Estadual;</span></p>
+<p class="inc" id="art-35-V"><span class="n">V –</span><span class="tx">aprovar o Plano Plurianual da aplicação de Recursos da Presidência Estadual e o Plano de Trabalho e Orçamento Anual;</span></p>
+<p class="inc" id="art-35-VI"><span class="n">VI –</span><span class="tx">planejar, coordenar os trabalhos, aprovar as diretrizes e políticas globais da Igreja Estadual, nas áreas de evangelização, missões, educação religiosa e comunicação em todo território nacional através das Instituições Executivas e Juntas Distritais;</span></p>
+<p class="inc" id="art-35-VII"><span class="n">VII –</span><span class="tx">deliberar em conjunto com o Ministério de Educação Teológica sobre o funcionamento do Instituto Bíblico Pentecostal Monte Sinai (<abbr class="sigla" data-g="IBPMS">IBPMS</abbr>), Instituto de Treinamento Missionário (<abbr class="sigla" data-g="ITM">ITM</abbr>), assessorar o <abbr class="sigla" data-g="SEBAETE">SEBAETE</abbr> e outras questões ligadas ao Ensino Teológico no âmbito da IDPB-AM;</span></p>
+<p class="inc" id="art-35-VIII"><span class="n">VIII –</span><span class="tx">coordenar o funcionamento da Associação de Retiros Pentecostais do Amazonas (<abbr class="sigla" data-g="ARPAM">ARPAM</abbr>), homologando os nomes eleitos pelos condôminos para compor o Conselho Administrativo e deliberando em conjunto com os mesmos quando necessário;</span></p>
+<p class="inc" id="art-35-IX"><span class="n">IX –</span><span class="tx">deliberar, em conjunto com o Conselho Eclesiástico Estadual ou Conselho de Exame e Tomada de Contas Estadual, quando se fizer necessário;</span></p>
+<p class="inc" id="art-35-X"><span class="n">X –</span><span class="tx">aprovar Estatutos das Instituições Executivas, Declaração de Normas Éticas da IDPB-AM, Regimentos Internos das Juntas Administrativas Distritais, Igrejas Locais e Congregações;</span></p>
+<p class="inc" id="art-35-XI"><span class="n">XI –</span><span class="tx">aprovar o Relatório Anual da Presidência Estadual, com base no Parecer do Conselho de Exame e Tomada de Contas Estadual, encaminhando-os, juntamente com a Prestação de Contas do exercício, para apreciação em Assembleia Geral Estadual;</span></p>
+<p class="inc" id="art-35-XII"><span class="n">XII –</span><span class="tx">deliberar sobre a aquisição por compra ou por permuta, como também a alienação por venda, permuta, locação, doação, empréstimos dos patrimônios da IDPB-AM;</span></p>
+<p class="inc" id="art-35-XIII"><span class="n">XIII –</span><span class="tx">julgar, em última instância, os recursos que lhe forem dirigidos;</span></p>
+<p class="inc" id="art-35-XIV"><span class="n">XIV –</span><span class="tx">deliberar sobre emissão, suspensão ou exclusão das credenciais dos ministros evangélicos e respectivos cônjuges ao ministério geral da IDPB- AM;</span></p>
+<p class="inc" id="art-35-XV"><span class="n">XV –</span><span class="tx">homologar o detalhamento da estrutura orgânica da IDPB-AM, a política de recursos humanos e os nomes indicados para os cargos de auxiliares da administração na Presidência Estadual;</span></p>
+<p class="inc" id="art-35-XVI"><span class="n">XVI –</span><span class="tx">deliberar sobre todos os assuntos referentes às decisões finais aos casos de disciplina que a ela forem peticionados;</span></p>
+<p class="inc" id="art-35-XVII"><span class="n">XVII –</span><span class="tx">quando delegada pela Assembleia Geral Estadual receber todas as questões ou moções que não foram analisadas durante a referida Assembleia;</span></p>
+<p class="inc" id="art-35-XVIII"><span class="n">XVIII –</span><span class="tx">estabelecer um planejamento missionário a ser executado pelas Juntas Administrativas Distritais que envolve:</span></p>
+<p class="ali"><span class="n">a)</span><span class="tx">abertura de novas obras missionárias Dentro e fora do Estado;</span></p>
+<p class="ali"><span class="n">b)</span><span class="tx">um plano de implantação de igrejas na capital e em outras localidades;</span></p>
+<p class="ali"><span class="n">c)</span><span class="tx">ter a disposição os nomes da relação dos estagiários para enviar para aberturas de novas obras em concordância com o pastor da igreja local confirmando sua liberação;</span></p>
+<p class="ali"><span class="n">d)</span><span class="tx">liberar recursos para assistência missionária na forma de prebenda, aluguel e outros; e</span></p>
+<p class="ali"><span class="n">e)</span><span class="tx">dispor aos distritos recursos para abertura de novas obras missionárias mediante esse planejamento caso haja insuficiência de recursos nos distritos, após avaliação de desempenho dos atuais missionários pelos supervisores.</span></p>
+<p class="inc" id="art-35-XIX"><span class="n">XIX –</span><span class="tx">liberar obra missionária dessa condição ao comprovar sua auto sustentação, após avaliação do missionário pela Junta Administrativa Distrital obedecendo os parâmetros:</span></p>
+<p class="ali"><span class="n">a)</span><span class="tx">havendo recursos disponíveis no Distrito, outras obras missionárias poderão ser abertas mesmo que aquelas abertas ainda não tenham alcançado a auto sustentação e/ou emancipação após dois anos em funcionamento;</span></p>
+<p class="ali"><span class="n">b)</span><span class="tx">serão abertas novas obras missionárias após auto sustentação e/ou emancipação das que já foram abertas e estão em funcionamento a partir de 2 anos; e</span></p>
+<p class="ali"><span class="n">c)</span><span class="tx">nenhuma obra será aberta pelo distrito sem que ele disponha de recursos orçamentários em sua rubrica para atender essa finalidade.</span></p>
+<p class="inc" id="art-35-XX"><span class="n">XX –</span><span class="tx">nomear os membros da Comissão Técnica de Construção Cível e deliberar como os mesmos quando necessário; e</span></p>
+<p class="inc" id="art-35-XXI"><span class="n">XXI –</span><span class="tx">no seguimento da política partidária IDPB-AM adota a seguinte postura:</span></p>
+<p class="par sub" id="art-35-XXI-p1"><span class="n">§ 1º</span><span class="tx">Reconhece o direito que seus membros possuem de aspirarem funções dentro dos Poderes Executivo, Legislativo e Judiciário.</span></p>
+<p class="par sub" id="art-35-XXI-p2"><span class="n">§ 2º</span><span class="tx">Porém, os membros da instituição que exerçam cargos administrativos ou ministeriais, que venham postular cargos eletivos, deverão desincompatibilizar-se de suas funções, após a homologação de seus nomes pela justiça eleitoral, sem qualquer ônus à Igreja.</span></p>
+<p class="par sub" id="art-35-XXI-p3"><span class="n">§ 3º</span><span class="tx">A IDPB-AM criará uma Comissão de Orientação Política da IDPB-AM que terá os seguintes objetivos:</span></p>
+<p class="ali sub2"><span class="n">a)</span><span class="tx">conscientizar os membros da instituição acerca da importância de suas escolhas políticas; e</span></p>
+<p class="ali sub2"><span class="n">b)</span><span class="tx">resolver todo e qualquer assunto referente à Política Partidária, surgida no âmbito da instituição no Estado.</span></p>
+<p class="par sub" id="art-35-XXI-p4"><span class="n">§ 4º</span><span class="tx">A Comissão de Orientação Política e Partidária da IDPB-AM assim será constituída:</span></p>
+<p class="ali sub2"><span class="n">a)</span><span class="tx">Presidente;</span></p>
+<p class="ali sub2"><span class="n">b)</span><span class="tx">Vice-Presidente;</span></p>
+<p class="ali sub2"><span class="n">c)</span><span class="tx">Relator; e</span></p>
+<p class="ali sub2"><span class="n">d)</span><span class="tx">um Membro escolhido de cada distrito.</span></p>
+<p class="par sub" id="art-35-XXI-p5"><span class="n">§ 5º</span><span class="tx">Os membros da <abbr class="sigla" data-g="COP">COP</abbr> serão escolhidos pela Junta Administrativa Estadual em sua primeira reunião ordinária, após a posse efetiva.</span></p>
+<p class="inc" id="art-35-XXII"><span class="n">XXII –</span><span class="tx">resolver os casos omissos neste Estatuto.</span></p>
+<p class="inc" id="art-35-XXIII"><span class="n">XXIII –</span><span class="tx">a Junta Administrativa Estadual terá a sua funcionalidade através de seu Regimento Interno próprio, a ser aprovado em Assembleia Geral Ordinária e/ou Extraordinária.</span></p>
+</article>
+</section>
+
+<section class="secao" id="cap-5-sec-7" data-label="Seção VII" data-title="Da Competência da Presidência e dos Requisitos para o Mandato">
+<h3><span>Seção VII</span><span>Da Competência da Presidência e dos Requisitos para o Mandato</span></h3>
+<article class="art" id="art-36" data-label="Art. 36">
+<p class="caput"><a class="artnum" href="#art-36">Art. 36.</a> Compete ao Presidente Estadual a atribuição de Direção e Coordenação Geral da IDPB - AM:</p>
+<p class="inc" id="art-36-I"><span class="n">I –</span><span class="tx">convocar e presidir as reuniões ordinárias e extraordinárias da Junta Administrativa Estadual;</span></p>
+<p class="inc" id="art-36-II"><span class="n">II –</span><span class="tx">convocar as Assembleias Gerais Ordinárias e Extraordinárias, observando o prazo constante no Estatuto Estadual;</span></p>
+<p class="inc" id="art-36-III"><span class="n">III –</span><span class="tx">cumprir e se fazer cumprir o Estatuto Estadual;</span></p>
+<p class="inc" id="art-36-IV"><span class="n">IV –</span><span class="tx">assinar e despachar expedientes da Junta Administrativa Estadual;</span></p>
+<p class="inc" id="art-36-V"><span class="n">V –</span><span class="tx">assinar as atas das reuniões, após a sua aprovação, juntamente com o 1º Vice-Presidente;</span></p>
+<p class="inc" id="art-36-VI"><span class="n">VI –</span><span class="tx">assinar cheques, balancetes, relatórios financeiros e toda documentação referente à área financeira da IDPB-AM, bem como efetuar pagamentos e transferências por meios eletrônicos, TED, DOC, e similares, juntamente com o 2º Vice-Presidente;</span></p>
+<p class="inc" id="art-36-VII"><span class="n">VII –</span><span class="tx">representar a Junta Administrativa Estadual;</span></p>
+<p class="inc" id="art-36-VIII"><span class="n">VIII –</span><span class="tx">indicar nomes para compor as comissões desse estatuto;</span></p>
+<p class="inc" id="art-36-IX"><span class="n">IX –</span><span class="tx">constituir procuradores para representar a Organização Religiosa nas questões administrativas junto aos órgãos públicos municipais, estaduais e federais, instituições financeiras, bancárias, judicial e extrajudicial;</span></p>
+<p class="inc" id="art-36-X"><span class="n">X –</span><span class="tx">constituir procuradores para compra, venda, doação ou aluguel de imóveis com a devida anuência dos demais componentes da Junta Administrativa Estadual, através de ata com a participação mínima de 75% dos componentes, conforme <a class="ref" data-ref="art-34" data-t="Art. 34" href="#art-34">artigo 34 e parágrafo único</a> deste Estatuto, sendo que tais procurações devem ser por instrumento público; e</span></p>
+<p class="inc" id="art-36-XI"><span class="n">XI –</span><span class="tx">somente deverá ser averbada no Cartório de Títulos e Documentos as atas de posse dos presidentes das Igrejas Locais conforme <a class="ref" data-ref="art-68" data-t="Art. 68" href="#art-68">art. 68, I e II</a>.</span></p>
+</article>
+<article class="art" id="art-37" data-label="Art. 37">
+<p class="caput"><a class="artnum" href="#art-37">Art. 37.</a> Compete ao 1º Vice-Presidente - Secretário, a atribuição de Gestor Administrativo:</p>
+<p class="inc" id="art-37-I"><span class="n">I –</span><span class="tx">assumir todas as atribuições do Presidente Estadual na ausência e vacância dele;</span></p>
+<p class="inc" id="art-37-II"><span class="n">II –</span><span class="tx">lavrar as atas de cada reunião e assiná-las juntamente com o presidente;</span></p>
+<p class="inc" id="art-37-III"><span class="n">III –</span><span class="tx">convocar os membros da junta para reunião ordinária e extraordinária;</span></p>
+<p class="inc" id="art-37-IV"><span class="n">IV –</span><span class="tx">manter sob controle as correspondências emitidas e recebidas;</span></p>
+<p class="inc" id="art-37-V"><span class="n">V –</span><span class="tx">manter os controles das credenciais dos ministros; e</span></p>
+<p class="inc" id="art-37-VI"><span class="n">VI –</span><span class="tx">tomar assinatura em livro próprio dos membros presentes em reuniões.</span></p>
+</article>
+<article class="art" id="art-38" data-label="Art. 38">
+<p class="caput"><a class="artnum" href="#art-38">Art. 38.</a> Compete ao 2º Vice-Presidente - Tesoureiro, a atribuição de Gestor Financeiro:</p>
+<p class="inc" id="art-38-I"><span class="n">I –</span><span class="tx">dar ciência nos documentos de Receitas e Despesas;</span></p>
+<p class="inc" id="art-38-II"><span class="n">II –</span><span class="tx">assinar juntamente com o Presidente cheques, balancetes, Balanço geral, relatórios financeiros, fluxos de caixa, demonstração contábil e toda documentação referente à área financeira da Junta Administrativa Estadual para apresentação em reuniões de pastores e convenções;</span></p>
+<p class="inc" id="art-38-III"><span class="n">III –</span><span class="tx">efetuar pagamentos e transferências por meios eletrônicos, TED, DOC, e similares, juntamente com o Presidente;</span></p>
+<p class="inc" id="art-38-IV"><span class="n">IV –</span><span class="tx">assumir a Presidência na ausência do Presidente e do 1ºVice Presidente;</span></p>
+<p class="inc" id="art-38-V"><span class="n">V –</span><span class="tx">Secretário Executivo; e</span></p>
+<p class="inc" id="art-38-VI"><span class="n">VI –</span><span class="tx">assumir a 1ª Vice-Presidência em caso de vacância do 1º Vice- Presidente.</span></p>
+<p class="par" id="art-38-p1"><span class="n">§ 1º</span><span class="tx">A Presidência Estadual terá 02 (dois) suplentes eleitos em Assembleia Geral Estadual, observando os critérios estabelecidos no <a class="ref" data-ref="art-39" data-t="Art. 39" href="#art-39">art. 39</a>.</span></p>
+<p class="par" id="art-38-p2"><span class="n">§ 2º</span><span class="tx">Para o caso de vacância nos cargos dos Oficiais eleitos mencionados nos <a class="ref" data-ref="art-36" data-t="Art. 36" href="#art-36">artigos 36, 37 e 38</a>, serão observados os critérios estabelecidos no rito abaixo:</span></p>
+<p class="inc sub" id="art-38-p2-I"><span class="n">I –</span><span class="tx">na vacância do Presidente, assume o 1º Vice-Presidente, sequenciando a ascensão do 2º Vice-Presidente para o cargo de 1º Vice-Presidente, que logo assumirá o 1º Suplente o cargo de 2º Vice-Presidente.</span></p>
+<p class="inc sub" id="art-38-p2-II"><span class="n">II –</span><span class="tx">a mesma ordem seguirá na vacância do 1º e 2º Vice-Presidentes, assumindo sempre o 1º Suplente o último cargo vago da hierarquia da Presidência Estadual da IDPB-AM.</span></p>
+<p class="par" id="art-38-p3"><span class="n">§ 3º</span><span class="tx">No caso da vacância prevista neste artigo, no prazo de 30 (trinta) dias, será nomeado novo titular, que completará o mandato do antecessor.</span></p>
+</article>
+<article class="art" id="art-39" data-label="Art. 39">
+<p class="caput"><a class="artnum" href="#art-39">Art. 39.</a> Os membros integrantes da Presidência Estadual serão eleitos pela maioria simples dos votos (cinquenta por cento mais um) da Assembleia Geral Estadual por escrutínio secreto, para o mandato de 03 (três) anos, devendo os candidatos preencherem os seguintes requisitos:</p>
+<p class="inc" id="art-39-I"><span class="n">I –</span><span class="tx">Ministro Ordenado da IDPB-AM;</span></p>
+<p class="inc" id="art-39-II"><span class="n">II –</span><span class="tx">idade mínima de 30 anos;</span></p>
+<p class="inc" id="art-39-III"><span class="n">III –</span><span class="tx">experiência na função de membro da Junta Administrativa Estadual, Junta Administrativa Distrital ou Conselhos.</span></p>
+<p class="inc" id="art-39-IV"><span class="n">IV –</span><span class="tx">conduta ilibada; e</span></p>
+<p class="inc" id="art-39-V"><span class="n">V –</span><span class="tx">aprovação de suas contas, enquanto atuou como gestor administrativo da IDPB-AM.</span></p>
+<p class="par" id="art-39-pu"><span class="n">Parágrafo único.</span><span class="tx">Não havendo candidatos no Grau de Ministro Ordenado para concorrer aos cargos da Presidência Estadual, poderão concorrer os Licenciados e, por último, os Cooperadores.</span></p>
+</article>
+</section>
+
+<section class="secao" id="cap-5-sec-8" data-label="Seção VIII" data-title="Da Composição dos Distritos e Subdistritos e dos Requisitos ao Mandato">
+<h3><span>Seção VIII</span><span>Da Composição dos Distritos e Subdistritos e dos Requisitos ao Mandato</span></h3>
+<article class="art" id="art-40" data-label="Art. 40">
+<p class="caput"><a class="artnum" href="#art-40">Art. 40.</a> A IDPB-AM tem como objetivo a gestão administrativa, ficando reservado aos Distritos, na pessoa do Supervisor Distrital, a finalidade de comunhão, mentoreamento e crescimento do corpo ministerial da respectiva jurisdição.</p>
+<p class="inc" id="art-40-I"><span class="n">I –</span><span class="tx">na criação de Distritos, se buscará respeitar o critério geográfico.</span></p>
+<p class="inc" id="art-40-II"><span class="n">II –</span><span class="tx">os Subdistritos poderão ser compostos de igrejas locais e/ou obras missionárias, estando os mesmos subordinados e coordenados pelo Distrito do qual ele faz parte.</span></p>
+<p class="inc" id="art-40-III"><span class="n">III –</span><span class="tx">os Subdistritos, localizados no interior do Estado do Amazonas, são subordinados e coordenados pelo Distrito de Manaus do qual ele faz parte.</span></p>
+<p class="inc" id="art-40-IV"><span class="n">IV –</span><span class="tx">os Subdistritos poderão ser transformados em Distritos, a partir de 07(sete) igrejas emancipadas, dependendo de critérios pré-estabelecidos pelas Juntas Distritais responsáveis pelos mesmos, em conjunto com a <abbr class="sigla" data-g="JAE">JAE</abbr>, devendo ser reconhecidos em Convenção Estadual, conforme ordenamento deste Estatuto.</span></p>
+<p class="par" id="art-40-p1"><span class="n">§ 1º</span><span class="tx">O mandato dos oficiais dos distritos e subdistritos obedecerá ao mesmo período de tempo do mandato da Junta Administrativa Estadual.</span></p>
+<p class="par" id="art-40-p2"><span class="n">§ 2º</span><span class="tx">A criação, extinção, transformação e emancipação das Igrejas Locais e Distritos, somente se processará por decisão da Junta Administrativa Estadual, observado o parecer da Presidência Estadual, da Comissão Especial de Estatuto, das Juntas Administrativas Distritais ou até, se necessário, dos Conselho Eclesiástico Estadual e do Conselho de Exame e Tomada de Contas Estadual, ambos com seu parecer técnico, respeitando- se o disposto no <a class="ref" data-ref="art-67" data-t="Art. 67" href="#art-67">art. 67 e parágrafo único</a> do presente Estatuto.</span></p>
+<p class="par" id="art-40-p3"><span class="n">§ 3º</span><span class="tx">Os Subdistritos serão comandados por um Sub-Supervisor escolhido pela Junta Administrativa Distrital para coordenar, acompanhar e supervisionar as obras missionárias até sua emancipação em Igreja local.</span></p>
+<p class="inc sub" id="art-40-p3-I"><span class="n">I –</span><span class="tx">fica facultado ao Supervisor Distrital, o pagamento de uma remuneração ao Sub Supervisor, a ser retirada dos recursos do próprio distrito, em comum acordo com a <abbr class="sigla" data-g="JAD">JAD</abbr>.</span></p>
+<p class="inc sub" id="art-40-p3-II"><span class="n">II –</span><span class="tx">o Supervisor, poderá, a seu critério, conceder assistência financeira a quem estiver a serviço da <abbr class="sigla" data-g="JAD">JAD</abbr>, independentemente de ser membro dessa diretoria.</span></p>
+</article>
+<article class="art" id="art-41" data-label="Art. 41">
+<p class="caput"><a class="artnum" href="#art-41">Art. 41.</a> A Junta Administrativa Distrital será composta dos seguintes cargos:</p>
+<p class="inc" id="art-41-I"><span class="n">I –</span><span class="tx">Supervisor;</span></p>
+<p class="inc" id="art-41-II"><span class="n">II –</span><span class="tx">1º Vice-Supervisor, que atuará como secretário;</span></p>
+<p class="inc" id="art-41-III"><span class="n">III –</span><span class="tx">2º Vice-Supervisor, que atuará como tesoureiro;</span></p>
+<p class="inc" id="art-41-IV"><span class="n">IV –</span><span class="tx">1º Conselheiro; e</span></p>
+<p class="inc" id="art-41-V"><span class="n">V –</span><span class="tx">2º Conselheiro.</span></p>
+</article>
+<article class="art" id="art-42" data-label="Art. 42">
+<p class="caput"><a class="artnum" href="#art-42">Art. 42.</a> Para concorrer aos cargos da Junta Administrativa Distrital, os candidatos deverão preencher os seguintes requisitos:</p>
+<p class="inc" id="art-42-I"><span class="n">I –</span><span class="tx">ser Ministro Ordenado da IDPB- AM, com idade mínima de 30 anos;</span></p>
+<p class="inc" id="art-42-II"><span class="n">II –</span><span class="tx">ter conduta ilibada; e</span></p>
+<p class="inc" id="art-42-III"><span class="n">III –</span><span class="tx">ter tido aprovação de suas contas, enquanto atuou como gestor administrativo da IDPB-AM.</span></p>
+<p class="par" id="art-42-p1"><span class="n">§ 1º</span><span class="tx">Não havendo candidatos no Grau de Ministro Ordenado para concorrer aos cargos majoritários da <abbr class="sigla" data-g="JAD">JAD</abbr>, poderão concorrer os Licenciados e, por último, os Cooperadores.</span></p>
+<p class="par" id="art-42-p2"><span class="n">§ 2º</span><span class="tx">A Junta Administrativa Distrital terá 2 (dois) suplentes eleitos em Assembleia Geral Estadual, pela sua zona distrital, para atuar em caso de vacância nos cargos dos oficiais eleitos mencionados neste no <a class="ref" data-ref="art-38" data-t="Art. 38" href="#art-38">caput do artigo 38</a>, observando os critérios estabelecidos nos §§ 1º, 2º e 3º.</span></p>
+<p class="par" id="art-42-p3"><span class="n">§ 3º</span><span class="tx">A eleição para esses cargos se dará em reunião exclusiva dos membros dos respectivos distritos durante a Assembleia Geral Estadual, pela maioria absoluta dos votos dos presentes regularmente inscritos na mesma.</span></p>
+</article>
+<article class="art" id="art-43" data-label="Art. 43">
+<p class="caput"><a class="artnum" href="#art-43">Art. 43.</a> Compete ao Supervisor Distrital:</p>
+<p class="inc" id="art-43-I"><span class="n">I –</span><span class="tx">participar das reuniões ordinárias e extraordinárias da Junta Administrativa Estadual;</span></p>
+<p class="inc" id="art-43-II"><span class="n">II –</span><span class="tx">convocar e presidir reuniões distritais ordinárias e extraordinárias;</span></p>
+<p class="inc" id="art-43-III"><span class="n">III –</span><span class="tx">cumprir e fazer cumprir o estatuto, regimento interno e as metas elaboradas pela presidência estadual;</span></p>
+<p class="inc" id="art-43-IV"><span class="n">IV –</span><span class="tx">abrir e supervisionar novas igrejas no interior do estado, na capital ou em qualquer lugar do país e exterior; e</span></p>
+<p class="inc" id="art-43-V"><span class="n">V –</span><span class="tx">mentorear na esfera distrital os pastores(as), ministros(as) auxiliares, missionários(as) e estagiários(as), que deverão estar acompanhados de seus respectivos cônjuges, através de reuniões de mentoreamento, visitas e aconselhamentos e outros que se fizerem necessários.</span></p>
+</article>
+<article class="art" id="art-44" data-label="Art. 44">
+<p class="caput"><a class="artnum" href="#art-44">Art. 44.</a> Compete ao 1º Vice Supervisor Distrital (Secretário):</p>
+<p class="inc" id="art-44-I"><span class="n">I –</span><span class="tx">participar das reuniões ordinárias e extraordinárias da Junta Distrital;</span></p>
+<p class="inc" id="art-44-II"><span class="n">II –</span><span class="tx">lavrar as atas de cada reunião e assiná-las juntamente com o Supervisor;</span></p>
+<p class="inc" id="art-44-III"><span class="n">III –</span><span class="tx">convocar os membros da Junta Distrital para reunião ordinária e extraordinária; e</span></p>
+<p class="inc" id="art-44-IV"><span class="n">IV –</span><span class="tx">assumir a supervisão distrital na ausência ou vacância do Supervisor.</span></p>
+</article>
+<article class="art" id="art-45" data-label="Art. 45">
+<p class="caput"><a class="artnum" href="#art-45">Art. 45.</a> Compete ao 2º Vice Supervisor Distrital (Tesoureiro)</p>
+<p class="inc" id="art-45-I"><span class="n">I –</span><span class="tx">participar das reuniões ordinárias e extraordinárias da Junta Distrital;</span></p>
+<p class="inc" id="art-45-II"><span class="n">II –</span><span class="tx">assinar juntamente com o Supervisor, relatórios financeiros, fluxos de caixa, demonstração contábil e toda documentação referente à área financeira da Junta Distrital, para apresentação a Tesouraria Estadual e em reuniões distritais;</span></p>
+<p class="inc" id="art-45-III"><span class="n">III –</span><span class="tx">auxiliar a supervisão distrital no trabalho missionário e de mentoreamento dos pastores, estagiários e cônjuges do seu distrito; e</span></p>
+<p class="inc" id="art-45-IV"><span class="n">IV –</span><span class="tx">assumir a supervisão na ausência do 1º Vice Supervisor e do Supervisor.</span></p>
+</article>
+<article class="art" id="art-46" data-label="Art. 46">
+<p class="caput"><a class="artnum" href="#art-46">Art. 46.</a> Compete ao 1º e 2º Conselheiros Distritais:</p>
+<p class="inc" id="art-46-I"><span class="n">I –</span><span class="tx">participar das reuniões ordinárias e extraordinárias da Junta Administrativa Distrital; e</span></p>
+<p class="inc" id="art-46-II"><span class="n">II –</span><span class="tx">auxiliar a supervisão distrital no trabalho missionário e de mentoreamento dos pastores, estagiários e cônjuges do seu distrito.</span></p>
+</article>
+<article class="art" id="art-47" data-label="Art. 47">
+<p class="caput"><a class="artnum" href="#art-47">Art. 47.</a> Compete ao 1º e 2º Suplentes Distritais:</p>
+<p class="inc" id="art-47-I"><span class="n">I –</span><span class="tx">substituir qualquer membro da Junta Administrativa Distrital, em caso de vacância, observando de igual modo, os critérios citados no <a class="ref" data-ref="art-38-p2" data-t="Art. 38, § 2º" href="#art-38-p2">art. 38, §2º, I e II</a> para os cargos da Presidência Estadual da IDPB-AM; e</span></p>
+<p class="inc" id="art-47-II"><span class="n">II –</span><span class="tx">em caso de vacância no cargo de Supervisor, o 1º Vice Supervisor assume automaticamente a Supervisão do Distrito e assim se dará nos demais cargos, entrando o Suplente no último cargo vago da hierarquia.</span></p>
+</article>
+<article class="art" id="art-48" data-label="Art. 48">
+<p class="caput"><a class="artnum" href="#art-48">Art. 48.</a> As fontes de recursos dos Distritos são as seguintes:</p>
+<p class="inc" id="art-48-I"><span class="n">I –</span><span class="tx">os dízimos dos Pastores Presidentes de igrejas locais;</span></p>
+<p class="inc" id="art-48-II"><span class="n">II –</span><span class="tx">as ofertas missionárias captadas das Igrejas Locais integrante do respectivo Distrito; e</span></p>
+<p class="inc" id="art-48-III"><span class="n">III –</span><span class="tx">outros recursos oriundos de atividades e eventos do Distrito para desenvolvimento de suas atividades distritais e manutenção das obras missionárias.</span></p>
+<p class="par" id="art-48-pu"><span class="n">Parágrafo único.</span><span class="tx">Todo recurso adquirido ou gerado através das atividades desenvolvidas pelos Distritos, ficarão na tesouraria estadual à disposição dos mesmos para desenvolvimento de suas atividades.</span></p>
+</article>
+</section>
+
+<section class="secao" id="cap-5-sec-9" data-label="Seção IX" data-title="Do Conselho Eclesiástico Estadual">
+<h3><span>Seção IX</span><span>Do Conselho Eclesiástico Estadual</span></h3>
+<article class="art" id="art-49" data-label="Art. 49">
+<p class="caput"><a class="artnum" href="#art-49">Art. 49.</a> O Conselho Eclesiástico Estadual é o órgão que atuará como conselheiro e moderador da IDPB-AM, composto por três integrantes:</p>
+<p class="inc" id="art-49-I"><span class="n">I –</span><span class="tx">Relator;</span></p>
+<p class="inc" id="art-49-II"><span class="n">II –</span><span class="tx">1º Conselheiro; e</span></p>
+<p class="inc" id="art-49-III"><span class="n">III –</span><span class="tx">2º Conselheiro.</span></p>
+<p class="par" id="art-49-p1"><span class="n">§ 1º</span><span class="tx">Compete ao Relator convocar e presidir as reuniões ordinárias e extraordinárias do Conselho Eclesiástico Estadual.</span></p>
+<p class="par" id="art-49-p2"><span class="n">§ 2º</span><span class="tx">Compete ao 1º Conselheiro substituir o Relator em caso de ausência.</span></p>
+<p class="par" id="art-49-p3"><span class="n">§ 3º</span><span class="tx">O Conselho Eclesiástico Estadual só poderá dar parecer por voto da maioria absoluta (50%+1) dos membros do Conselho.</span></p>
+</article>
+<article class="art" id="art-50" data-label="Art. 50">
+<p class="caput"><a class="artnum" href="#art-50">Art. 50.</a> Os membros integrantes do Conselho Eclesiástico Estadual serão eleitos pela maioria simples dos votos (cinquenta por cento mais um) da Assembleia Geral Estadual por escrutínio secreto, para o mandato de 03 (três) anos, devendo os candidatos que preencherem os seguintes requisitos:</p>
+<p class="inc" id="art-50-I"><span class="n">I –</span><span class="tx">Ministro Ordenado da IDPB-AM;</span></p>
+<p class="inc" id="art-50-II"><span class="n">II –</span><span class="tx">idade mínima de 30 anos;</span></p>
+<p class="inc" id="art-50-III"><span class="n">III –</span><span class="tx">experiência como membro da Junta Administrativa Estadual ou Distrital;</span></p>
+<p class="inc" id="art-50-IV"><span class="n">IV –</span><span class="tx">conduta ilibada; e</span></p>
+<p class="inc" id="art-50-V"><span class="n">V –</span><span class="tx">aprovação de suas contas, enquanto atuou como gestor administrativo da IDPB-AM.</span></p>
+<p class="par" id="art-50-p1"><span class="n">§ 1º</span><span class="tx">Não havendo candidatos no Grau de Ministro Ordenado para concorrer aos cargos do Conselho Eclesiástico Estadual, poderão concorrer os Licenciados e, por último, os Cooperadores.</span></p>
+<p class="par" id="art-50-p2"><span class="n">§ 2º</span><span class="tx">Os integrantes deste Conselho não poderão ocupar nenhum outro cargo de função dentro dos Órgãos Administrativos da IDPB-AM.</span></p>
+<p class="par" id="art-50-p3"><span class="n">§ 3º</span><span class="tx">O Conselho Eclesiástico Estadual terá 02 (dois) Suplentes eleitos em Convenção Estadual, observados os critérios estabelecidos deste artigo.</span></p>
+<p class="par" id="art-50-p4"><span class="n">§ 4º</span><span class="tx">Em caso de vacância no cargo de Relator, o 1º Conselheiro assume automaticamente e assim se dará nos demais cargos, entrando o suplente no último cargo da hierarquia.</span></p>
+<p class="par" id="art-50-p5"><span class="n">§ 5º</span><span class="tx">No caso da vacância prevista neste artigo, será nomeado pela <abbr class="sigla" data-g="JAE">JAE</abbr> o novo titular do cargo no prazo de 30 (trinta dias), que completará o mandato do antecessor.</span></p>
+</article>
+<article class="art" id="art-51" data-label="Art. 51">
+<p class="caput"><a class="artnum" href="#art-51">Art. 51.</a> O Conselho Eclesiástico Estadual reunir-se-á extraordinariamente quando se fizer necessário, convocado no mínimo com dois de seus 3 (três) integrantes.</p>
+<p class="par" id="art-51-pu"><span class="n">Parágrafo único.</span><span class="tx">Será destituído o integrante deste Conselho, que perder a função eclesiástica.</span></p>
+</article>
+<article class="art" id="art-52" data-label="Art. 52">
+<p class="caput"><a class="artnum" href="#art-52">Art. 52.</a> Compete ao Conselho Eclesiástico Estadual:</p>
+<p class="inc" id="art-52-I"><span class="n">I –</span><span class="tx">zelar pelo desenvolvimento, prestígio e equilíbrio espiritual da IDPB-AM, sugerindo medidas que a resguardem; e</span></p>
+<p class="inc" id="art-52-II"><span class="n">II –</span><span class="tx">atuar como moderador, quando solicitado, nas hipóteses previstas neste Estatuto, examinando fatos feitos ou praticados por qualquer pessoa investida nas funções eclesiásticas, aconselhando, dando apoio espiritual ou emitindo parecer à Junta Administrativa Estadual quando se fizer necessário.</span></p>
+</article>
+</section>
+
+<section class="secao" id="cap-5-sec-10" data-label="Seção X" data-title="Do Conselho de Exame e Tomada de Contas Estadual">
+<h3><span>Seção X</span><span>Do Conselho de Exame e Tomada de Contas Estadual</span></h3>
+<article class="art" id="art-53" data-label="Art. 53">
+<p class="caput"><a class="artnum" href="#art-53">Art. 53.</a> O Conselho de Exame e Tomada de Contas Estadual é o órgão de fiscalização da IDPB-AM, cabendo-lhe, precipuamente, zelar pela gestão econômico-financeira da Presidência Estadual, ou igreja local quando solicitado pela <abbr class="sigla" data-g="JAE">JAE</abbr> e é composto de três integrantes, eleitos em Assembleia Geral Estadual para um mandato de 3 (três) anos.</p>
+<p class="inc" id="art-53-I"><span class="n">I –</span><span class="tx">Relator;</span></p>
+<p class="inc" id="art-53-II"><span class="n">II –</span><span class="tx">1º Conselheiro; e</span></p>
+<p class="inc" id="art-53-III"><span class="n">III –</span><span class="tx">2º Conselheiro.</span></p>
+<p class="par" id="art-53-p1"><span class="n">§ 1º</span><span class="tx">Compete ao Relator convocar e presidir as reuniões ordinárias e extraordinárias do Conselho de Exame e Tomada de Contas Estadual.</span></p>
+<p class="par" id="art-53-p2"><span class="n">§ 2º</span><span class="tx">Compete ao 1º Conselheiro substituir o Relator em caso de ausência.</span></p>
+</article>
+<article class="art" id="art-54" data-label="Art. 54">
+<p class="caput"><a class="artnum" href="#art-54">Art. 54.</a> Os membros integrantes do Conselho De Exame e Tomada de Contas Estadual serão eleitos pela maioria simples dos votos (cinquenta por cento mais um) da Assembleia Geral Estadual por escrutínio secreto, para o mandato de 03 (três) anos, devendo os candidatos que preencherem os seguintes requisitos:</p>
+<p class="inc" id="art-54-I"><span class="n">I –</span><span class="tx">Ministro Ordenado da IDPB-AM;</span></p>
+<p class="inc" id="art-54-II"><span class="n">II –</span><span class="tx">idade mínima de 30 anos;</span></p>
+<p class="inc" id="art-54-III"><span class="n">III –</span><span class="tx">experiência como membro da Junta Administrativa Estadual ou Distrital;</span></p>
+<p class="inc" id="art-54-IV"><span class="n">IV –</span><span class="tx">conduta ilibada; e</span></p>
+<p class="inc" id="art-54-V"><span class="n">V –</span><span class="tx">aprovação de suas contas, enquanto atuou como gestor administrativo da IDPB-AM.</span></p>
+<p class="par" id="art-54-p1"><span class="n">§ 1º</span><span class="tx">Não havendo candidatos no Grau de Ministro Ordenado para concorrer aos cargos do Conselho de Exame e Tomada de Constas Estadual, poderão concorrer os Licenciados e, por último, os Cooperadores.</span></p>
+<p class="par" id="art-54-p2"><span class="n">§ 2º</span><span class="tx">Os integrantes deste Conselho não poderão ocupar nenhum cargo de função administrativa (presidência estadual ou supervisão distrital).</span></p>
+<p class="par" id="art-54-p3"><span class="n">§ 3º</span><span class="tx">Serão eleitos os três membros integrantes do Conselho de Exame e Tomada de Contas sem distinção de cargos, devendo os eleitos escolherem entre si, o seu relator.</span></p>
+</article>
+<article class="art" id="art-55" data-label="Art. 55">
+<p class="caput"><a class="artnum" href="#art-55">Art. 55.</a> O Conselho de Exame e Tomada de Contas estadual terá 02 (dois) suplentes eleitos em Convenção Estadual, observados os critérios estabelecidos neste artigo.</p>
+<p class="par" id="art-55-p1"><span class="n">§ 1º</span><span class="tx">Em caso de vacância no cargo de Relator, o 1º. Conselheiro assume automaticamente e assim se dará nos demais cargos, entrando o suplente no último cargo da hierarquia.</span></p>
+<p class="par" id="art-55-p2"><span class="n">§ 2º</span><span class="tx">No caso da vacância prevista neste artigo, será nomeado pela Junta Administrativa Estadual o novo titular, no prazo de 30 (trinta) dias, que completará o mandato do antecessor.</span></p>
+</article>
+<article class="art" id="art-56" data-label="Art. 56">
+<p class="caput"><a class="artnum" href="#art-56">Art. 56.</a> Será destituído o integrante do Conselho de Exame e Tomada de Contas Estadual quando:</p>
+<p class="inc" id="art-56-I"><span class="n">I –</span><span class="tx">faltar injustificadamente a três reuniões consecutivas ou a cinco alternadas; e/ou</span></p>
+<p class="inc" id="art-56-II"><span class="n">II –</span><span class="tx">perder a função eclesiástica.</span></p>
+</article>
+<article class="art" id="art-57" data-label="Art. 57">
+<p class="caput"><a class="artnum" href="#art-57">Art. 57.</a> O Conselho de Exames e Tomada de Contas Estadual reunir-se-á, ordinariamente, no início de cada semestre e, extraordinariamente, quando convocado por qualquer dos seus integrantes ou pela Junta Administrativa Estadual, e só poderá deliberar por voto da maioria absoluta (cinquenta por cento mais um) dos membros do Conselho.</p>
+</article>
+<article class="art" id="art-58" data-label="Art. 58">
+<p class="caput"><a class="artnum" href="#art-58">Art. 58.</a> Compete ao Conselho de Exames e Tomada de Contas Estadual:</p>
+<p class="inc" id="art-58-I"><span class="n">I –</span><span class="tx">emitir parecer conclusivo, a ser apresentado a Junta Administrativa Estadual, sobre as demonstrações financeiras, prestação de contas e outras operações relativas a cada exercício financeiro, depois de auditado;</span></p>
+<p class="inc" id="art-58-II"><span class="n">II –</span><span class="tx">examinar, em qualquer época, atos e operações dos órgãos da IDPB-AM e das igrejas locais, quando provocado pela Junta Administrativa Estadual, solicitado pela Igreja Local ou por sua iniciativa própria através de auditoria preventiva e didática com a anuência da <abbr class="sigla" data-g="JAE">JAE</abbr>;</span></p>
+<p class="inc" id="art-58-III"><span class="n">III –</span><span class="tx">apresentar a Junta Administrativa Estadual as irregularidades de que tome conhecimento; e</span></p>
+<p class="inc" id="art-58-IV"><span class="n">IV –</span><span class="tx">oferecer sugestões, fazer recomendações para a melhoria dos serviços e sugerir medidas saneadoras.</span></p>
+<p class="par" id="art-58-p1"><span class="n">§ 1º</span><span class="tx">Nenhum papel, documento ou informação, referente à gestão financeira e patrimônio da IDPB-AM, poderá ser sonegado ao Conselho de Exames e Tomada de Contas Estadual, sob qualquer pretexto.</span></p>
+<p class="par" id="art-58-p2"><span class="n">§ 2º</span><span class="tx">Os pareceres e laudos dos exames procedidos serão transcritos em Ata assinada por todos os integrantes, os quais farão parte das peças a serem apresentadas em Reunião Estadual de Pastores, Assembleia Geral Ordinária Estadual e Convenção Nacional da IDPB.</span></p>
+<p class="par" id="art-58-p3"><span class="n">§ 3º</span><span class="tx">O Conselho de Exames e Tomadas de Contas Estaduais poderá valer-se de assessoria técnica externa em contabilidade e auditoria contábil para a realização de sua atividade fim.</span></p>
+</article>
+</section>
+
+<section class="secao" id="cap-5-sec-11" data-label="Seção XI" data-title="Do Ministério de Educação Teológica do Amazonas (MET/AM)">
+<h3><span>Seção XI</span><span>Do Ministério de Educação Teológica do Amazonas (MET/AM)</span></h3>
+<article class="art" id="art-59" data-label="Art. 59">
+<p class="caput"><a class="artnum" href="#art-59">Art. 59.</a> O Ministério de Educação Teológica do Amazonas é o órgão que atuará como Conselho na condução dos rumos do ensino teológico no âmbito da IDPB-AM, fazendo parte do MET NACIONAL, composto por 03 (três) integrantes mais os diretores dos seminários reconhecidos da IDPB- AM:</p>
+<p class="inc" id="art-59-I"><span class="n">I –</span><span class="tx">Diretor;</span></p>
+<p class="inc" id="art-59-II"><span class="n">II –</span><span class="tx">1º Conselheiro;</span></p>
+<p class="inc" id="art-59-III"><span class="n">III –</span><span class="tx">2º Conselheiro; e</span></p>
+<p class="inc" id="art-59-IV"><span class="n">IV –</span><span class="tx">Diretores dos seminários reconhecidos da IDPB-AM.</span></p>
+<p class="par" id="art-59-p1"><span class="n">§ 1º</span><span class="tx">O Diretor e os conselheiros do <abbr class="sigla" data-g="MET">MET/AM</abbr> serão nomeados pela Junta Administrativa Estadual em sua primeira reunião ordinária, após a posse efetiva.</span></p>
+<p class="par" id="art-59-p2"><span class="n">§ 2º</span><span class="tx">Será destituído o integrante do <abbr class="sigla" data-g="MET">MET/AM</abbr>, que perder a função eclesiástica.</span></p>
+</article>
+<article class="art" id="art-60" data-label="Art. 60">
+<p class="caput"><a class="artnum" href="#art-60">Art. 60.</a> Compete ao Ministério de Educação Teológica do Amazonas - <abbr class="sigla" data-g="MET">MET/AM</abbr>:</p>
+<p class="inc" id="art-60-I"><span class="n">I –</span><span class="tx">elaborar diretrizes para os seminários existentes e postulantes;</span></p>
+<p class="inc" id="art-60-II"><span class="n">II –</span><span class="tx">avaliar os seminários existentes e postulantes;</span></p>
+<p class="inc" id="art-60-III"><span class="n">III –</span><span class="tx">zelar pelo ensino teológico da IDPB-AM avaliando as doutrinas ensinadas na IDPB-AM, a luz da Bíblia;</span></p>
+<p class="inc" id="art-60-IV"><span class="n">IV –</span><span class="tx">avaliar desvios doutrinários sugerindo medidas que resguardem a IDPB- AM;</span></p>
+<p class="inc" id="art-60-V"><span class="n">V –</span><span class="tx">criar cursos de capacitação de professores de seminário; e</span></p>
+<p class="inc" id="art-60-VI"><span class="n">VI –</span><span class="tx">avaliar periodicamente a grade curricular dos seminários com a participação dos pastores e professores.</span></p>
+</article>
+<article class="art" id="art-61" data-label="Art. 61">
+<p class="caput"><a class="artnum" href="#art-61">Art. 61.</a> Compete ao Diretor do Ministério de Educação Teológica convocar e presidir as reuniões ordinárias e extraordinárias do Ministério de Educação Teológica do Amazonas.</p>
+</article>
+<article class="art" id="art-62" data-label="Art. 62">
+<p class="caput"><a class="artnum" href="#art-62">Art. 62.</a> Compete aos Diretores de Seminário:</p>
+<p class="inc" id="art-62-I"><span class="n">I –</span><span class="tx">o bom andamento do Seminário;</span></p>
+<p class="inc" id="art-62-II"><span class="n">II –</span><span class="tx">preparação de materiais para o seminário;</span></p>
+<p class="inc" id="art-62-III"><span class="n">III –</span><span class="tx">verificação da Doutrina da IDPB-AM;</span></p>
+<p class="inc" id="art-62-IV"><span class="n">IV –</span><span class="tx">confeccionar as apostilas, revistas e livros;</span></p>
+<p class="inc" id="art-62-V"><span class="n">V –</span><span class="tx">suprir os Núcleos com os Módulos;</span></p>
+<p class="inc" id="art-62-VI"><span class="n">VI –</span><span class="tx">arquivar todos os Diários de Classe do Seminário;</span></p>
+<p class="inc" id="art-62-VII"><span class="n">VII –</span><span class="tx">assinar juntamente com presidente da IDPB-AM os Certificados de Conclusão de Curso do Seminário;</span></p>
+<p class="inc" id="art-62-VIII"><span class="n">VIII –</span><span class="tx">assinar o Relatório Financeiro do Seminário; e</span></p>
+<p class="inc" id="art-62-IX"><span class="n">IX –</span><span class="tx">prestar conta do Relatório Financeiro a Junta Administrativa Estadual e Convenção Estadual.</span></p>
+</article>
+<article class="art" id="art-63" data-label="Art. 63">
+<p class="caput"><a class="artnum" href="#art-63">Art. 63.</a> O Ministério de Educação Teológica do Amazonas - <abbr class="sigla" data-g="MET">MET/AM</abbr> reunir- se-á ordinariamente conforme agenda estabelecida no início de cada semestre ou extraordinariamente, quando convocado.</p>
+</article>
+</section>
+</section>
+
+<section class="cap" id="cap-6" data-label="Capítulo VI" data-title="Do Cadastro Nacional de Pessoa Jurídica (CNPJ/MF)">
+<header><span class="cap-label">Capítulo VI</span><h2>Do Cadastro Nacional de Pessoa Jurídica (CNPJ/MF)</h2></header>
+<article class="art" id="art-64" data-label="Art. 64">
+<p class="caput"><a class="artnum" href="#art-64">Art. 64.</a> A IDPB-AM e suas igrejas filiadas são regidas pelo presente Estatuto ao serem registradas no Ministério da Fazenda (Secretaria da Receita Federal) para obtenção do Cadastro Nacional de Pessoa Jurídica (CNPJ) do Ministério da Fazenda e receberão a terminação do número atribuído à Igreja Estadual.</p>
+</article>
+</section>
+
+<section class="cap" id="cap-7" data-label="Capítulo VII" data-title="Da Igreja Local e o Pastor">
+<header><span class="cap-label">Capítulo VII</span><h2>Da Igreja Local e o Pastor</h2></header>
+
+<section class="secao" id="cap-7-sec-1" data-label="Seção I" data-title="Da Igreja Local">
+<h3><span>Seção I</span><span>Da Igreja Local</span></h3>
+<article class="art" id="art-65" data-label="Art. 65">
+<p class="caput"><a class="artnum" href="#art-65">Art. 65.</a> A Igreja Local é composta de Sede e Congregações, que tomarão o nome de lugar onde se encontrarem ou outro aprovado pela Junta Administrativa Estadual.</p>
+</article>
+<article class="art" id="art-66" data-label="Art. 66">
+<p class="caput"><a class="artnum" href="#art-66">Art. 66.</a> Será considerada como Igreja Local aquela que possuir, no mínimo, <strong>40 (quarenta)</strong> membros e ser autossustentável, com autonomia aprovada pelos membros e homologação da Junta Administrativa Estadual.</p>
+<div class="alt-row"><a class="ref alt" data-ref="alt-moc4" href="#alt-moc4">Alterado na XI Convenção (2023)</a></div>
+<p class="par" id="art-66-p1"><span class="n">§ 1º</span><span class="tx">A diretoria da igreja local deverá ser organizada através de um Regimento Interno Local, que, deverá ser encaminhado à Junta Administrativa Estadual, a fim obter a sua homologação.</span></p>
+<p class="par" id="art-66-p2"><span class="n">§ 2º</span><span class="tx">Em caráter excepcional poderão ter representante nas Assembleias Gerais as congregações organizadas e dirigidas pela Junta Administrativa Distrital.</span></p>
+</article>
+</section>
+
+<section class="secao" id="cap-7-sec-2" data-label="Seção II" data-title="Do Pastor Presidente da Igreja Local">
+<h3><span>Seção II</span><span>Do Pastor Presidente da Igreja Local</span></h3>
+<article class="art" id="art-67" data-label="Art. 67">
+<p class="caput"><a class="artnum" href="#art-67">Art. 67.</a> O Pastor Presidente da Igreja Local será um Ministro Credenciado pela IDPB-Nacional, devidamente enquadrado no <a class="ref" data-ref="art-8" data-t="Art. 8º" href="#art-8">art. 8º e incisos</a>, sendo indicado pela Junta Administrativa Estadual, através das Supervisões Distritais, e servirá por tempo indeterminado, ou a critério da autoridade competente.</p>
+<p class="par" id="art-67-pu"><span class="n">Parágrafo único.</span><span class="tx">No caso da vacância, prevista neste artigo, a <abbr class="sigla" data-g="JAE">JAE</abbr> terá o prazo de 30 (trinta) dias, para nomear o novo titular, observando o que está regulamentado no <a class="ref" data-ref="art-71" data-t="Art. 71" href="#art-71">art. 71 e §§ 1º e 2º</a>.</span></p>
+</article>
+<article class="art" id="art-68" data-label="Art. 68">
+<p class="caput"><a class="artnum" href="#art-68">Art. 68.</a> Compete ao Pastor Presidente da Igreja Local:</p>
+<p class="inc" id="art-68-I"><span class="n">I –</span><span class="tx">a gestão administrativa, direção dos atos de cultos e das reuniões solenes, por tempo indeterminado e enquanto bem servir, ou a critério das autoridades mencionadas no presente artigo; e</span></p>
+<p class="inc" id="art-68-II"><span class="n">II –</span><span class="tx">representar a igreja local mediante procuração perante os órgãos federais, estaduais, municipais, autarquias, instituições financeiras e bancarias.</span></p>
+<p class="par" id="art-68-pu"><span class="n">Parágrafo único.</span><span class="tx">É vedado, no entanto, o uso da procuração em negócios estranhos ao interesse da instituição, ou o procurador assumir a responsabilidade estranha as finalidades sociais previstas no <a class="ref" data-ref="art-3" data-t="Art. 3º" href="#art-3">art. 3º deste Estatuto</a>.</span></p>
+</article>
+<article class="art" id="art-69" data-label="Art. 69">
+<p class="caput"><a class="artnum" href="#art-69">Art. 69.</a> O Pastor Presidente da Igreja Local como membro da IDPB-AM, é um vocacionado voluntário para o exercício do seu sacerdócio, possuindo autonomia, organização própria, liberdade de iniciativa, de ação e autodisciplina em sua igreja local.</p>
+<p class="par" id="art-69-pu"><span class="n">Parágrafo único.</span><span class="tx">O seu sustento do Pastor Presidente de Igreja Local será mantido pelas contribuições voluntárias dos fiéis de sua respectiva Igreja Local.</span></p>
+</article>
+<article class="art" id="art-70" data-label="Art. 70">
+<p class="caput"><a class="artnum" href="#art-70">Art. 70.</a> O Pastor Presidente da Igreja Local deverá, obrigatoriamente, ter a sua inscrição no <abbr class="sigla" data-g="INSS">INSS</abbr> e ser responsável pelo recolhimento mensal de seus encargos sociais e fiscais.</p>
+<p class="par" id="art-70-p1"><span class="n">§ 1º</span><span class="tx">O recolhimento do <abbr class="sigla" data-g="INSS">INSS</abbr> de outros pastores locais ou auxiliares, também será de responsabilidade do Pastor de Igreja Local.</span></p>
+<p class="par" id="art-70-p2"><span class="n">§ 2º</span><span class="tx">As retenções de IR sobre os subsídios dos pastores e auxiliares devem ser recolhidas mensalmente conforme instruções da Receita Federal, utilizando o CNPJ da matriz por se tratar de tributo federal.</span></p>
+</article>
+<article class="art" id="art-71" data-label="Art. 71">
+<p class="caput"><a class="artnum" href="#art-71">Art. 71.</a> Caso o Pastor Presidente da Igreja Local, venha ser acometido de invalidez permanente que o impossibilite de continuar com as suas atividades eclesiásticas, ou venha falecer, o seu cônjuge, sendo apto e manifestando o desejo, assumirá a presidência da Igreja Local.</p>
+<p class="par" id="art-71-p1"><span class="n">§ 1º</span><span class="tx">No caso de invalidez permanente, o cônjuge não se sentindo apto a assumir a Igreja Local, a título de liberalidade dos fiéis da igreja local e sob a supervisão da <abbr class="sigla" data-g="JAE">JAE</abbr>, o Pastor Presidente acometido de invalidez poderá receber o valor equivalente a 50% (cinquenta por cento) ao que vinha recebendo na época do fato.</span></p>
+<p class="par" id="art-71-p2"><span class="n">§ 2º</span><span class="tx">No caso de falecimento, o cônjuge não assumindo a presidência da Igreja Local, poderá ter uma ajuda mensal, a título de liberalidade dos fiéis da igreja local, no valor equivalente a 50% (cinquenta por cento) ao que vinha recebendo o Pastor Presidente na época do fato.</span></p>
+</article>
+<article class="art" id="art-72" data-label="Art. 72">
+<p class="caput"><a class="artnum" href="#art-72">Art. 72.</a> O jubilamento do Pastor de Igreja Local ou Congregação será resolvido exclusivamente pela Junta Administrativa Estadual (<a class="ref" data-ref="art-35" data-t="Art. 35" href="#art-35">art. 35, X, XIII, XIX</a>), e quando for o caso, a <abbr class="sigla" data-g="JAE">JAE</abbr> solicitará da diretoria da Igreja Local o parecer jubilatório.</p>
+<p class="par" id="art-72-pu"><span class="n">Parágrafo único.</span><span class="tx">Após o jubilamento do Pastor de Igreja Local ou Congregação, a <abbr class="sigla" data-g="JAE">JAE</abbr> terá o prazo de até 30 (trinta dias) para consultar a regularização do Pastor jubilado junto ao <abbr class="sigla" data-g="INSS">INSS</abbr>, <abbr class="sigla" data-g="FGTS">FGTS</abbr>, e similares para avaliar a concessão de até 50% (cinquenta por cento) da prebenda equivalente ao que vinha recebendo enquanto ativo como pastor.</span></p>
+</article>
+</section>
+
+<section class="secao" id="cap-7-sec-3" data-label="Seção III" data-title="Do Ministério Auxiliar">
+<h3><span>Seção III</span><span>Do Ministério Auxiliar</span></h3>
+<article class="art" id="art-73" data-label="Art. 73">
+<p class="caput"><a class="artnum" href="#art-73">Art. 73.</a> O Ministério Auxiliar é uma concessão da Junta Administrativa Estadual à Igreja Local, através de credenciais fornecidas aos Assistentes Pastorais e Missionários, reconhecidos pela diretoria de sua Igreja local de origem e pela IDPB-AM, conforme disposto neste Estatuto.</p>
+</article>
+<article class="art" id="art-74" data-label="Art. 74">
+<p class="caput"><a class="artnum" href="#art-74">Art. 74.</a> Os Candidatos a Ministro Auxiliar deverão preencher os seguintes requisitos:</p>
+<p class="inc" id="art-74-I"><span class="n">I –</span><span class="tx">fidelidade nos dízimos e ofertas;</span></p>
+<p class="inc" id="art-74-II"><span class="n">II –</span><span class="tx">declaração de Concordância em ser de sua livre e espontânea vontade, o desejo de ingressar no Ministério Auxiliar da IDPB-AM, na qualidade de VOCACIONADO VOLUNTÁRIO PARA EXERCÍCIO DO SACERDÓCIO NA IGREJA LOCAL, certo de não haver nenhum vínculo empregatício;</span></p>
+<p class="inc" id="art-74-III"><span class="n">III –</span><span class="tx">demonstrar total respeito hierárquico pelos seus líderes eclesiásticos, com o espírito de […]</span></p>
+</article>
+<div class="lacuna" role="note"><strong>A cópia disponível termina aqui.</strong> O PDF registrado tem 27 páginas, mas só recebemos até a página 24, que para no meio do art. 74, III. Pela Ata da XI Convenção, o Estatuto vai pelo menos até o art. 78. O restante entra assim que as páginas 25 a 27 forem localizadas.</div>
+</section>
+</section>
+      </div>
+      <p class="empty" id="empty" hidden>Nenhum artigo encontrado. Tente outra palavra ou digite o número, como “art 15”.</p>
+
+      <footer class="note">Transcrição do Estatuto registrado no RCPJ de Manaus, conferida com a cópia autenticada pelo 5º Ofício de Notas em 08/01/2024. A grafia do original foi mantida. Em caso de divergência, prevalece o documento registrado.</footer>
+    </div>
+  </main>
+</div>
+
+<div class="pop" id="pop" role="dialog" aria-modal="false" hidden></div>
+<div class="toast" id="toast" role="status" hidden></div>
+<div class="scrim" id="scrim" hidden></div>
+
+<script>
+(function(){
+  'use strict';
+  var store = {
+    get:function(k){try{return localStorage.getItem('estatuto-idpb:'+k)}catch(e){return null}},
+    set:function(k,v){try{localStorage.setItem('estatuto-idpb:'+k,v)}catch(e){}}
+  };
+  var root = document.documentElement;
+  var $ = function(s,c){return (c||document).querySelector(s)};
+  var $$ = function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+
+  /* Dispositivos citados que ficam fora deste protótipo ou fora do Estatuto */
+  var EXT = {
+    'cpc-369': {t:'Código de Processo Civil, art. 369', h:'<p><b>Art. 369.</b> As partes têm o direito de empregar todos os meios legais, bem como os moralmente legítimos, ainda que não especificados neste Código, para provar a verdade dos fatos em que se funda o pedido ou a defesa e influir eficazmente na convicção do juiz.</p>', n:'Lei nº 13.105/2015'},
+    'alt-moc3': {t:'Alteração · XI Convenção (2023)', h:'<p><b>Moção nº 3 – Impedimentos de Ministros a Cargos Eletivos e Comissões.</b> Acrescentou os incisos III, IV e V ao art. 26. No documento registrado, esses incisos aparecem em negrito.</p><dl><dt>Aprovação</dt><dd>26/10/2023, 2ª sessão</dd><dt>Votação</dt><dd>284 a favor · 11 abstenções</dd></dl>', n:'Fonte: Ata da XI Convenção, pág. 22'},
+    'alt-moc4': {t:'Alteração · XI Convenção (2023)', h:'<p><b>Moção nº 4 – Alteração do art. 66.</b> Reduziu de <b>80</b> para <b>40</b> o número mínimo de membros para uma igreja ser considerada Igreja Local.</p><p><i>Redação anterior:</i> exigia no mínimo 80 (oitenta) membros.</p><dl><dt>Aprovação</dt><dd>26/10/2023, 2ª sessão</dd><dt>Votação</dt><dd>267 a favor · 4 contra · 32 abstenções</dd></dl>', n:'Fonte: Ata da XI Convenção, págs. 22–23'},
+  'cf-5': {t:'Constituição Federal, art. 5º', h:'<p><b>VI –</b> é inviolável a liberdade de consciência e de crença, sendo assegurado o livre exercício dos cultos religiosos e garantida, na forma da lei, a proteção aos locais de culto e a suas liturgias;</p><p><b>VII –</b> é assegurada, nos termos da lei, a prestação de assistência religiosa nas entidades civis e militares de internação coletiva;</p><p><b>VIII –</b> ninguém será privado de direitos por motivo de crença religiosa ou de convicção filosófica ou política, salvo se as invocar para eximir-se de obrigação legal a todos imposta e recusar-se a cumprir prestação alternativa, fixada em lei;</p>', n:'Legislação federal'},
+    'cc-44': {t:'Código Civil, art. 44', h:'<p><b>Art. 44.</b> São pessoas jurídicas de direito privado: (…) <b>IV –</b> as organizações religiosas;</p><p><b>§ 1º</b> São livres a criação, a organização, a estruturação interna e o funcionamento das organizações religiosas, sendo vedado ao poder público negar-lhes reconhecimento ou registro dos atos constitutivos e necessários ao seu funcionamento.</p>', n:'Lei nº 10.406/2002'},
+    'alt-moc2': {t:'Alteração · XI Convenção (2023)', h:'<p><b>Moção nº 2 – Das Credenciais.</b> Incluiu este § 2º no art. 14, com redação baseada no art. 49, VIII do Estatuto da IDPB Nacional. No documento registrado, o trecho aparece em negrito.</p><dl><dt>Aprovação</dt><dd>26/10/2023, 2ª sessão</dd><dt>Votação</dt><dd>262 a favor · 9 abstenções</dd><dt>Autoria</dt><dd>Pr. Paulo Henrique da Cunha e outros</dd></dl>', n:'Fonte: Ata da XI Convenção, pág. 22'},
+  'idpb-nac': {t:'Estatuto da IDPB Nacional, art. 4º, I', h:'<p>Dispositivo do Estatuto da IDPB Nacional, que trata do credenciamento de ministros pela Junta Administrativa Nacional. O texto do Estatuto Nacional não faz parte deste documento.</p>', n:'Norma externa'}
+  };
+  var GLOSS = {
+    'IDPB-AM':'Igreja de Deus Pentecostal do Brasil do Amazonas, nome abreviado adotado pelo próprio Estatuto (art. 1º).',
+    'JAE':'Junta Administrativa Estadual. Órgão máximo de administração da IDPB-AM (art. 32), composto pela Presidência e pelos Supervisores de Distritos (art. 33).',
+    'JAD':'Junta Administrativa Distrital. Administra cada Distrito: Supervisor, 1º e 2º Vice-Supervisores e dois Conselheiros (art. 41).',
+    'INSS':'Instituto Nacional do Seguro Social. A renovação anual da credencial exige os comprovantes de recolhimento.',
+    'COP':'Comissão de Orientação Política da IDPB-AM (art. 13, IV, a, e art. 35, XXI, §§ 3º a 5º).',
+    'MET':'Ministério de Educação Teológica do Amazonas, que orienta o ensino teológico da IDPB-AM (arts. 59 a 63).',
+    'IBPMS':'Instituto Bíblico Pentecostal Monte Sinai.',
+    'ITM':'Instituto de Treinamento Missionário.',
+    'SEBAETE':'Seminário e Escola Bíblica do Amazonas Educação Teológica por Extensão, conforme a Ata da XI Convenção.',
+    'ARPAM':'Associação de Retiros Pentecostais do Amazonas.',
+    'FGTS':'Fundo de Garantia do Tempo de Serviço.',
+    'NVI':'Nova Versão Internacional, tradução da Bíblia citada no art. 14, § 1º.'
+  };
+
+  /* ---------- Aviso da XII Convenção (21 a 24/10/2026) ---------- */
+  (function(){
+    var hoje=new Date(),d=new Date(hoje.getFullYear(),hoje.getMonth(),hoje.getDate());
+    var ini=new Date(2026,9,21),fim=new Date(2026,9,24);
+    if(d>fim){
+      $('#avisoTit').textContent='XII Convenção Estadual realizada';
+      $('#avisoTxt').textContent='A IDPB-AM realizou de 21 a 24 de outubro de 2026 a XII Convenção Estadual';
+      $('#aviso .dot').style.animation='none';
+    } else if(d<ini){
+      $('#avisoTit').textContent='XII Convenção Estadual: 21 a 24 de outubro de 2026';
+      $('#avisoTxt').textContent='A IDPB-AM realizará de 21 a 24 de outubro de 2026 a XII Convenção Estadual';
+    }
+  })();
+
+  /* ---------- Sumário ---------- */
+  var tocList = $('#tocList');
+  var arts = $$('.art');
+  function shortN(label){return label.replace(/^Art\.\s*/,'')}
+  function chipsFor(container){
+    var d=document.createElement('div');d.className='chips';
+    $$(':scope > .art', container).forEach(function(a){
+      var c=document.createElement('a');c.className='chip';c.href='#'+a.id;c.textContent=a.dataset.label.replace('º','');
+      c.dataset.for=a.id;c.title=a.dataset.label;d.appendChild(c);
+    });
+    return d;
+  }
+  $$('.cap').forEach(function(cap){
+    var w=document.createElement('div');w.className='toc-cap';
+    var h=document.createElement('a');h.href='#'+cap.id;
+    h.innerHTML=cap.dataset.label+'<span>'+cap.dataset.title+'</span>';w.appendChild(h);
+    var direct=$$(':scope > .art',cap);
+    if(direct.length) w.appendChild(chipsFor(cap));
+    $$(':scope > .secao',cap).forEach(function(s){
+      var sw=document.createElement('div');sw.className='toc-sec';
+      var sa=document.createElement('a');sa.href='#'+s.id;sa.textContent=s.dataset.label+' · '+s.dataset.title;
+      sw.appendChild(sa);sw.appendChild(chipsFor(s));w.appendChild(sw);
+    });
+    tocList.appendChild(w);
+  });
+  var chipMap={};$$('.chip').forEach(function(c){chipMap[c.dataset.for]=c});
+
+  /* ---------- Ferramentas por artigo ---------- */
+  var ICON_LINK='<svg viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>';
+  var ICON_COPY='<svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>';
+  arts.forEach(function(a){
+    var t=document.createElement('div');t.className='tools';
+    t.innerHTML='<button type="button" data-act="link">'+ICON_LINK+'Copiar link</button><button type="button" data-act="text">'+ICON_COPY+'Copiar texto</button>';
+    a.appendChild(t);
+  });
+  var ORIG={};arts.forEach(function(a){ORIG[a.id]=a.innerHTML});
+
+  function articleText(a){
+    var lines=$$('p',a).map(function(p){
+      var n=$('.n',p),tx=$('.tx',p);
+      return n? n.textContent.trim()+' '+tx.textContent.trim() : p.textContent.trim();
+    });
+    return lines.join('\n')+'\n\n(Estatuto da IDPB-AM, XI Convenção, 2023)';
+  }
+  function baseUrl(){return location.href.split('#')[0]}
+
+  /* ---------- Aviso ---------- */
+  var toast=$('#toast'),toastTimer;
+  function say(msg,action){
+    clearTimeout(toastTimer);toast.innerHTML='';
+    var s=document.createElement('span');s.textContent=msg;toast.appendChild(s);
+    if(action){var b=document.createElement('button');b.type='button';b.textContent=action.label;b.onclick=function(){toast.hidden=true;action.run()};toast.appendChild(b);
+      var x=document.createElement('button');x.type='button';x.className='x';x.setAttribute('aria-label','Fechar');x.textContent='✕';x.onclick=function(){toast.hidden=true};toast.appendChild(x);}
+    toast.hidden=false;
+    toastTimer=setTimeout(function(){toast.hidden=true},action?9000:2400);
+  }
+  function copy(text,okMsg){
+    function fallback(){
+      var ta=document.createElement('textarea');ta.value=text;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.opacity='0';
+      document.body.appendChild(ta);ta.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}
+      document.body.removeChild(ta);say(ok?okMsg:'Não foi possível copiar. Selecione o texto e copie manualmente.');
+    }
+    try{navigator.clipboard.writeText(text).then(function(){say(okMsg)},fallback)}catch(e){fallback()}
+  }
+
+  /* ---------- Popovers (remissões e siglas) ---------- */
+  var pop=$('#pop'),popFor=null,hideT;
+  function place(anchor){
+    var r=anchor.getBoundingClientRect(),pw=pop.offsetWidth,ph=pop.offsetHeight,vw=innerWidth,vh=innerHeight;
+    var left=Math.min(Math.max(12,r.left),vw-pw-12);
+    var top=r.bottom+8; if(top+ph>vh-12 && r.top-ph-8>12) top=r.top-ph-8;
+    pop.style.left=left+'px';pop.style.top=Math.max(12,top)+'px';
+  }
+  function open(anchor){
+    clearTimeout(hideT);
+    var html='',title='',foot='',go=null;
+    if(anchor.classList.contains('sigla')){
+      var g=anchor.dataset.g;title='Sigla · '+anchor.textContent;html='<p>'+(GLOSS[g]||'')+'</p>';
+    } else {
+      var id=anchor.dataset.ref,el=document.getElementById(id);
+      title=anchor.dataset.t||anchor.textContent;
+      if(el && el.classList.contains('art')===false && EXT[id]===undefined){
+        var clone=el.cloneNode(true);clone.removeAttribute('id');
+        html='<div class="body">'+clone.outerHTML+collectChildren(el)+'</div>';go=id;
+      } else if(el){
+        var c=document.createElement('div');c.innerHTML=ORIG[el.id];
+        $$('.tools',c).forEach(function(t){t.remove()});
+        html='<div class="body">'+c.innerHTML+'</div>';go=id;
+      } else if(EXT[id]){
+        title=EXT[id].t;html='<div class="body">'+EXT[id].h+'</div>';foot=EXT[id].n;
+      }
+    }
+    pop.innerHTML='<h4>'+title+'</h4>'+(html.indexOf('<div')===0?html:'<div class="body">'+html+'</div>')+
+      '<div class="foot"><span>'+foot+'</span>'+(go?'<button type="button" class="go" data-go="'+go+'">Ir para o dispositivo</button>':'')+'</div>';
+    $$('a',pop).forEach(function(a){a.removeAttribute('href');a.classList.remove('ref')});
+    pop.hidden=false;place(anchor);popFor=anchor;
+  }
+  /* Para um § com incisos (ex.: art. 17, § 1º), mostra também os incisos que vêm logo abaixo */
+  function collectChildren(el){
+    if(!el.classList.contains('par'))return '';
+    var out='',n=el.nextElementSibling;
+    while(n && (n.classList.contains('sub')||n.classList.contains('sub2')) && !n.classList.contains('par')){var c=n.cloneNode(true);c.removeAttribute('id');out+=c.outerHTML;n=n.nextElementSibling}
+    return out;
+  }
+  function close(){pop.hidden=true;popFor=null}
+  document.addEventListener('click',function(e){
+    var go=e.target.closest('[data-go]');
+    if(go){close();goTo(go.dataset.go);return}
+    var trg=e.target.closest('.ref,.sigla');
+    if(trg && !pop.contains(trg)){e.preventDefault();if(popFor===trg)close();else open(trg);return}
+    var act=e.target.closest('.tools button');
+    if(act){var a=act.closest('.art');
+      if(act.dataset.act==='link')copy(baseUrl()+'#'+a.id,'Link do '+a.dataset.label+' copiado');
+      else copy(articleText(a),'Texto do '+a.dataset.label+' copiado');
+      return}
+    if(!pop.contains(e.target))close();
+  });
+  if(matchMedia('(hover:hover)').matches){
+    document.addEventListener('mouseover',function(e){
+      var t=e.target.closest('.ref,.sigla');if(t && t!==popFor && !pop.contains(t)){clearTimeout(hideT);hideT=setTimeout(function(){open(t)},180)}
+    });
+    document.addEventListener('mouseout',function(e){
+      var t=e.target.closest('.ref,.sigla');
+      if(t && !(e.relatedTarget && (pop.contains(e.relatedTarget)||t.contains(e.relatedTarget)))){clearTimeout(hideT);hideT=setTimeout(close,250)}
+    });
+    pop.addEventListener('mouseenter',function(){clearTimeout(hideT)});
+    pop.addEventListener('mouseleave',function(){hideT=setTimeout(close,250)});
+  }
+  addEventListener('scroll',function(){if(!pop.hidden)close()},{passive:true});
+  addEventListener('keydown',function(e){if(e.key==='Escape'){close();closeToc()}});
+
+  function goTo(id){
+    var el=document.getElementById(id);if(!el)return;
+    var art=el.closest('.art')||el;
+    el.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+    art.classList.remove('flash');void art.offsetWidth;art.classList.add('flash');
+    setTimeout(function(){art.classList.remove('flash')},2200);
+  }
+
+  /* ---------- Gaveta do sumário (celular) ---------- */
+  var toc=$('#toc'),scrim=$('#scrim'),menuBtn=$('#menuBtn');
+  function openToc(){toc.classList.add('open');scrim.hidden=false;menuBtn.setAttribute('aria-expanded','true')}
+  function closeToc(){toc.classList.remove('open');scrim.hidden=true;menuBtn.setAttribute('aria-expanded','false')}
+  menuBtn.addEventListener('click',function(){toc.classList.contains('open')?closeToc():openToc()});
+  scrim.addEventListener('click',closeToc);
+  toc.addEventListener('click',function(e){if(e.target.closest('a'))closeToc()});
+
+  /* ---------- Leitura: tamanho da letra e tema ---------- */
+  var fs=parseFloat(store.get('fs'))||1;
+  function setFs(v){fs=Math.min(1.35,Math.max(.85,Math.round(v*100)/100));root.style.setProperty('--fs',fs);store.set('fs',fs)}
+  setFs(fs);
+  $('#fsUp').onclick=function(){setFs(fs+.08)};
+  $('#fsDown').onclick=function(){setFs(fs-.08)};
+  var savedTheme=store.get('theme');if(savedTheme)root.dataset.theme=savedTheme;
+  $('#themeBtn').onclick=function(){
+    var dark=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+    root.dataset.theme=dark?'light':'dark';store.set('theme',root.dataset.theme);
+  };
+
+  /* ---------- Artigo atual e "continuar de onde parou" ---------- */
+  var current=null;
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          if(current&&chipMap[current])chipMap[current].classList.remove('on');
+          current=en.target.id;if(chipMap[current])chipMap[current].classList.add('on');
+          store.set('last',current);
+        }
+      });
+    },{rootMargin:'-25% 0px -65% 0px'});
+    arts.forEach(function(a){io.observe(a)});
+  }
+  var last=store.get('last');
+  if(!location.hash && last && last!=='art-1' && document.getElementById(last)){
+    say('Continuar a leitura no '+document.getElementById(last).dataset.label+'?',{label:'Continuar',run:function(){goTo(last)}});
+  }
+
+  /* ---------- Busca ---------- */
+  var q=$('#q'),clearBtn=$('#clear'),kbd=$('#kbd'),status=$('#status'),empty=$('#empty');
+  var VAR={a:'aáàâã',e:'eéê',i:'ií',o:'oóôõ',u:'uúü',c:'cç'};
+  function norm(s){return s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase()}
+  function makeRx(term){
+    var p='';norm(term).split('').forEach(function(ch){
+      if(VAR[ch])p+='['+VAR[ch]+VAR[ch].toUpperCase()+']';
+      else if(/\s/.test(ch))p+='\\s+';
+      else p+=ch.replace(/[.*+?^${}()|[\]\\\/]/g,'\\$&');
+    });
+    return new RegExp(p,'gi');
+  }
+  function highlight(el,rx){
+    var walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,{acceptNode:function(n){
+      return n.parentNode.closest('.tools')?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT}});
+    var nodes=[],n;while((n=walker.nextNode()))nodes.push(n);
+    var count=0;
+    nodes.forEach(function(node){
+      var s=node.nodeValue;rx.lastIndex=0;if(!rx.test(s))return;rx.lastIndex=0;
+      var frag=document.createDocumentFragment(),last=0,m;
+      while((m=rx.exec(s))){if(!m[0].length){rx.lastIndex++;continue}
+        frag.appendChild(document.createTextNode(s.slice(last,m.index)));
+        var mk=document.createElement('mark');mk.textContent=m[0];frag.appendChild(mk);last=m.index+m[0].length;count++}
+      frag.appendChild(document.createTextNode(s.slice(last)));node.parentNode.replaceChild(frag,node);
+    });
+    return count;
+  }
+  function reset(){
+    arts.forEach(function(a){a.innerHTML=ORIG[a.id];a.hidden=false});
+    $$('.secao,.cap').forEach(function(s){s.hidden=false});
+    $$('.chip').forEach(function(c){c.classList.remove('dim')});
+    empty.hidden=true;status.textContent='';
+  }
+  function artJump(v){
+    var m=v.trim().match(/^art(?:igo)?\.?\s*(\d{1,3})\s*[ºo°]?$/i);
+    return m && document.getElementById('art-'+parseInt(m[1],10)) ? 'art-'+parseInt(m[1],10) : null;
+  }
+  var tq;
+  function run(){
+    var v=q.value.trim();clearBtn.hidden=!v;kbd.hidden=!!v;reset();close();
+    if(!v)return;
+    var jump=artJump(v);
+    if(jump){status.textContent='Pressione Enter para ir ao '+document.getElementById(jump).dataset.label+'.';return}
+    if(v.length<2)return;
+    var rx=makeRx(v),hitsA=0,hits=0;
+    arts.forEach(function(a){
+      rx.lastIndex=0;
+      var plain=$$('p',a).map(function(p){return p.textContent}).join(' ');
+      if(rx.test(plain)){rx.lastIndex=0;hits+=highlight(a,rx);hitsA++}
+      else{a.hidden=true;if(chipMap[a.id])chipMap[a.id].classList.add('dim')}
+    });
+    $$('.secao').forEach(function(s){s.hidden=!$$('.art',s).some(function(a){return!a.hidden})});
+    $$('.cap').forEach(function(s){s.hidden=!$$('.art',s).some(function(a){return!a.hidden})});
+    empty.hidden=hitsA>0;
+    status.textContent=hitsA?hits+(hits===1?' ocorrência':' ocorrências')+' em '+hitsA+(hitsA===1?' artigo':' artigos')+'.':'';
+  }
+  q.addEventListener('input',function(){clearTimeout(tq);tq=setTimeout(run,120)});
+  q.addEventListener('keydown',function(e){
+    if(e.key==='Enter'){var j=artJump(q.value);if(j){q.value='';run();goTo(j);q.blur()}
+      else{var first=$('.art:not([hidden]) mark');if(first){first.scrollIntoView({block:'center'})}}}
+  });
+  clearBtn.addEventListener('click',function(){q.value='';run();q.focus()});
+  addEventListener('keydown',function(e){
+    if(e.key==='/' && document.activeElement!==q && !/input|textarea/i.test(document.activeElement.tagName)){e.preventDefault();q.focus()}
+  });
+})();
+</script>
