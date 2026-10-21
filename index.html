@@ -1,3 +1,10 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f0c23e">
+<link rel="icon" type="image/png" href="logo-idpb.png">
 <title>Estatuto IDPB-AM</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Estatuto da Igreja de Deus Pentecostal do Brasil do Amazonas, aprovado na XI Convenção (2023), organizado por artigos.">
@@ -10,22 +17,23 @@
   /* Paleta do logo IDPB: ouro do livro, verde do mapa, preto da sigla */
   --bg:#f6f6f3; --surface:#ffffff; --ink:#15171a; --muted:#5d6068; --line:#e4e2da;
   --accent:#7a5a08; --accent-soft:#fbf2d4; --gold:#f0c23e; --gold-deep:#e0ad2a; --on-gold:#15171a;
-  --green:#4f6e35; --green-soft:#edf3e6; --mark:#f6dc78; --mark-ink:#15171a; --warn:#4f6e35;
+  --green:#4f6e35; --green-soft:#edf3e6; --del-bg:#fbe3df; --del-ink:#8f2a1b; --ins-bg:#e3f0d8; --ins-ink:#3b5f22; --mark:#f6dc78; --mark-ink:#15171a; --warn:#4f6e35;
   --f-display:"Young Serif", Georgia, "Times New Roman", serif;
   --f-body:"Literata", Georgia, "Times New Roman", serif;
   --f-ui:"Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --fs:1; --hh:60px;
+  --fs:1; --hh:104px;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#121316; --surface:#1a1c20; --ink:#ecebe6; --muted:#a4a39b; --line:#2e2f34;
   --accent:#f2c94c; --accent-soft:#2c2614; --gold:#f0c23e; --gold-deep:#e0ad2a; --on-gold:#15171a;
-  --green:#a9c58b; --green-soft:#1f2a19; --mark:#6b5414; --mark-ink:#fff6d6; --warn:#a9c58b; color-scheme:dark}}
+  --green:#a9c58b; --green-soft:#1f2a19; --del-bg:#45201a; --del-ink:#ffb4a6; --ins-bg:#233519; --ins-ink:#bfe0a0; --mark:#6b5414; --mark-ink:#fff6d6; --warn:#a9c58b; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#121316; --surface:#1a1c20; --ink:#ecebe6; --muted:#a4a39b; --line:#2e2f34;
   --accent:#f2c94c; --accent-soft:#2c2614; --gold:#f0c23e; --gold-deep:#e0ad2a; --on-gold:#15171a;
-  --green:#a9c58b; --green-soft:#1f2a19; --mark:#6b5414; --mark-ink:#fff6d6; --warn:#a9c58b; color-scheme:dark}
+  --green:#a9c58b; --green-soft:#1f2a19; --del-bg:#45201a; --del-ink:#ffb4a6; --ins-bg:#233519; --ins-ink:#bfe0a0; --mark:#6b5414; --mark-ink:#fff6d6; --warn:#a9c58b; color-scheme:dark}
 
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
 body{background:var(--bg);color:var(--ink);font-family:var(--f-ui);margin:0}
@@ -37,7 +45,7 @@ button{font:inherit;color:inherit}
 /* Cabeçalho */
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--surface);border-bottom:3px solid var(--gold);
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.top-in{max-width:1200px;margin:0 auto;min-height:var(--hh);display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-block:10px}
+.top-in{max-width:1200px;margin:0 auto;min-height:60px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-block:10px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
 .logo-sm{height:40px;width:auto;flex:none;display:block}
 .brand b{font-family:var(--f-display);font-weight:400;font-size:1.05rem;white-space:nowrap}
@@ -84,12 +92,12 @@ main{min-width:0;padding-block:36px 96px;font-size:calc(1.0625rem * var(--fs))}
 .cover{padding-bottom:28px;margin-bottom:12px;border-bottom:1px solid var(--line)}
 .cover-head{display:grid;grid-template-columns:auto minmax(0,1fr);gap:24px;align-items:center;margin-bottom:22px}
 .cover-txt{min-width:0}
-.cover-txt .sub{margin-bottom:0}
+.cover-txt .csub{margin-bottom:0}
 .logo-lg{width:112px;height:auto;max-width:100%;filter:drop-shadow(0 6px 14px rgba(120,90,10,.18))}
 @media (max-width:520px){.cover-head{grid-template-columns:1fr;gap:14px}.logo-lg{width:84px}}
 .eyebrow{font:600 .72rem/1.3 var(--f-ui);letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin:0 0 12px}
 .cover h1{font-family:var(--f-display);font-weight:400;font-size:clamp(1.7rem,4.2vw,2.5rem);line-height:1.12;margin:0 0 10px;text-wrap:balance}
-.cover .sub{font-family:var(--f-body);font-size:1.02em;color:var(--muted);margin:0 0 18px;line-height:1.5}
+.cover .csub{font-family:var(--f-body);font-size:1.02em;color:var(--muted);margin:0 0 18px;line-height:1.5}
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px 24px;margin:0;font-size:.82rem}
 .facts div{min-width:0}
 .facts dt{color:var(--muted);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
@@ -129,6 +137,103 @@ main{min-width:0;padding-block:36px 96px;font-size:calc(1.0625rem * var(--fs))}
 .tx{min-width:0}
 .destaque{font-weight:600}
 
+
+@media (max-width:480px){
+  .top-in{gap:8px}
+  .brand{flex:1 1 auto;min-width:0}
+  .brand>span{min-width:0}
+  .brand b{display:block;overflow:hidden;text-overflow:ellipsis}
+  .brand small{display:none}
+  .acts{gap:4px}
+  .ibtn{height:36px;min-width:36px;padding:0 8px}
+}
+/* Abas */
+.tabs{max-width:1200px;margin:0 auto;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.tab{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;text-decoration:none;font-size:.88rem;font-weight:500;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-3px;white-space:nowrap}
+.tab:hover{color:var(--ink)}
+.tab.on{color:var(--ink);border-bottom-color:var(--gold-deep);font-weight:600}
+.tab .cnt{background:var(--gold);color:var(--on-gold);border-radius:999px;font-size:.7rem;font-weight:600;padding:1px 7px}
+body.v-mocoes .menu-btn{display:none}
+/* Selo "em pauta" */
+.pauta-row{padding-left:calc(.6em + 2.7em + .5em);margin:-.2em 0 .6em}
+.caput+.pauta-row{padding-left:0}
+.pauta{display:inline-flex;align-items:center;gap:7px;font:500 .74rem/1.3 var(--f-ui);text-decoration:none;color:var(--accent);background:var(--accent-soft);border:1px solid var(--gold-deep);border-radius:8px;padding:6px 10px}
+.pauta::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.pauta:hover{background:var(--gold);color:var(--on-gold)}
+@media (max-width:900px){.pauta-row{padding-left:0}}
+/* Moções */
+.mview{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 96px}
+.mwrap{max-width:940px;margin:0 auto}
+.mhead h1{font-family:var(--f-display);font-weight:400;font-size:clamp(1.7rem,4vw,2.3rem);line-height:1.15;margin:0 0 10px;text-wrap:balance}
+.mhead .msub{font-family:var(--f-body);color:var(--muted);line-height:1.55;margin:0 0 12px;max-width:68ch}
+.neutro{font-size:.86rem;line-height:1.5;margin:0 0 20px;padding:10px 14px;border-left:3px solid var(--green);background:var(--green-soft);border-radius:6px;max-width:68ch}
+.mindex{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-bottom:14px}
+.mindex a{display:grid;gap:4px;text-decoration:none;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.mindex a:hover{border-color:var(--gold-deep)}
+.mindex b{font:600 .72rem/1 var(--f-ui);letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.mindex span{font-family:var(--f-body);font-size:1rem;line-height:1.35}
+.mindex em{font-style:normal;font-size:.78rem;color:var(--muted)}
+.legenda{display:flex;gap:10px;flex-wrap:wrap;font-size:.78rem;color:var(--muted);margin:0}
+.lg-del,.cmp del{background:var(--del-bg);color:var(--del-ink);text-decoration:line-through;text-decoration-thickness:1px;border-radius:2px;padding:0 2px}
+.lg-ins,.cmp ins{background:var(--ins-bg);color:var(--ins-ink);text-decoration:none;border-radius:2px;padding:0 2px}
+.mocao{margin-top:40px;padding-top:28px;border-top:3px solid var(--gold);scroll-margin-top:calc(var(--hh) + env(safe-area-inset-top,0px) + 12px)}
+.m-top{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:16px;align-items:start}
+.m-num{font-family:var(--f-display);font-size:2.6rem;line-height:1;color:var(--gold-deep)}
+.m-tit h2{font-family:var(--f-display);font-weight:400;font-size:1.45rem;line-height:1.2;margin:2px 0 6px;text-wrap:balance}
+.m-meta{margin:0;font-size:.82rem;color:var(--muted);line-height:1.45}
+.status{font-size:.74rem;font-weight:600;padding:5px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.m-sec{margin-top:26px}
+.m-sec>h3{font:600 .72rem/1.2 var(--f-ui);letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin:0 0 10px;display:flex;align-items:center;gap:8px}
+.m-sec>h3::before{content:"";width:18px;height:3px;border-radius:2px;background:var(--gold)}
+.m-sec>p,.ponto p,.integra div{font-family:var(--f-body);line-height:1.65;max-width:72ch}
+.resumo{font-size:1.12em;margin:0}
+.m-intro{color:var(--muted);font-size:.95em;margin:0 0 12px}
+.integra{margin-top:10px;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+.integra summary{cursor:pointer;padding:10px 14px;font-size:.85rem;font-weight:500;color:var(--accent)}
+.integra div{padding:0 16px 8px;font-size:.95em}
+.cmp{margin:0 0 22px}
+.cmp h4{font:600 .9rem/1.3 var(--f-ui);margin:0 0 8px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.cmp h4 a{color:var(--accent)}
+.tipo{font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:2px 6px}
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.col,.novo{border:1px solid var(--line);border-radius:8px;background:var(--surface);padding:12px 14px;min-width:0}
+.col .lab{display:block;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.col p,.novo p{margin:0;font-family:var(--f-body);line-height:1.62;font-size:.97em}
+.novo{border-left:3px solid var(--ins-ink)}
+.novo p+p{margin-top:8px}
+.nota{font-size:.82rem;color:var(--muted);margin:8px 0 0}
+.ponto{border:1px solid var(--line);border-radius:10px;background:var(--surface);padding:16px 18px;margin-bottom:14px;scroll-margin-top:calc(var(--hh) + env(safe-area-inset-top,0px) + 12px)}
+.ponto h4{font:600 1rem/1.35 var(--f-ui);margin:0 0 8px;display:flex;gap:10px;align-items:baseline}
+.pn{flex:none;display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--gold);color:var(--on-gold);font-size:.78rem}
+.ponto p{margin:0 0 10px}
+.ponto p:last-child{margin-bottom:0}
+.pergunta{background:var(--accent-soft);border-radius:6px;padding:10px 12px}
+.tbl{overflow-x:auto;margin:4px 0 12px}
+.tbl table{border-collapse:collapse;width:100%;font-size:.88rem;min-width:520px}
+.tbl th{text-align:left;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;padding:8px 10px;border-bottom:2px solid var(--line)}
+.tbl td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.5}
+.tbl td:first-child{width:42%}
+.tag{display:inline-block;font-size:.7rem;font-weight:600;border-radius:4px;padding:1px 6px;margin-right:4px}
+.tag.nao{background:var(--del-bg);color:var(--del-ink)}
+.tag.parte{background:var(--accent-soft);color:var(--accent);border:1px solid var(--gold-deep)}
+.mfonte{margin-top:36px;font-size:.8rem;color:var(--muted);line-height:1.55;max-width:72ch}
+@media (max-width:700px){.pair{grid-template-columns:1fr}.m-top{grid-template-columns:auto minmax(0,1fr)}.status{grid-column:2;justify-self:start}}
+
+
+.mbar{position:fixed;left:0;right:0;top:var(--hh);z-index:25;background:var(--surface);border-bottom:1px solid var(--line);
+  box-shadow:0 6px 16px rgba(20,20,10,.08);transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .15s,transform .15s,visibility .15s;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mbar.on{opacity:1;transform:none;visibility:visible}
+.mbar-in{max-width:940px;margin:0 auto;display:flex;align-items:center;gap:12px;padding-block:8px;flex-wrap:wrap}
+.mbar-t{font-family:var(--f-display);font-weight:400;font-size:1rem;white-space:nowrap}
+.mbar-nav{display:flex;gap:6px;flex-wrap:wrap;flex:1;min-width:0}
+.mbar-nav a{text-decoration:none;font-size:.8rem;padding:5px 10px;border-radius:999px;border:1px solid var(--line);white-space:nowrap;color:var(--muted)}
+.mbar-nav a b{color:var(--accent);font-weight:600}
+.mbar-nav a.on{background:var(--gold);border-color:var(--gold-deep);color:var(--on-gold)}
+.mbar-nav a.on b{color:var(--on-gold)}
+.mbar .legenda{font-size:.72rem}
+#pgMocoes .mocao,#pgMocoes .ponto{scroll-margin-top:calc(var(--hh) + var(--mb,56px) + 12px)}
+@media (max-width:700px){.mbar-t,.mbar .legenda{display:none}.mbar-nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}}
 /* Remissões e siglas */
 .ref{color:var(--accent);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;cursor:pointer}
 .ref.ext{text-decoration-style:dotted}
@@ -179,7 +284,7 @@ footer.note{margin-top:48px;font-size:.8rem;color:var(--muted);line-height:1.55;
 .scrim{position:fixed;inset:0;background:rgba(8,12,20,.45);z-index:45}
 
 @media (max-width:900px){
-  :root{--hh:112px}
+  :root{--hh:156px}
   .menu-btn{display:inline-flex}
   .search{order:3;flex-basis:100%}
   .brand{flex:1}
@@ -196,6 +301,8 @@ footer.note{margin-top:48px;font-size:.8rem;color:var(--muted);line-height:1.55;
 }
 </style>
 
+</head>
+<body>
 <div class="top">
   <div class="top-in">
     <button class="ibtn menu-btn" id="menuBtn" aria-label="Abrir sumário" aria-controls="toc" aria-expanded="false">
@@ -219,9 +326,13 @@ footer.note{margin-top:48px;font-size:.8rem;color:var(--muted);line-height:1.55;
       </button>
     </div>
   </div>
+  <nav class="tabs" aria-label="Seções do site">
+    <a href="#inicio" class="tab" data-view="estatuto">Estatuto</a>
+    <a href="#mocoes" class="tab" data-view="mocoes">Moções da XII Convenção <span class="cnt">2</span></a>
+  </nav>
 </div>
 
-<div class="wrap">
+<div class="wrap" id="viewEstatuto">
   <nav class="toc" id="toc" aria-label="Sumário">
     <h2>Sumário</h2>
     <div id="tocList"></div>
@@ -242,7 +353,7 @@ footer.note{margin-top:48px;font-size:.8rem;color:var(--muted);line-height:1.55;
         <div class="cover-txt">
         <p class="eyebrow">Igreja de Deus Pentecostal do Brasil do Amazonas</p>
         <h1>Estatuto da IDPB-AM</h1>
-        <p class="sub">Aprovado pela Assembleia Geral Ordinária na XI Convenção da IDPB-AM, em 2023, nos termos do <a class="ref" data-ref="art-30-III" data-t="Art. 30, III" href="#art-30-III">art. 30, III</a>.</p>
+        <p class="csub">Aprovado pela Assembleia Geral Ordinária na XI Convenção da IDPB-AM, em 2023, nos termos do <a class="ref" data-ref="art-30-III" data-t="Art. 30, III" href="#art-30-III">art. 30, III</a>.</p>
         </div>
         </div>
         <dl class="facts">
@@ -324,7 +435,7 @@ footer.note{margin-top:48px;font-size:.8rem;color:var(--muted);line-height:1.55;
 <article class="art" id="art-9" data-label="Art. 9º">
 <p class="caput"><a class="artnum" href="#art-9">Art. 9º</a> A qualidade dos Membros Institucionais é intransmissível e intransferível, não sendo permitido o voto por procuração. Sendo classificados da seguinte forma:</p>
 <p class="inc"><span class="n">I –</span><span class="tx">Ministros Oficiais: São os Ministros Credenciados que ocupam cargos nos órgãos administrativos da IDPB-AM eleitos em Assembleia Geral Estadual.</span></p>
-<p class="inc"><span class="n">II –</span><span class="tx">Ministros Credenciados: São os Pastores(as) consagrados(as) e reconhecidos(as) através do credenciamento fornecido pela Junta Administrativa Nacional da IDPB, conforme prevê o <a class="ref ext" data-ref="idpb-nac" data-t="Estatuto da IDPB Nacional, art. 4º, I" href="#idpb-nac">Art. 4º, I, do Estatuto da IDPB Nacional</a>.</span></p>
+<p class="inc" id="art-9-II"><span class="n">II –</span><span class="tx">Ministros Credenciados: São os Pastores(as) consagrados(as) e reconhecidos(as) através do credenciamento fornecido pela Junta Administrativa Nacional da IDPB, conforme prevê o <a class="ref ext" data-ref="idpb-nac" data-t="Estatuto da IDPB Nacional, art. 4º, I" href="#idpb-nac">Art. 4º, I, do Estatuto da IDPB Nacional</a>.</span></p>
 <p class="inc"><span class="n">III –</span><span class="tx">Cônjuges de Ministros Credenciados.</span></p>
 </article>
 </section>
@@ -405,6 +516,7 @@ footer.note{margin-top:48px;font-size:.8rem;color:var(--muted);line-height:1.55;
 <h3><span>Seção I</span><span>Disposições Gerais</span></h3>
 <article class="art" id="art-14" data-label="Art. 14">
 <p class="caput"><a class="artnum" href="#art-14">Art. 14.</a> Poderão ser admitidos e credenciados pela Junta Administrativa Estadual ao Ministério Geral da IDPB-AM, os membros da Igreja Local ou Congregação, de qualquer nacionalidade, sexo, cor, inclusive seus cônjuges, que pedirem por escrito, no qual expressem que aceitam as Escrituras Sagradas, como única regra de fé e prática, que reconheçam como parâmetro de fidelidade “Regras de Fé e Doutrinas, Estatuto, Regimentos Internos e Declaração de Normas Éticas da IDPB-AM”, e afirmem seu propósito de contribuir moralmente, espiritualmente e financeiramente para a consecução dos fins desta instituição.</p>
+<div class="pauta-row"><a class="pauta" href="#mocao-1">Em pauta na XII Convenção · Moção nº 1 propõe nova redação do caput e novos parágrafos</a></div>
 <p class="par"><span class="n">§ 1º</span><span class="tx">Em princípio, nenhum candidato ao ministério, que, após a conversão, tenha se separado de fato ou judicialmente, divorciado ou encontrar-se em relações extraconjugais, ou homossexuais, conforme <span class="bib">I Coríntios 6.9</span>, conforme a Bíblia <abbr class="sigla" data-g="NVI">NVI</abbr>, deverá ser aceito pela IDPB-AM, ficando as questões desta natureza sob a orientação e decisão da Junta Administrativa Estadual.</span></p>
 <p class="par destaque"><span class="n">§ 2º</span><span class="tx">Será vetado o fornecimento de credencial ao candidato à carreira ministerial que apoie, dissemine, doutrine, compartilhe em redes sociais, ou por qualquer outro meio de comunicação, faça campanha política ou seja filiado a partidos de ideologias marxista e leninista, estendido também aos ministros auxiliares.</span></p>
 <div class="alt-row"><a class="ref alt" data-ref="alt-moc2" href="#alt-moc2">Incluído na XI Convenção (2023)</a></div>
@@ -415,10 +527,11 @@ footer.note{margin-top:48px;font-size:.8rem;color:var(--muted);line-height:1.55;
 <h3><span>Seção II</span><span>Credenciamento ao Ministério</span></h3>
 <article class="art" id="art-15" data-label="Art. 15">
 <p class="caput"><a class="artnum" href="#art-15">Art. 15.</a> O credenciamento ao Ministério Geral da IDPB-AM obedece rigorosamente uma hierarquia de grau ministerial da seguinte ordem:</p>
+<div class="pauta-row"><a class="pauta" href="#mocao-1">Em pauta na XII Convenção · Moção nº 1 propõe nova redação do caput e inclusão do § 6º</a></div>
 <p class="inc" id="art-15-I"><span class="n">I –</span><span class="tx">Ministro Cooperador;</span></p>
 <p class="inc" id="art-15-II"><span class="n">II –</span><span class="tx">Ministro Licenciado; e</span></p>
 <p class="inc" id="art-15-III"><span class="n">III –</span><span class="tx">Ministro Ordenado.</span></p>
-<p class="par"><span class="n">§ 1º</span><span class="tx">As credenciais que trata o presente artigo, terão validade por 12 (doze) meses, de janeiro a dezembro de cada ano e a mesma somente será renovada mediante a apresentação obrigatória dos comprovantes de recolhimento do <abbr class="sigla" data-g="INSS">INSS</abbr> e a declaração do Imposto de Renda, atualizados.</span></p>
+<p class="par" id="art-15-p1"><span class="n">§ 1º</span><span class="tx">As credenciais que trata o presente artigo, terão validade por 12 (doze) meses, de janeiro a dezembro de cada ano e a mesma somente será renovada mediante a apresentação obrigatória dos comprovantes de recolhimento do <abbr class="sigla" data-g="INSS">INSS</abbr> e a declaração do Imposto de Renda, atualizados.</span></p>
 <p class="par"><span class="n">§ 2º</span><span class="tx">Os candidatos de outras organizações que desejarem ingressar no ministério da IDPB-AM submeter-se-ão a um exame doutrinário e a um período de adaptação de, no mínimo, 12 (doze) meses, sob a supervisão de uma autoridade designada pela Junta Administrativa Estadual. Após esse período e antes de seu credenciamento o(a) candidato(a), submeter-se-á a apreciação final da autoridade competente.</span></p>
 <p class="par"><span class="n">§ 3º</span><span class="tx">Será verificada para o credenciamento ao Ministério Pastoral a experiência do batismo no Espírito Santo, com a evidência de falar em línguas estranhas, segundo <span class="bib">Atos 2:4; 10:46 e 19:6</span>; não ocorrerá o credenciamento caso não se verifique a existência destes requisitos em sua experiência pessoal.</span></p>
 <p class="par"><span class="n">§ 4º</span><span class="tx">Nenhum bem ou direito patrimonial e financeiro será exigido da IDPB-AM, por aquele(a) que deixar de ser Ministro Credenciado, não importando o motivo.</span></p>
@@ -465,6 +578,7 @@ footer.note{margin-top:48px;font-size:.8rem;color:var(--muted);line-height:1.55;
 
 <p class="par"><span class="n">§ 4º</span><span class="tx">A Junta Administrativa Estadual, ao analisar a solicitação do candidato, poderá solicitar outros documentos ou informações que se fizerem necessários para emitir seu parecer final.</span></p>
 <p class="par" id="art-17-p5"><span class="n">§ 5º</span><span class="tx">Os interessados protocolarão seus pedidos, no período de janeiro a março de cada ano, junto à IDPB-AM, que avaliará previamente e encaminhará à Junta Administrativa Nacional, no prazo de 30 dias de antecedência das suas reuniões, para a devida apreciação de seus pedidos, esta, por sua vez, emitirá seu parecer final em 90 (noventa) dias após a reunião em que analisar os referidos pedidos.</span></p>
+<div class="pauta-row"><a class="pauta" href="#mocao-1">Em pauta na XII Convenção · Moção nº 1 propõe nova redação deste § 5º</a></div>
 <p class="par"><span class="n">§ 6º</span><span class="tx">Esgotado o prazo máximo estabelecido no <a class="ref" data-ref="art-17-p5" data-t="Art. 17, § 5º" href="#art-17-p5">§5º última parte</a>, caberá ao interessado recorrer à Junta Administrativa Estadual e, em última instância, ao Conselho Eclesiástico Estadual.</span></p>
 </article>
 </section>
@@ -646,6 +760,7 @@ footer.note{margin-top:48px;font-size:.8rem;color:var(--muted);line-height:1.55;
 <p class="inc" id="art-35-XII"><span class="n">XII –</span><span class="tx">deliberar sobre a aquisição por compra ou por permuta, como também a alienação por venda, permuta, locação, doação, empréstimos dos patrimônios da IDPB-AM;</span></p>
 <p class="inc" id="art-35-XIII"><span class="n">XIII –</span><span class="tx">julgar, em última instância, os recursos que lhe forem dirigidos;</span></p>
 <p class="inc" id="art-35-XIV"><span class="n">XIV –</span><span class="tx">deliberar sobre emissão, suspensão ou exclusão das credenciais dos ministros evangélicos e respectivos cônjuges ao ministério geral da IDPB- AM;</span></p>
+<div class="pauta-row"><a class="pauta" href="#mocao-1">Em pauta na XII Convenção · Moção nº 1 propõe nova redação deste inciso e um novo parágrafo no art. 35</a></div>
 <p class="inc" id="art-35-XV"><span class="n">XV –</span><span class="tx">homologar o detalhamento da estrutura orgânica da IDPB-AM, a política de recursos humanos e os nomes indicados para os cargos de auxiliares da administração na Presidência Estadual;</span></p>
 <p class="inc" id="art-35-XVI"><span class="n">XVI –</span><span class="tx">deliberar sobre todos os assuntos referentes às decisões finais aos casos de disciplina que a ela forem peticionados;</span></p>
 <p class="inc" id="art-35-XVII"><span class="n">XVII –</span><span class="tx">quando delegada pela Assembleia Geral Estadual receber todas as questões ou moções que não foram analisadas durante a referida Assembleia;</span></p>
@@ -980,6 +1095,7 @@ footer.note{margin-top:48px;font-size:.8rem;color:var(--muted);line-height:1.55;
 <h3><span>Seção III</span><span>Do Ministério Auxiliar</span></h3>
 <article class="art" id="art-73" data-label="Art. 73">
 <p class="caput"><a class="artnum" href="#art-73">Art. 73.</a> O Ministério Auxiliar é uma concessão da Junta Administrativa Estadual à Igreja Local, através de credenciais fornecidas aos Assistentes Pastorais e Missionários, reconhecidos pela diretoria de sua Igreja local de origem e pela IDPB-AM, conforme disposto neste Estatuto.</p>
+<div class="pauta-row"><a class="pauta" href="#mocao-2">Em pauta na XII Convenção · Moção nº 2 propõe prazo de validade para a credencial</a></div>
 </article>
 <article class="art" id="art-74" data-label="Art. 74">
 <p class="caput"><a class="artnum" href="#art-74">Art. 74.</a> Os Candidatos a Ministro Auxiliar deverão preencher os seguintes requisitos:</p>
@@ -996,6 +1112,227 @@ footer.note{margin-top:48px;font-size:.8rem;color:var(--muted);line-height:1.55;
       <footer class="note">Transcrição do Estatuto registrado no RCPJ de Manaus, conferida com a cópia autenticada pelo 5º Ofício de Notas em 08/01/2024. A grafia do original foi mantida. Em caso de divergência, prevalece o documento registrado.</footer>
     </div>
   </main>
+</div>
+
+
+<div class="mview" id="pgMocoes" hidden>
+  <div class="mbar" id="mbar" aria-hidden="true">
+    <div class="mbar-in">
+      <b class="mbar-t">Moções da XII Convenção</b>
+      <nav class="mbar-nav" aria-label="Ir para a moção">
+        <a href="#mocao-1" data-m="mocao-1"><b>Moção nº 1</b> Credenciamento ministerial</a>
+        <a href="#mocao-2" data-m="mocao-2"><b>Moção nº 2</b> Credencial de Ministro Auxiliar</a>
+      </nav>
+      <span class="legenda"><span class="lg-del">retirado</span> <span class="lg-ins">incluído</span></span>
+    </div>
+  </div>
+  <div class="mwrap">
+    <header class="mhead" id="mhead">
+      <p class="eyebrow">XII Convenção Estadual · 21 a 24 de outubro de 2026</p>
+      <h1>Moções da XII Convenção</h1>
+      <p class="msub">Duas propostas de alteração do Estatuto foram apresentadas. Cada uma foi analisada pela Comissão Especial de Estatuto, pela Comissão Jurídica e pela Junta Administrativa Estadual em reunião ordinária de 6 de outubro de 2026.</p>
+      <p class="neutro">Esta aba mostra o que cada moção altera, a justificativa do autor e pontos que podem merecer esclarecimento antes da votação. Ela não recomenda voto: a decisão é da Assembleia.</p>
+      <nav class="mindex" aria-label="Moções">
+        <a href="#mocao-1"><b>Moção nº 1</b><span>Harmonização das competências sobre credenciamento ministerial</span><em>Arts. 14, 15, 17 e 35</em></a>
+        <a href="#mocao-2"><b>Moção nº 2</b><span>Prazo de validade da credencial de Ministro Auxiliar</span><em>Art. 73</em></a>
+      </nav>
+      <p class="legenda"><span class="lg-del">texto retirado</span> <span class="lg-ins">texto incluído</span></p>
+    </header>
+
+    <!-- ================= MOÇÃO 1 ================= -->
+    <article class="mocao" id="mocao-1">
+      <header class="m-top">
+        <span class="m-num">1</span>
+        <div class="m-tit">
+          <h2>Harmonização das competências sobre credenciamento ministerial</h2>
+          <p class="m-meta">Autor: Pr. Wenderson Ovídio de Souza Ferreira · Dispositivos: arts. 14, 15, 17 (§ 5º) e 35 (inciso XIV e novo parágrafo)</p>
+        </div>
+        <span class="status">Aguardando votação</span>
+      </header>
+
+      <section class="m-sec">
+        <h3>Em uma frase</h3>
+        <p class="resumo">A Junta Administrativa Estadual passa a <b>avaliar e recomendar</b>, e a decisão definitiva sobre emitir, renovar, suspender ou cassar credenciais ministeriais fica com a <b>Junta Administrativa Nacional</b>.</p>
+      </section>
+
+      <section class="m-sec">
+        <h3>Por que o autor propõe</h3>
+        <p>O autor aponta que o próprio Estatuto já reconhece a Junta Administrativa Nacional como responsável pelo credenciamento (<a class="ref" data-ref="art-9-II" data-t="Art. 9º, II" href="#art-9">art. 9º, II</a>, e <a class="ref" data-ref="art-17-p5" data-t="Art. 17, § 5º" href="#art-17-p5">art. 17, § 5º</a>), enquanto os arts. 14, 15 e 35, XIV podem ser lidos como se a JAE também credenciasse, suspendesse ou cassasse credenciais. A proposta quer evitar conflito de competência e credenciamento em duplicidade, mantendo com a JAE o acompanhamento, a avaliação e a disciplina dos ministros do Amazonas.</p>
+        <details class="integra">
+          <summary>Ler a apresentação e a justificativa na íntegra</summary>
+          <div>
+            <p>Senhores Convencionais,</p>
+            <p>A Igreja de Deus Pentecostal do Brasil do Amazonas - IDPB-AM integra a estrutura eclesiástica da Igreja de Deus Pentecostal do Brasil e reconhece a autoridade eclesiástica da Organização Nacional, conforme estabelecido em seu Estatuto.</p>
+            <p>Ao analisarmos os dispositivos referentes ao ingresso, à ascensão e ao credenciamento dos ministros, constatamos a necessidade de harmonizar as competências da Junta Administrativa Estadual - JAE e da Junta Administrativa Nacional - JAN.</p>
+            <p>O art. 9º, inciso II, do Estatuto da IDPB-AM estabelece que os Ministros Credenciados são os pastores reconhecidos por meio do credenciamento fornecido pela Junta Administrativa Nacional. De igual modo, o art. 17, §5º, determina que os pedidos avaliados previamente pela IDPB-AM sejam encaminhados à Junta Administrativa Nacional, a quem compete emitir o parecer final.</p>
+            <p>Entretanto, os arts. 14, 15 e 35, inciso XIV, apresentam redações que podem ser interpretadas como atribuição da Junta Administrativa Estadual para admitir, credenciar, emitir, suspender ou cassar credenciais ministeriais.</p>
+            <p>Para evitar conflito de competência, duplicidade de credenciamento e insegurança na aplicação das normas estatutárias, propomos a harmonização dos dispositivos abaixo.</p>
+            <p><b>Justificativa.</b> A presente alteração não retira da Junta Administrativa Estadual a responsabilidade de acompanhar, avaliar, orientar e disciplinar os ministros sob sua jurisdição.</p>
+            <p>A proposta diferencia claramente a avaliação e aprovação preliminar realizadas pela Junta Administrativa Estadual, a recomendação estadual de ingresso, ascensão ou medida disciplinar e a decisão definitiva e emissão da credencial pela Junta Administrativa Nacional.</p>
+            <p>A harmonização preserva a autonomia administrativa da IDPB-AM, prevista no art. 44, inciso IV e §1º, do Código Civil, e, ao mesmo tempo, respeita a organização eclesiástica reconhecida pelo próprio Estatuto Estadual.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="m-sec">
+        <h3>O que muda, dispositivo por dispositivo</h3>
+
+        <div class="cmp">
+          <h4><a href="#art-14">Art. 14</a> · caput <span class="tipo">nova redação</span></h4>
+          <div class="pair" data-diff>
+            <div class="col"><span class="lab">Texto atual</span><p class="antes">Poderão ser admitidos e credenciados pela Junta Administrativa Estadual ao Ministério Geral da IDPB-AM, os membros da Igreja Local ou Congregação, de qualquer nacionalidade, sexo, cor, inclusive seus cônjuges, que pedirem por escrito, no qual expressem que aceitam as Escrituras Sagradas, como única regra de fé e prática, que reconheçam como parâmetro de fidelidade “Regras de Fé e Doutrinas, Estatuto, Regimentos Internos e Declaração de Normas Éticas da IDPB-AM”, e afirmem seu propósito de contribuir moralmente, espiritualmente e financeiramente para a consecução dos fins desta instituição.</p></div>
+            <div class="col"><span class="lab">Texto proposto</span><p class="depois">Poderão ser admitidos ao processo de ingresso no Ministério Geral da IDPB-AM os membros de Igreja Local ou Congregação que preencham os requisitos estabelecidos neste Estatuto e no Regimento Interno.</p></div>
+          </div>
+        </div>
+
+        <div class="cmp">
+          <h4><a href="#art-14">Art. 14</a> · novos §§ 1º, 2º e 3º <span class="tipo">inclusão</span></h4>
+          <div class="novo">
+            <p><b>§ 1º</b> Compete à Junta Administrativa Estadual receber, acompanhar, examinar e avaliar os candidatos ao ministério, emitindo parecer preliminar e encaminhando os pedidos aprovados à Junta Administrativa Nacional.</p>
+            <p><b>§ 2º</b> Compete à Junta Administrativa Nacional deliberar, em caráter definitivo, sobre o ingresso e a emissão da credencial ministerial, conforme o Estatuto da IDPB Nacional.</p>
+            <p><b>§ 3º</b> Permanecem aplicáveis aos candidatos os demais requisitos doutrinários, ministeriais, éticos e administrativos previstos neste Estatuto.</p>
+          </div>
+          <p class="nota">Os atuais §§ 1º e 2º do art. 14 passam a ser §§ 4º e 5º, sem mudança de texto.</p>
+        </div>
+
+        <div class="cmp">
+          <h4><a href="#art-15">Art. 15</a> · caput <span class="tipo">nova redação</span></h4>
+          <div class="pair" data-diff>
+            <div class="col"><span class="lab">Texto atual</span><p class="antes">O credenciamento ao Ministério Geral da IDPB-AM obedece rigorosamente uma hierarquia de grau ministerial da seguinte ordem:</p></div>
+            <div class="col"><span class="lab">Texto proposto</span><p class="depois">O processo de ingresso e ascensão ao Ministério Geral da IDPB-AM obedecerá à seguinte hierarquia de graus ministeriais:</p></div>
+          </div>
+          <p class="nota">Os incisos I a III (Cooperador, Licenciado e Ordenado) e os §§ 1º a 5º continuam iguais.</p>
+        </div>
+
+        <div class="cmp">
+          <h4><a href="#art-15">Art. 15</a> · novo § 6º <span class="tipo">inclusão</span></h4>
+          <div class="novo"><p><b>§ 6º</b> As credenciais correspondentes aos graus ministeriais previstos neste artigo serão expedidas ou reconhecidas pela Junta Administrativa Nacional, após avaliação e parecer preliminar favorável da Junta Administrativa Estadual.</p></div>
+        </div>
+
+        <div class="cmp">
+          <h4><a href="#art-17-p5">Art. 17, § 5º</a> <span class="tipo">nova redação</span></h4>
+          <div class="pair" data-diff>
+            <div class="col"><span class="lab">Texto atual</span><p class="antes">Os interessados protocolarão seus pedidos, no período de janeiro a março de cada ano, junto à IDPB-AM, que avaliará previamente e encaminhará à Junta Administrativa Nacional, no prazo de 30 dias de antecedência das suas reuniões, para a devida apreciação de seus pedidos, esta, por sua vez, emitirá seu parecer final em 90 (noventa) dias após a reunião em que analisar os referidos pedidos.</p></div>
+            <div class="col"><span class="lab">Texto proposto</span><p class="depois">Os interessados protocolarão seus pedidos junto à IDPB-AM, no período de janeiro a março, conforme calendário estabelecido pela Junta Administrativa Estadual que realizará a avaliação preliminar e encaminhará à Junta Administrativa Nacional os processos considerados aptos, observados os prazos e procedimentos estabelecidos pelas normas da IDPB Nacional.</p></div>
+          </div>
+        </div>
+
+        <div class="cmp">
+          <h4><a href="#art-35-XIV">Art. 35, XIV</a> <span class="tipo">nova redação</span></h4>
+          <div class="pair" data-diff>
+            <div class="col"><span class="lab">Texto atual</span><p class="antes">deliberar sobre emissão, suspensão ou exclusão das credenciais dos ministros evangélicos e respectivos cônjuges ao ministério geral da IDPB- AM;</p></div>
+            <div class="col"><span class="lab">Texto proposto</span><p class="depois">deliberar preliminarmente sobre os pedidos de ingresso e ascensão ministerial, bem como instaurar e decidir os procedimentos disciplinares de sua competência, encaminhando à Junta Administrativa Nacional as recomendações de emissão, renovação, suspensão ou cassação de credenciais ministeriais, para decisão definitiva, nos termos do Estatuto da IDPB Nacional.</p></div>
+          </div>
+        </div>
+
+        <div class="cmp">
+          <h4><a href="#art-35">Art. 35</a> · novo parágrafo <span class="tipo">inclusão</span></h4>
+          <div class="novo"><p><b>Parágrafo único.</b> A aplicação imediata de medida preventiva de afastamento de função ministerial ou administrativa, quando necessária à proteção da Igreja, não equivale à suspensão ou cassação definitiva da credencial, devendo a decisão final ser submetida ao órgão competente, assegurados o contraditório e a ampla defesa.</p></div>
+        </div>
+      </section>
+
+      <section class="m-sec">
+        <h3>Pontos que podem merecer esclarecimento</h3>
+        <p class="m-intro">Questões observadas na comparação com o texto atual do Estatuto. Servem para orientar perguntas ao autor e às comissões.</p>
+
+        <div class="ponto" id="mocao-1-art14">
+          <h4><span class="pn">1</span> Os requisitos que hoje estão no caput do art. 14 continuam valendo?</h4>
+          <p>A moção reescreve o caput do art. 14 inteiro, e a nova redação é bem mais curta. Algumas exigências que hoje estão escritas ali deixariam de constar do Estatuto. A tabela mostra cada uma e se ela aparece em outro artigo.</p>
+          <div class="tbl"><table>
+            <thead><tr><th>Elemento do caput atual</th><th>Aparece em outro artigo?</th></tr></thead>
+            <tbody>
+              <tr><td>Pedido <b>por escrito</b> para ingressar</td><td><span class="tag nao">Não</span> para o ingresso. O “solicitar por escrito” só aparece na subida para Licenciado e Ordenado (<a class="ref" data-ref="art-17-p2" data-t="Art. 17, § 2º" href="#art-17-p2">art. 17, §§ 2º</a> e <a class="ref" data-ref="art-17-p3" data-t="Art. 17, § 3º" href="#art-17-p3">3º</a>).</td></tr>
+              <tr><td>Aceitar as Escrituras como <b>única regra de fé e prática</b></td><td><span class="tag parte">Em parte</span> O <a class="ref" data-ref="art-8" data-t="Art. 8º" href="#art-8">art. 8º</a> exige isso de quem quer ser <b>membro</b>, não especificamente de quem ingressa no ministério.</td></tr>
+              <tr><td>Reconhecer as <b>Regras de Fé, Estatuto, Regimentos e Normas Éticas</b> como parâmetro de fidelidade</td><td><span class="tag nao">Não</span></td></tr>
+              <tr><td>Compromisso de contribuir <b>moral, espiritual e financeiramente</b></td><td><span class="tag parte">Em parte</span> O <a class="ref" data-ref="art-17" data-t="Art. 17" href="#art-17">art. 17, I</a> exige fidelidade nos dízimos e ofertas, mas só para o estágio.</td></tr>
+              <tr><td>“De qualquer nacionalidade, sexo, cor”</td><td><span class="tag nao">Não</span> com esse sentido de acesso ao ministério. O <a class="ref" data-ref="art-6" data-t="Art. 6º" href="#art-6">art. 6º</a> trata disso só para membros.</td></tr>
+              <tr><td>“<b>Inclusive seus cônjuges</b>”</td><td><span class="tag nao">Não</span> Hoje é o caput do art. 14 que prevê o credenciamento dos cônjuges. O Estatuto fala em “Cônjuges Credenciados” em outros pontos, como o <a class="ref" data-ref="art-28" data-t="Art. 28" href="#art-28">art. 28</a>.</td></tr>
+            </tbody>
+          </table></div>
+          <p><b>Por que isso importa.</b> O novo § 3º diz que “permanecem aplicáveis os demais requisitos previstos neste Estatuto”. Mas, se essas exigências saírem do art. 14, elas não estarão previstas em nenhum outro lugar do Estatuto. O novo caput também remete ao Regimento Interno: se o Regimento trouxer essas exigências, elas continuam valendo por lá.</p>
+          <p class="pergunta"><b>Perguntas para a Assembleia:</b> essas exigências estão no Regimento Interno? A intenção é retirá-las do Estatuto, ou foi efeito da reescrita do artigo? Se não for intencional, elas podem ser mantidas em um parágrafo, por exemplo no próprio § 3º, e a moção mudaria a competência sem mudar os requisitos.</p>
+        </div>
+
+        <div class="ponto">
+          <h4><span class="pn">2</span> O art. 17, § 6º ficaria sem referência</h4>
+          <p>O <a class="ref" data-ref="art-17" data-t="Art. 17" href="#art-17">§ 6º do art. 17</a> diz: “Esgotado o prazo máximo estabelecido no §5º última parte, caberá ao interessado recorrer…”. A “última parte” do § 5º atual é o prazo de 90 dias para o parecer final. A nova redação do § 5º retira esse prazo e remete às normas da IDPB Nacional.</p>
+          <p class="pergunta"><b>Pergunta:</b> a partir de quando o interessado poderá recorrer? O § 6º precisa ser ajustado junto?</p>
+        </div>
+
+        <div class="ponto">
+          <h4><span class="pn">3</span> Numeração do novo parágrafo do art. 35</h4>
+          <p>A moção inclui um “Parágrafo único” no art. 35, mas esse artigo já tem §§ 1º a 5º (dentro do inciso XXI, sobre política partidária). Pela técnica de redação, “parágrafo único” só se usa quando o artigo tem um parágrafo.</p>
+          <p class="pergunta"><b>Pergunta:</b> o novo texto passaria a ser o § 6º do art. 35?</p>
+        </div>
+
+        <div class="ponto">
+          <h4><span class="pn">4</span> Coerência com os artigos de disciplina (arts. 21 a 25)</h4>
+          <p>Hoje o Estatuto permite que a JAE aplique suspensão e cassação de credencial (<a class="ref" data-ref="art-22" data-t="Art. 22" href="#art-22">art. 22, IV e V</a>; <a class="ref" data-ref="art-23" data-t="Art. 23" href="#art-23">art. 23</a>; <a class="ref" data-ref="art-24-p1" data-t="Art. 24, § 1º" href="#art-24-p1">art. 24, § 1º</a>). O <a class="ref" data-ref="art-25" data-t="Art. 25" href="#art-25">art. 25</a> também se apoia no art. 35, XIV. Pela moção, a JAE passaria a recomendar essas medidas à Junta Nacional, mas esses artigos não são alterados.</p>
+          <p class="pergunta"><b>Pergunta:</b> os arts. 21 a 25 precisam de ajuste para não haver dúvida sobre quem decide a suspensão e a cassação?</p>
+        </div>
+      </section>
+    </article>
+
+    <!-- ================= MOÇÃO 2 ================= -->
+    <article class="mocao" id="mocao-2">
+      <header class="m-top">
+        <span class="m-num">2</span>
+        <div class="m-tit">
+          <h2>Prazo de validade da credencial de Ministro Auxiliar</h2>
+          <p class="m-meta">Autor: Pr. Jonas de Queiroz Pinto · Dispositivo: art. 73</p>
+        </div>
+        <span class="status">Aguardando votação</span>
+      </header>
+
+      <section class="m-sec">
+        <h3>Em uma frase</h3>
+        <p class="resumo">A credencial de Ministro Auxiliar, que hoje não tem prazo, passa a valer <b>4 anos</b>, podendo ser renovada por mais <b>3 anos</b>.</p>
+      </section>
+
+      <section class="m-sec">
+        <h3>Por que o autor propõe</h3>
+        <p>O autor argumenta que muitos Ministros Auxiliares vocacionados acabam se acomodando na função na igreja local. Um prazo criaria uma “porta de saída” que os estimule a seguir para a carreira ministerial pastoral, formando os ministros de que a IDPB precisará para presidências, supervisões e demais funções.</p>
+        <details class="integra">
+          <summary>Ler a justificativa na íntegra</summary>
+          <div>
+            <p>CONSIDERANDO que muitos Ministros Auxiliares, fortemente vocacionados e comprometidos com o Reino de Deus, com talentos para ter uma visão ministerial além fronteiras, que podem contribuir muito mais na carreira ministerial pastoral, ficam acomodados nas suas funções na igreja local, esquecendo que podem fazer muito mais;</p>
+            <p>CONSIDERANDO que precisa ter uma porta de saída para os vocacionados que entram para o Ministério Auxiliar, que ao terminarem o tempo proposto, podem ingressar na honrosa carreira ministerial pastoral da Igreja de Deus Pentecostal do Brasil, que precisa de ministros preparados para assumir os postos sagrados nas suas estruturas ministeriais eclesiástica e de gestão organizacional da igreja, sendo bons presidentes, supervisores, etc.;</p>
+            <p>CONSIDERANDO que as gerações vêm e passam, e que a IDPB, dentro do contexto de novos tempos, precisa de ministros e ministras, preparados para os desafios da era dos tempos proféticos finais; para isso, precisamos de mais candidatos vocacionados no estágio para a carreira ministerial pastoral.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="m-sec">
+        <h3>O que muda</h3>
+        <div class="cmp">
+          <h4><a href="#art-73">Art. 73</a> <span class="tipo">nova redação</span></h4>
+          <div class="pair" data-diff>
+            <div class="col"><span class="lab">Texto atual</span><p class="antes">O Ministério Auxiliar é uma concessão da Junta Administrativa Estadual à Igreja Local, através de credenciais fornecidas aos Assistentes Pastorais e Missionários, reconhecidos pela diretoria de sua Igreja local de origem e pela IDPB-AM, conforme disposto neste Estatuto.</p></div>
+            <div class="col"><span class="lab">Texto proposto</span><p class="depois">O Ministério Auxiliar é uma concessão da Junta Administrativa Estadual à Igreja Local, através de credenciais, com validade de 4 (quatro) anos, podendo ser renovadas por mais 3 (três) anos, fornecidas aos Assistentes Pastorais e Missionários, reconhecidos pela diretoria de sua Igreja local de origem e pela IDPB-AM, conforme disposto neste Estatuto.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="m-sec">
+        <h3>Pontos que podem merecer esclarecimento</h3>
+        <div class="ponto">
+          <h4><span class="pn">1</span> A renovação é uma só ou pode se repetir?</h4>
+          <p>O texto diz “podendo ser renovadas por mais 3 (três) anos”. A justificativa fala em “porta de saída”, o que sugere um limite total de 7 anos, mas a redação não diz expressamente que a renovação acontece uma única vez.</p>
+        </div>
+        <div class="ponto">
+          <h4><span class="pn">2</span> O que acontece ao fim do prazo?</h4>
+          <p>A moção não diz se, ao fim dos 4 anos (ou dos 7, com a renovação), a credencial simplesmente perde a validade, ou se há um caminho previsto, como o encaminhamento ao estágio de Ministro Cooperador (<a class="ref" data-ref="art-17" data-t="Art. 17" href="#art-17">art. 17</a>).</p>
+        </div>
+        <div class="ponto">
+          <h4><span class="pn">3</span> Como ficam as credenciais já emitidas?</h4>
+          <p>Não há regra de transição. Para quem já é Ministro Auxiliar, a Assembleia pode querer definir se o prazo conta a partir da aprovação da moção ou da data em que a credencial foi concedida.</p>
+        </div>
+        <p class="nota">Para comparação: as credenciais do Ministério Geral (Cooperador, Licenciado e Ordenado) já têm validade anual, de janeiro a dezembro, com renovação condicionada a comprovantes de INSS e Imposto de Renda (<a class="ref" data-ref="art-15-p1" data-t="Art. 15, § 1º" href="#art-15-p1">art. 15, § 1º</a>).</p>
+      </section>
+    </article>
+
+    <p class="mfonte">Fonte: propostas de moção apresentadas à XII Convenção Estadual da IDPB-AM, com os textos transcritos integralmente. As observações desta aba comparam as propostas com o Estatuto vigente e não substituem o parecer das comissões.</p>
+  </div>
 </div>
 
 <div class="pop" id="pop" role="dialog" aria-modal="false" hidden></div>
@@ -1037,6 +1374,68 @@ footer.note{margin-top:48px;font-size:.8rem;color:var(--muted);line-height:1.55;
     'FGTS':'Fundo de Garantia do Tempo de Serviço.',
     'NVI':'Nova Versão Internacional, tradução da Bíblia citada no art. 14, § 1º.'
   };
+
+
+  /* ---------- Abas (Estatuto / Moções) ---------- */
+  var viewE=$('#viewEstatuto'),viewM=$('#pgMocoes'),curView='estatuto';
+  function setView(v){
+    if(v===curView)return;curView=v;
+    viewE.hidden=v!=='estatuto';viewM.hidden=v!=='mocoes';
+    document.body.classList.toggle('v-mocoes',v==='mocoes');
+    $$('.tab').forEach(function(t){t.classList.toggle('on',t.dataset.view===v);t.setAttribute('aria-current',t.dataset.view===v?'page':'false')});
+    close();
+  }
+  function route(){
+    var h=location.hash.slice(1);
+    var moc=h==='mocoes'||h.indexOf('mocao-')===0;
+    curView=null;setView(moc?'mocoes':'estatuto');
+    if(h==='mocoes'){setTimeout(function(){window.scrollTo({top:0,behavior:'instant'})},0);return}
+    var el=h&&document.getElementById(h);
+    if(el)requestAnimationFrame(function(){el.scrollIntoView({block:'start'})});
+  }
+  addEventListener('hashchange',route);
+  /* Altura real do cabeçalho, para os saltos não ficarem escondidos sob ele */
+  function medeTopo(){var t=$('.top');if(t)root.style.setProperty('--hh',t.offsetHeight+'px')}
+  medeTopo();addEventListener('resize',medeTopo);
+
+
+  /* Barra congelada da aba Moções */
+  (function(){
+    var bar=$('#mbar'),head=$('#mhead');if(!bar||!head)return;
+    var links=$$('.mbar-nav a',bar);
+    function upd(){
+      if(curView!=='mocoes'){bar.classList.remove('on');return}
+      var hh=$('.top').offsetHeight,b=head.getBoundingClientRect().bottom;
+      var on=b<hh+4;bar.classList.toggle('on',on);bar.setAttribute('aria-hidden',on?'false':'true');
+      root.style.setProperty('--mb',bar.offsetHeight+'px');
+      var cur=null;$$('.mocao').forEach(function(m){if(m.getBoundingClientRect().top<hh+bar.offsetHeight+80)cur=m.id});
+      links.forEach(function(a){a.classList.toggle('on',a.dataset.m===cur)});
+    }
+    addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);addEventListener('hashchange',function(){setTimeout(upd,50)});
+    setTimeout(upd,100);
+  })();
+
+  /* Comparação palavra a palavra (texto atual × proposto) */
+  function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+  function diff(a,b){
+    var A=a.split(/(\s+)/),B=b.split(/(\s+)/),n=A.length,m=B.length,i,j;
+    var L=[];for(i=0;i<=n;i++){L.push(new Array(m+1).fill(0))}
+    for(i=n-1;i>=0;i--)for(j=m-1;j>=0;j--)L[i][j]=A[i]===B[j]?L[i+1][j+1]+1:Math.max(L[i+1][j],L[i][j+1]);
+    var outA='',outB='',dA=[],dB=[];i=0;j=0;
+    function flush(){if(dA.length){outA+='<del>'+esc(dA.join(''))+'</del>';dA=[]}if(dB.length){outB+='<ins>'+esc(dB.join(''))+'</ins>';dB=[]}}
+    while(i<n&&j<m){
+      if(A[i]===B[j]){
+        if(/^\s+$/.test(A[i])&&(dA.length||dB.length)){dA.push(A[i]);dB.push(B[j]);i++;j++;continue}
+        flush();outA+=esc(A[i]);outB+=esc(B[j]);i++;j++}
+      else if(L[i+1][j]>=L[i][j+1]){dA.push(A[i]);i++}
+      else{dB.push(B[j]);j++}
+    }
+    while(i<n)dA.push(A[i++]);while(j<m)dB.push(B[j++]);flush();
+    return [outA,outB];
+  }
+  $$('[data-diff]').forEach(function(p){
+    var a=$('.antes',p),b=$('.depois',p),r=diff(a.textContent,b.textContent);a.innerHTML=r[0];b.innerHTML=r[1];
+  });
 
   /* ---------- Aviso da XII Convenção (21 a 24/10/2026) ---------- */
   (function(){
@@ -1185,6 +1584,7 @@ footer.note{margin-top:48px;font-size:.8rem;color:var(--muted);line-height:1.55;
 
   function goTo(id){
     var el=document.getElementById(id);if(!el)return;
+    if(!el.closest('#pgMocoes'))setView('estatuto');
     var art=el.closest('.art')||el;
     el.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
     art.classList.remove('flash');void art.offsetWidth;art.classList.add('flash');
@@ -1225,6 +1625,7 @@ footer.note{margin-top:48px;font-size:.8rem;color:var(--muted);line-height:1.55;
     },{rootMargin:'-25% 0px -65% 0px'});
     arts.forEach(function(a){io.observe(a)});
   }
+  route();
   var last=store.get('last');
   if(!location.hash && last && last!=='art-1' && document.getElementById(last)){
     say('Continuar a leitura no '+document.getElementById(last).dataset.label+'?',{label:'Continuar',run:function(){goTo(last)}});
@@ -1286,7 +1687,7 @@ footer.note{margin-top:48px;font-size:.8rem;color:var(--muted);line-height:1.55;
     empty.hidden=hitsA>0;
     status.textContent=hitsA?hits+(hits===1?' ocorrência':' ocorrências')+' em '+hitsA+(hitsA===1?' artigo':' artigos')+'.':'';
   }
-  q.addEventListener('input',function(){clearTimeout(tq);tq=setTimeout(run,120)});
+  q.addEventListener('input',function(){setView('estatuto');clearTimeout(tq);tq=setTimeout(run,120)});
   q.addEventListener('keydown',function(e){
     if(e.key==='Enter'){var j=artJump(q.value);if(j){q.value='';run();goTo(j);q.blur()}
       else{var first=$('.art:not([hidden]) mark');if(first){first.scrollIntoView({block:'center'})}}}
@@ -1297,3 +1698,6 @@ footer.note{margin-top:48px;font-size:.8rem;color:var(--muted);line-height:1.55;
   });
 })();
 </script>
+
+</body>
+</html>

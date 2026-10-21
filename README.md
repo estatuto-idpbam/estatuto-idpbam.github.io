@@ -13,6 +13,7 @@ Página web do Estatuto da **Igreja de Deus Pentecostal do Brasil do Amazonas (I
 - Selos nos dispositivos alterados na XI Convenção, com a moção e o resultado da votação
 - Link direto e "copiar texto" de cada artigo, para compartilhar no WhatsApp
 - Tema claro/escuro, ajuste do tamanho da letra e "continuar de onde parou"
+- Aba **Moções da XII Convenção** (21 a 24/10/2026): texto atual × texto proposto, justificativa e pontos para esclarecimento de cada moção, sem recomendação de voto
 
 ## Fontes
 
