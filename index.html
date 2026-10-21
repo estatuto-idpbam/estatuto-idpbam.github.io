@@ -290,7 +290,7 @@ footer.note{margin-top:48px;font-size:.8rem;color:var(--muted);line-height:1.55;
   .brand{flex:1}
   .search .kbd{display:none}
   .wrap{grid-template-columns:minmax(0,1fr);gap:0}
-  .toc{position:fixed;top:0;bottom:0;left:0;width:min(86vw,330px);max-height:none;z-index:50;background:var(--surface);
+  .toc{position:fixed;top:0;bottom:0;left:0;width:min(86vw,330px);height:100vh;height:100dvh;max-height:none;align-self:stretch;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;z-index:50;background:var(--surface);
     border-right:1px solid var(--line);transform:translateX(-105%);transition:transform .22s ease;
     padding:calc(20px + env(safe-area-inset-top,0px)) 18px calc(30px + env(safe-area-inset-bottom,0px)) max(18px,env(safe-area-inset-left,0px))}
   .toc.open{transform:none}
