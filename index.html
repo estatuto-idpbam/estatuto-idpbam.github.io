@@ -70,7 +70,7 @@ button{font:inherit;color:inherit}
 
 /* Sumário */
 .toc{position:sticky;top:calc(var(--hh) + env(safe-area-inset-top,0px));align-self:start;max-height:calc(100vh - var(--hh) - env(safe-area-inset-top,0px));
-  overflow:auto;padding-block:28px 40px;font-size:.86rem}
+  overflow:auto;padding-block:0 40px;font-size:.86rem}
 .toc h2{font:600 .7rem/1 var(--f-ui);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
 .toc-cap{border-top:1px solid var(--line);padding-block:12px}
 .toc-cap>a{display:block;text-decoration:none;font-weight:600;line-height:1.35}
@@ -86,7 +86,10 @@ button{font:inherit;color:inherit}
 .chip.dim{opacity:.28}
 .chip.em-pauta{position:relative;border-color:var(--gold-deep);box-shadow:inset 0 0 0 1px var(--gold-deep)}
 .chip.em-pauta::after{content:"";position:absolute;top:-4px;right:-4px;width:9px;height:9px;border-radius:50%;background:var(--gold);border:2px solid var(--surface)}
-.toc-leg{display:flex;align-items:center;gap:7px;font-size:.76rem;color:var(--muted);margin:-4px 0 14px}
+.toc-head{position:sticky;top:0;z-index:2;background:var(--bg);padding-top:28px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.toc-head h2{margin-bottom:10px}
+.toc-leg{display:flex;align-items:center;gap:7px;font-size:.76rem;color:var(--muted);margin:0}
+.toc-head+div>.toc-cap:first-child{border-top:0}
 .toc-leg .dot{width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 1px var(--gold-deep)}
 .toc-note{margin-top:18px;padding:10px 12px;border:1px dashed var(--line);border-radius:8px;color:var(--muted);font-size:.78rem;line-height:1.45}
 
@@ -296,8 +299,9 @@ footer.note{margin-top:48px;font-size:.8rem;color:var(--muted);line-height:1.55;
   .wrap{grid-template-columns:minmax(0,1fr);gap:0}
   .toc{position:fixed;top:0;bottom:0;left:0;width:min(86vw,330px);height:100vh;height:100dvh;max-height:none;align-self:stretch;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;z-index:50;background:var(--surface);
     border-right:1px solid var(--line);transform:translateX(-105%);transition:transform .22s ease;
-    padding:calc(20px + env(safe-area-inset-top,0px)) 18px calc(30px + env(safe-area-inset-bottom,0px)) max(18px,env(safe-area-inset-left,0px))}
+    padding:0 18px calc(30px + env(safe-area-inset-bottom,0px)) max(18px,env(safe-area-inset-left,0px))}
   .toc.open{transform:none}
+  .toc-head{background:var(--surface);padding-top:calc(20px + env(safe-area-inset-top,0px))}
   main{padding-top:24px}
   .inc{padding-left:0}
   .ali,.sub{padding-left:1.6em}
@@ -338,8 +342,10 @@ footer.note{margin-top:48px;font-size:.8rem;color:var(--muted);line-height:1.55;
 
 <div class="wrap" id="viewEstatuto">
   <nav class="toc" id="toc" aria-label="Sumário">
-    <h2>Sumário</h2>
-    <p class="toc-leg"><span class="dot" aria-hidden="true"></span>Em pauta na XII Convenção</p>
+    <div class="toc-head">
+      <h2>Sumário</h2>
+      <p class="toc-leg"><span class="dot" aria-hidden="true"></span>Em pauta na XII Convenção</p>
+    </div>
     <div id="tocList"></div>
     <p class="toc-note">Texto até o art. 74, III. As páginas 25 a 27 do documento registrado ainda não foram localizadas.</p>
   </nav>
